@@ -1394,6 +1394,11 @@ python-freezegun-pip:
   ubuntu:
     pip:
       packages: [freezegun]
+python-frozendict:
+  alpine: [py2-frozendict]
+  debian: [python-frozendict]
+  fedora: [python-frozendict]
+  ubuntu: [python-frozendict]
 python-ftdi1:
   debian: [python-ftdi1]
   fedora: [python2-libftdi]
@@ -2488,6 +2493,7 @@ python-pandas:
   gentoo: [dev-python/pandas]
   ubuntu: [python-pandas]
 python-parameterized:
+  alpine: [py2-parameterized]
   debian:
     '*': [python-parameterized]
     jessie:
