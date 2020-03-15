@@ -3163,6 +3163,7 @@ python-pycodestyle:
   rhel: [python-pycodestyle]
   ubuntu: [pycodestyle]
 python-pycryptodome:
+  alpine: [py2-pycryptodome]
   arch: [python2-pycryptodome]
   debian: [python-pycryptodome]
   fedora: [python-pycryptodomex]
