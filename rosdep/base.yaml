@@ -1121,8 +1121,8 @@ golang-go:
 google-mock:
   alpine:
     '*': [gtest-dev, gmock]
-    3.7: [gmock-dev]
-    3.8: [gmock-dev]
+    '3.7': [gmock-dev]
+    '3.8': [gmock-dev]
   arch: [gmock]
   debian: [google-mock]
   fedora: [gmock-devel]
