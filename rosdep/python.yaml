@@ -2086,7 +2086,7 @@ python-gst:
     utopic: [python-gst0.10]
     vivid: [python-gst0.10]
 python-gst-1.0:
-  alpine: [py-gst]
+  alpine: [py2-gst]
   debian:
     buster: [python-gst-1.0]
     jessie: [python-gst-1.0]
