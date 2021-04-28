@@ -7460,6 +7460,7 @@ python3-urllib3:
   gentoo: [dev-python/urllib3]
   ubuntu: [python3-urllib3]
 python3-usb:
+  alpine: [py3-usb]
   debian: [python3-usb]
   gentoo: [dev-python/pyusb]
   openembedded: [python3-pyusb@meta-python]
