@@ -28,11 +28,13 @@ jobs:
           git merge --no-ff --no-edit upstream/master
       - name: Remove upstream remote
         run: git remote remove upstream # avoid to open PR in upstream repo
-      - name: pull-request
-        uses: repo-sync/pull-request@v2
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          source_branch: ${{ steps.create.outputs.branch }}
-          destination_branch: alpine-custom-apk
-          pr_title: Merge upstream
-          pr_body: "close #${{ github.event.issue.number }}"
+      - name: Create PR
+        run: |
+          gh pr create \
+            --repo ${GITHUB_REPOSITORY} \
+            --base alpine-custom-apk \
+            --head ${{ steps.create.outputs.branch }} \
+            --title "Merge upstream" \
+            --body "close #${{ github.event.issue.number }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
