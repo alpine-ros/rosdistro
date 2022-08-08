@@ -9366,7 +9366,9 @@ python3-wxgtk4.0:
   nixos: [python3Packages.wxPython_4_0]
   ubuntu: [python3-wxgtk4.0]
 python3-xdot:
-  alpine: [py3-xdot]
+  alpine:
+    '*': [py3-xdot]
+    '3.8': null
   arch: [xdot]
   debian: [xdot]
   fedora: [python-xdot]
