@@ -7529,6 +7529,7 @@ sdl2:
   rhel: [SDL2-devel]
   ubuntu: [libsdl2-dev]
 sdl2-image:
+  alpine: [sdl2_image-dev]
   debian: [libsdl2-image-dev]
   fedora: [SDL2_image-devel]
   rhel:
