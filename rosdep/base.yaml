@@ -7536,6 +7536,7 @@ sdl2-image:
     '7': [SDL2_image-devel]
   ubuntu: [libsdl2-image-dev]
 sdl2-mixer:
+  alpine: [sdl2_mixer-dev]
   debian: [libsdl2-mixer-dev]
   fedora: [SDL2_mixer-devel]
   ubuntu: [libsdl2-mixer-dev]
