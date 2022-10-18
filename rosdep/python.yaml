@@ -447,6 +447,16 @@ pyros-setup-pip:
   ubuntu:
     pip:
       packages: [pyros-setup]
+pysdl2:
+  alpine:
+    pip:
+      packages: [pysdl2]
+  debian:
+    pip:
+      packages: [pysdl2]
+  ubuntu:
+    pip:
+      packages: [pysdl2]
 pyside-tools:
   debian: [pyside-tools]
   gentoo: [dev-python/pyside-tools]
