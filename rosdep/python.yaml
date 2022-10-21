@@ -448,9 +448,7 @@ pyros-setup-pip:
     pip:
       packages: [pyros-setup]
 pysdl2:
-  alpine:
-    pip:
-      packages: [pysdl2]
+  alpine: [py-pysdl2]
   debian:
     pip:
       packages: [pysdl2]
@@ -458,9 +456,7 @@ pysdl2:
     pip:
       packages: [pysdl2]
 pysdl2-dll:
-  alpine:
-    pip:
-      packages: [pysdl2-dll]
+  alpine: [py-pysdl2-dll]
   debian:
     pip:
       packages: [pysdl2-dll]
