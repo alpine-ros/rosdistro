@@ -21,7 +21,7 @@ jobs:
         id: create
         run: |
           branch=merge-upstream-$(date '+%Y-%m-%d-%H-%M-%S')
-          echo "::set-output name=branch::${branch}"
+          echo "branch=${branch}" >> ${GITHUB_OUTPUT}
           git config --global user.email 'github-actions[bot]'
           git config --global user.name '41898282+github-actions[bot]@users.noreply.github.com'
           git checkout -b ${branch}
