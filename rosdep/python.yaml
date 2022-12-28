@@ -9000,7 +9000,7 @@ python3-qrcode:
 python3-qt5-bindings:
   alpine:
     '*': [py3-qt5, py3-sip, py-sip, py-sip-dev]
-    '3.17':  [py3-qt5, py3-sip4, py3-sip4-dev]
+    '3.17': [py3-qt5, py3-sip4, py3-sip4-dev]
   arch: [python-pyqt5]
   debian:
     '*': [libpyside2-dev, libshiboken2-dev, pyqt5-dev, python3-pyqt5, python3-pyqt5.qtsvg, python3-pyside2.qtsvg, python3-sip-dev, qtbase5-dev, shiboken2]
