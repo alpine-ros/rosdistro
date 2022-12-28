@@ -5764,8 +5764,9 @@ libssh2-dev:
   ubuntu: [libssh2-1-dev]
 libssl-dev:
   alpine:
-    '*': [libressl-dev]
-    '3.14': [openssl-dev]
+    '*': [openssl-dev]
+    '3.11': [libressl-dev]
+    '3.8': [libressl-dev]
   arch: [openssl]
   debian: [libssl-dev]
   fedora: [openssl-devel]
