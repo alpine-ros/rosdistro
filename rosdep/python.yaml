@@ -6319,8 +6319,9 @@ python3-bs4:
   ubuntu: [python3-bs4]
 python3-bson:
   alpine:
-    '*': [py3-pymongo]
-    '3.14': [py3-mongo]
+    '*': [py3-mongo]
+    '3.11': [py3-pymongo]
+    '3.8': [py3-pymongo]
   debian: [python3-bson]
   fedora: [python3-bson]
   gentoo: [dev-python/pymongo]
