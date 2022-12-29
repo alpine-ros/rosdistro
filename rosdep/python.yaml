@@ -9325,7 +9325,11 @@ python3-sense-hat-pip:
     pip:
       packages: [sense-hat]
 python3-serial:
-  alpine: [py3-serial]
+  alpine:
+    '*': [py3-pyserial]
+    '3.11': [py3-serial]
+    '3.14': [py3-serial]
+    '3.8': [py3-serial]
   debian: [python3-serial]
   fedora: [python3-pyserial]
   nixos: [python3Packages.pyserial]
