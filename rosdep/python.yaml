@@ -8960,9 +8960,9 @@ python3-pytest-mock:
   ubuntu: [python3-pytest-mock]
 python3-pytest-timeout:
   alpine:
-    '*': null
-    '3.14': [py3-pytest-timeout]
-    '3.17': [py3-pytest-timeout]
+    '3.11': null
+    '3.8': null
+    '*': [py3-pytest-timeout]
   arch: [python-pytest-timeout]
   debian: [python3-pytest-timeout]
   fedora: [python3-pytest-timeout]
