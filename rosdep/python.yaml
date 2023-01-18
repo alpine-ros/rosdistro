@@ -7720,6 +7720,7 @@ python3-pytest-mock:
   rhel: ['python%{python3_pkgversion}-pytest-mock']
   ubuntu: [python3-pytest-mock]
 python3-pytest-timeout:
+  alpine: [py3-pytest-timeout]
   debian: [python3-pytest-timeout]
   fedora: [python3-pytest-timeout]
   gentoo: [dev-python/pytest-timeout]
