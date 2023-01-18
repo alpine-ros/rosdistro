@@ -6,7 +6,9 @@ ace:
   ubuntu: [libace-dev]
 ack:
   debian: [ack]
+  fedora: [ack]
   nixos: [ack]
+  rhel: [ack]
   ubuntu:
     '*': [ack]
     xenial: null
@@ -48,15 +50,20 @@ alsa-oss:
   debian: [alsa-oss]
   gentoo: [media-libs/alsa-oss]
   nixos: [alsaOss]
+  openembedded: [alsa-oss@meta-oe]
   opensuse: [alsa-oss]
   ubuntu: [alsa-oss]
+alsa-plugins-pulse:
+  alpine: [alsa-plugins-pulse]
 alsa-utils:
+  alpine: [alsa-utils]
   arch: [alsa-utils]
   debian: [alsa-utils]
   fedora: [alsa-utils]
   gentoo: [media-sound/alsa-utils]
   nixos: [alsaUtils]
   opensuse: [alsa-utils]
+  rhel: [alsa-utils]
   ubuntu: [alsa-utils]
 ant:
   arch: [apache-ant]
@@ -64,6 +71,7 @@ ant:
   fedora: [ant]
   gentoo: [dev-java/ant]
   nixos: [ant]
+  rhel: [ant]
   ubuntu: [ant]
 antlr:
   arch: [antlr]
@@ -107,14 +115,16 @@ apr:
   ubuntu: [libapr1-dev, libaprutil1-dev]
 apt-transport-https:
   debian: [apt-transport-https]
+  fedora: [apt]
   ubuntu: [apt-transport-https]
 aravis:
   debian: [libaravis-0.6-0, aravis-tools]
   gentoo: [media-video/aravis]
   nixos: [aravis]
   ubuntu:
-    '*': [libaravis-0.6-0, aravis-tools]
+    '*': [libaravis-0.8-0, aravis-tools]
     bionic: null
+    focal: [libaravis-0.6-0, aravis-tools]
     xenial: null
 aravis-dev:
   debian: [libaravis-dev]
@@ -127,7 +137,6 @@ aravis-dev:
 arduino-core:
   arch: [arduino]
   debian: [arduino-core]
-  fedora: [arduino-core]
   gentoo: [dev-embedded/arduino]
   nixos: [arduino]
   ubuntu: [arduino-core]
@@ -158,7 +167,7 @@ asio:
   rhel: [asio-devel]
   ubuntu: [libasio-dev]
 assimp:
-  alpine: [assimp]
+  alpine: [assimp-dev]
   arch: [assimp]
   debian: [libassimp-dev]
   fedora: [assimp]
@@ -200,6 +209,7 @@ at-spi2-core:
   fedora: [at-spi2-core]
   gentoo: [at-spi2-core]
   nixos: [at-spi2-core]
+  rhel: [at-spi2-core]
   ubuntu: [at-spi2-core]
 atlas:
   arch: [atlas-lapack]
@@ -207,6 +217,7 @@ atlas:
   fedora: [atlas-devel]
   gentoo: [sci-libs/atlas]
   macports: [atlas]
+  rhel: [atlas-devel]
   ubuntu: [libatlas-base-dev]
 autoconf:
   arch: [autoconf]
@@ -283,6 +294,7 @@ awscli:
   fedora: [awscli]
   gentoo: [dev-python/awscli]
   nixos: [awscli]
+  rhel: [awscli]
   ubuntu: [awscli]
 babeltrace:
   debian: [babeltrace]
@@ -307,6 +319,7 @@ beep:
   nixos: [beep]
   ubuntu: [beep]
 benchmark:
+  arch: [benchmark]
   debian:
     '*': [libbenchmark-dev]
     stretch: null
@@ -345,6 +358,7 @@ blender:
   nixos: [blender]
   ubuntu: [blender]
 bluez:
+  alpine: [bluez-dev]
   arch: [bluez]
   debian: [bluez]
   fedora: [bluez-libs]
@@ -386,7 +400,7 @@ box2d-dev:
   nixos: [box2d]
   ubuntu: [libbox2d-dev]
 bullet:
-  alpine: [bullet-dev]
+  alpine: [bullet3-dev]
   arch: [bullet]
   debian: [libbullet-dev]
   fedora: [bullet-devel]
@@ -402,8 +416,10 @@ bullet:
 bullet-extras:
   arch: [bullet]
   debian: [libbullet-extras-dev]
-  fedora: [bullet-extras]
+  fedora: [bullet-extras-devel]
   gentoo: [sci-physics/bullet]
+  nixos: [bullet]
+  rhel: [bullet-extras-devel]
   ubuntu: [libbullet-extras-dev]
 bzip2:
   alpine: [bzip2-dev]
@@ -431,6 +447,7 @@ ca-certificates:
   nixos: [cacert]
   openembedded: [ca-certificates@openembedded-core]
   opensuse: [ca-certificates]
+  rhel: [ca-certificates]
   ubuntu: [ca-certificates]
 can-utils:
   debian: [can-utils]
@@ -441,6 +458,7 @@ cargo:
   archlinux: [rust]
   debian: [cargo]
   fedora: [cargo]
+  nixos: [cargo]
   opensuse: [cargo]
   rhel: [cargo]
   ubuntu: [cargo]
@@ -490,6 +508,7 @@ chromium-browser:
   fedora: [chromium]
   gentoo: [www-client/chromium]
   nixos: [chromium]
+  rhel: [chromium]
   ubuntu: [chromium-browser]
 chrony:
   arch: [chrony]
@@ -500,16 +519,19 @@ chrony:
   opensuse: [chrony]
   ubuntu: [chrony]
 clang:
+  arch: [clang]
   debian: [clang]
   fedora: [clang]
   gentoo: [sys-devel/clang]
   nixos: [clang]
+  openembedded: [clang-native@meta-clang]
   rhel:
     '*': [clang]
     '7': null
   ubuntu: [clang]
 clang-format:
   alpine: [clang]
+  arch: [clang]
   debian:
     bullseye: [clang-format]
     buster: [clang-format]
@@ -524,6 +546,7 @@ clang-format:
   ubuntu: [clang-format]
 clang-tidy:
   alpine: [clang-extra-tools]
+  arch: [clang]
   debian:
     bullseye: [clang-tidy]
     buster: [clang-tidy]
@@ -593,6 +616,7 @@ coinor-libosi-dev:
   gentoo: [sci-libs/coinor-osi]
   ubuntu: [coinor-libosi-dev]
 collada-dom:
+  alpine: [collada-dom-dev]
   arch: [collada-dom]
   debian:
     buster: [libcollada-dom2.4-dp-dev]
@@ -602,6 +626,7 @@ collada-dom:
   freebsd: [collada-dom]
   gentoo: [dev-libs/collada-dom]
   macports: [collada-dom]
+  nixos: [collada-dom]
   openembedded: [collada-dom@meta-ros-common]
   slackware: [collada-dom]
   ubuntu:
@@ -664,7 +689,7 @@ cppcheck:
   rhel: [cppcheck]
   ubuntu: [cppcheck]
 cppunit:
-  alpine: [cppunit]
+  alpine: [cppunit-dev]
   arch: [cppunit]
   debian: [libcppunit-dev]
   fedora: [cppunit-devel]
@@ -681,6 +706,10 @@ cpuburn:
   arch: [cpuburn]
   debian: [cpuburn]
   ubuntu: [cpuburn]
+croncpp:
+  alpine:
+    '3.11': [croncpp-dev]
+    '3.14': [croncpp-dev]
 crypto++:
   debian: [libcrypto++-dev]
   fedora: [cryptopp-devel]
@@ -703,7 +732,10 @@ curl:
       packages: [curl]
   ubuntu: [libcurl4-openssl-dev, curl]
 curlpp-dev:
-  debian: [libcurlpp-dev]
+  debian:
+    '*': [libcurlpp-dev]
+    buster: null
+    stretch: null
   fedora: [curlpp-devel]
   nixos: [curlpp]
   openembedded: [curlpp@meta-networking]
@@ -753,8 +785,10 @@ debtree:
 devilspie2:
   arch: [devilspie2]
   debian: [devilspie2]
+  fedora: [devilspie2]
   gentoo: [x11-misc/devilspie2]
   nixos: [devilspie2]
+  rhel: [devilspie2]
   ubuntu: [devilspie2]
 devscripts:
   debian: [devscripts]
@@ -847,7 +881,6 @@ e2fsprogs:
 eclipse:
   arch: [eclipse, eclipse-rcp, eclipse-emf, eclipse-pde]
   debian: [eclipse, eclipse-rcp, eclipse-xsd, eclipse-pde]
-  fedora: [eclipse-pde, eclipse-emf]
   gentoo: [dev-java/ant-eclipse-ecj, dev-java/eclipse-ecj]
   ubuntu:
     karmic: [eclipse, eclipse-platform, eclipse-rcp, eclipse-pde]
@@ -865,13 +898,8 @@ ed:
   ubuntu: [ed]
 eigen:
   alpine: [eigen-dev]
-  arch: [eigen3]
-  debian:
-    bullseye: [libeigen3-dev]
-    buster: [libeigen3-dev]
-    jessie: [libeigen3-dev]
-    stretch: [libeigen3-dev]
-    wheezy: [libeigen3-dev]
+  arch: [eigen]
+  debian: [libeigen3-dev]
   fedora: [eigen3-devel]
   freebsd: [eigen]
   gentoo: [dev-cpp/eigen]
@@ -950,8 +978,10 @@ f2c:
   ubuntu: [f2c, libf2c2, libf2c2-dev]
 fakeroot:
   debian: [fakeroot]
+  fedora: [fakeroot]
   gentoo: [sys-apps/fakeroot]
   nixos: [fakeroot]
+  rhel: [fakeroot]
   ubuntu: [fakeroot]
 fcgi:
   arch: [fcgi, mod_fcgid, spawn-fcgi]
@@ -960,6 +990,7 @@ fcgi:
   gentoo: [dev-ruby/fcgi]
   ubuntu: [libfcgi-dev, libapache2-mod-fastcgi, spawn-fcgi]
 festival:
+  alpine: [festival, festvox-kallpc16k]
   arch: [festival, festival-english]
   debian: [festival, festvox-kallpc16k]
   fedora: [festival, festvox-kal-diphone]
@@ -972,6 +1003,7 @@ festival-dev:
   gentoo: [app-accessibility/festival]
   ubuntu: [festival-dev]
 ffmpeg:
+  alpine: [ffmpeg-dev]
   arch: [ffmpeg]
   debian:
     '*': [ffmpeg, libavcodec-dev, libavformat-dev, libavutil-dev, libswscale-dev]
@@ -995,9 +1027,12 @@ ffmpeg2theora:
   gentoo: [media-video/ffmpeg2theora]
   ubuntu: [ffmpeg2theora]
 file:
+  arch: [file]
   debian: [file]
   fedora: [file]
   nixos: [file]
+  openembedded: [file@openembedded-core]
+  rhel: [file]
   ubuntu: [file]
 filezilla:
   arch: [filezilla]
@@ -1031,6 +1066,15 @@ flex:
   opensuse: [flex]
   rhel: [flex]
   ubuntu: [flex]
+flite:
+  alpine: [flite]
+  arch: [flite]
+  debian: [flite]
+  fedora: [flite]
+  gentoo: [app-accessibility/flite]
+  nixos: [flite]
+  rhel: [flite]
+  ubuntu: [flite]
 fltk:  # Consider using the libfltk-dev and fluid (fltk runtime) keys instead.
   arch: [fltk]
   debian: [libfltk1.1-dev]
@@ -1074,6 +1118,8 @@ fmt:
   fedora: [fmt-devel]
   gentoo: [dev-libs/libfmt]
   nixos: [fmt]
+  openembedded: [fmt@meta-oe]
+  rhel: [fmt-devel]
   ubuntu: [libfmt-dev]
 fonts-noto:
   alpine: [font-noto]
@@ -1099,17 +1145,23 @@ freeimage:
   ubuntu: [libfreeimage-dev]
 freetype:
   alpine: [freetype]
+  debian: [libfreetype6]
   fedora: [freetype]
   gentoo: [media-libs/freetype]
   macports: [freetype]
   nixos: [freetype]
+  ubuntu: [libfreetype6]
 fsharp:
   debian: [fsharp]
   gentoo: [dev-lang/fsharp]
   nixos: [fsharp]
   ubuntu: [fsharp]
 fswebcam:
+  fedora: [fswebcam]
   nixos: [fswebcam]
+  rhel:
+    '*': [fswebcam]
+    '7': null
   ubuntu: [fswebcam]
 ftdi-eeprom:
   arch: [libftdi]
@@ -1171,6 +1223,7 @@ gazebo:
     disco: [gazebo9]
     eoan: [gazebo9]
     focal: [gazebo11]
+    jammy: [gazebo]
     precise: [gazebo]
     quantal: [gazebo]
     raring: [gazebo]
@@ -1187,6 +1240,7 @@ gazebo11:
   nixos: [gazebo_11]
   ubuntu:
     focal: [gazebo11]
+    jammy: [gazebo]
 gazebo5:
   arch: [gazebo]
   gentoo: [=sci-electronics/gazebo-5*]
@@ -1272,6 +1326,7 @@ geos:
   fedora: [geos-devel]
   gentoo: [sci-libs/geos]
   nixos: [geos]
+  rhel: [geos-devel]
   ubuntu: [libgeos-dev]
 gettext-base:
   arch: [gettext]
@@ -1383,7 +1438,19 @@ gnat:
   debian: [gnat]
   nixos: [gnat]
   ubuntu: [gnat]
+gnome-terminal:
+  alpine: [gnome-terminal]
+  arch: [gnome-terminal]
+  debian: [gnome-terminal]
+  fedora: [gnome-terminal]
+  freebsd: [gnome-terminal]
+  gentoo: [x11-terms/gnome-terminal]
+  nixos: [gnome.gnome-terminal]
+  opensuse: [gnome-terminal]
+  rhel: [gnome-terminal]
+  ubuntu: [gnome-terminal]
 gnuplot:
+  alpine: [gnuplot]
   arch: [gnuplot]
   debian: [gnuplot]
   fedora: [gnuplot]
@@ -1391,16 +1458,23 @@ gnuplot:
   nixos: [gnuplot]
   openembedded: [gnuplot@meta-oe]
   ubuntu: [gnuplot]
+gnuplot-iostream:
+  debian: [libgnuplot-iostream-dev]
+  ubuntu: [libgnuplot-iostream-dev]
 gnuplot-x11:
   debian: [gnuplot-x11]
   ubuntu: [gnuplot-x11]
 golang-go:
   debian: [golang-go]
+  fedora: [golang-bin]
   gentoo: [dev-lang/go]
   nixos: [go]
   ubuntu: [golang-go]
 google-mock:
-  alpine: [gmock]
+  alpine:
+    '*': [gtest-dev, gmock]
+    '3.7': [gmock-dev]
+    '3.8': [gmock-dev]
   arch: [gmock]
   debian: [google-mock]
   fedora: [gmock-devel]
@@ -1454,6 +1528,7 @@ gphoto2:
   ubuntu: [gphoto2]
 gprbuild:
   debian: [gprbuild]
+  fedora: [gprbuild]
   ubuntu: [gprbuild]
 gpsd:
   debian: [gpsd]
@@ -1495,6 +1570,7 @@ graphviz:
   slackware: [graphviz]
   ubuntu: [graphviz]
 graphviz-dev:
+  alpine: [graphviz-dev]
   debian: [libgraphviz-dev]
   fedora: [graphviz-devel]
   nixos: [graphviz]
@@ -1547,6 +1623,7 @@ gstreamer0.10-pocketsphinx:
   gentoo: [app-accessibility/pocketsphinx]
   ubuntu: [gstreamer0.10-pocketsphinx]
 gstreamer1.0:
+  alpine: [gstreamer]
   arch: [gstreamer]
   debian: [gstreamer1.0-tools, libgstreamer1.0-0, gir1.2-gstreamer-1.0]
   fedora: [gstreamer1]
@@ -1557,6 +1634,7 @@ gstreamer1.0:
   rhel: [gstreamer1]
   ubuntu: [gstreamer1.0-tools, libgstreamer1.0-0, gir1.2-gstreamer-1.0]
 gstreamer1.0-alsa:
+  alpine: [gst-plugins-base]
   debian: [gstreamer1.0-alsa]
   fedora: [gstreamer1-plugins-base]
   nixos: [gst_all_1.gst-plugins-base]
@@ -1570,10 +1648,12 @@ gstreamer1.0-gl:
     stretch: null
   fedora: [gstreamer1-plugins-base]
   nixos: [gst_all_1.gst-plugins-base]
+  rhel: [gstreamer1-plugins-base]
   ubuntu:
     '*': [gstreamer1.0-gl]
     xenial: null
 gstreamer1.0-libav:
+  alpine: [gst-libav]
   arch: [gst-libav]
   debian: [gstreamer1.0-libav]
   fedora: [gstreamer1-libav]
@@ -1583,6 +1663,7 @@ gstreamer1.0-libav:
   opensuse: [gstreamer-plugins-libav]
   ubuntu: [gstreamer1.0-libav]
 gstreamer1.0-plugins-bad:
+  alpine: [gst-plugins-bad]
   arch: [gst-plugins-bad]
   debian: [gstreamer1.0-plugins-bad]
   fedora: [gstreamer1-plugins-bad-free]
@@ -1590,8 +1671,10 @@ gstreamer1.0-plugins-bad:
   nixos: [gst_all_1.gst-plugins-bad]
   openembedded: [gstreamer1.0-plugins-bad@openembedded-core]
   opensuse: [gstreamer-plugins-bad]
+  rhel: [gstreamer1-plugins-bad-free]
   ubuntu: [gstreamer1.0-plugins-bad]
 gstreamer1.0-plugins-base:
+  alpine: [gst-plugins-base]
   arch: [gst-plugins-base]
   debian: [gstreamer1.0-plugins-base, libgstreamer-plugins-base1.0-0, gir1.2-gst-plugins-base-1.0]
   fedora: [gstreamer1-plugins-base]
@@ -1599,8 +1682,10 @@ gstreamer1.0-plugins-base:
   nixos: [gst_all_1.gst-plugins-base]
   openembedded: [gstreamer1.0-plugins-base@openembedded-core]
   opensuse: [gstreamer-plugins-base]
+  rhel: [gstreamer1-plugins-base]
   ubuntu: [gstreamer1.0-plugins-base, libgstreamer-plugins-base1.0-0, gir1.2-gst-plugins-base-1.0]
 gstreamer1.0-plugins-good:
+  alpine: [gst-plugins-good]
   arch: [gst-plugins-good]
   debian: [gstreamer1.0-plugins-good]
   fedora: [gstreamer1-plugins-good]
@@ -1611,6 +1696,7 @@ gstreamer1.0-plugins-good:
   rhel: [gstreamer1-plugins-good]
   ubuntu: [gstreamer1.0-plugins-good, libgstreamer-plugins-good1.0-0]
 gstreamer1.0-plugins-ugly:
+  alpine: [gst-plugins-ugly]
   arch: [gst-plugins-ugly]
   debian: [gstreamer1.0-plugins-ugly]
   fedora: [gstreamer1-plugins-ugly]
@@ -1623,12 +1709,14 @@ gstreamer1.0-rtsp:
   debian: [gstreamer1.0-rtsp]
   ubuntu: [gstreamer1.0-rtsp]
 gstreamer1.0-tools:
+  alpine: [gstreamer-tools]
   debian: [gstreamer1.0-tools]
   fedora: [gstreamer1]
   gentoo: ['media-libs/gstreamer:1.0']
   opensuse: [gstreamer-utils]
   ubuntu: [gstreamer1.0-tools]
 gstreamer1.0-x:
+  alpine: [gst-plugins-base]
   arch: [gstreamer]
   debian: [gstreamer1.0-x]
   fedora: [gstreamer1-plugins-base]
@@ -1657,6 +1745,7 @@ gtk-doc-tools:
   nixos: [gtk-doc]
   ubuntu: [gtk-doc-tools]
 gtk2:
+  alpine: [gtk+2.0-dev]
   arch: [gtk2]
   debian: [libgtk2.0-dev]
   fedora: [gtk2-devel]
@@ -1672,6 +1761,7 @@ gtk2:
       packages: [gtk+2]
   ubuntu: [libgtk2.0-dev]
 gtk3:
+  alpine: [gtk+3.0-dev]
   arch: [gtk3]
   debian: [libgtk-3-dev]
   fedora: [gtk3-devel]
@@ -1700,6 +1790,7 @@ gurumdds-2.8:
   ubuntu:
     bionic: [gurumdds-2.8]
     focal: [gurumdds-2.8]
+    jammy: [gurumdds-2.8]
     xenial: [gurumdds-2.8]
 gv:
   arch: [gv]
@@ -1708,12 +1799,122 @@ gv:
   gentoo: [app-text/gv]
   nixos: [gv]
   ubuntu: [gv]
+gz-citadel:
+  ubuntu:
+    focal: [gz-citadel]
+gz-cmake2:
+  ubuntu:
+    focal: [libgz-cmake2-dev]
+    jammy: [libgz-cmake2-dev]
+gz-common3:
+  ubuntu:
+    focal: [libgz-common3-dev]
+gz-common4:
+  ubuntu:
+    focal: [libgz-common4-dev]
+    jammy: [libgz-common4-dev]
+gz-fortress:
+  ubuntu:
+    focal: [gz-fortress]
+    jammy: [gz-fortress]
+gz-fuel-tools4:
+  ubuntu:
+    focal: [libgz-fuel-tools4-dev]
+gz-fuel-tools7:
+  ubuntu:
+    focal: [libgz-fuel-tools7-dev]
+    jammy: [libgz-fuel-tools7-dev]
+gz-gui3:
+  ubuntu:
+    focal: [libgz-gui3-dev]
+gz-gui6:
+  ubuntu:
+    focal: [libgz-gui6-dev]
+    jammy: [libgz-gui6-dev]
+gz-launch2:
+  ubuntu:
+    focal: [libgz-launch2-dev]
+gz-launch5:
+  ubuntu:
+    focal: [libgz-launch5-dev]
+    jammy: [libgz-launch5-dev]
+gz-math6:
+  ubuntu:
+    focal: [libgz-math6-dev]
+    jammy: [libgz-math6-dev]
+gz-math6-eigen3:
+  ubuntu:
+    focal: [libgz-math6-eigen3-dev]
+    jammy: [libgz-math6-eigen3-dev]
+gz-msgs5:
+  ubuntu:
+    focal: [libgz-msgs5-dev]
+gz-msgs8:
+  ubuntu:
+    focal: [libgz-msgs8-dev]
+    jammy: [libgz-msgs8-dev]
+gz-physics2:
+  ubuntu:
+    focal: [libgz-physics2-dev]
+gz-physics5:
+  ubuntu:
+    focal: [libgz-physics5-dev]
+    jammy: [libgz-physics5-dev]
+gz-plugin:
+  ubuntu:
+    focal: [libgz-plugin-dev]
+    jammy: [libgz-plugin-dev]
+gz-rendering3:
+  ubuntu:
+    focal: [libgz-rendering3-dev]
+gz-rendering6:
+  ubuntu:
+    focal: [libgz-rendering6-dev]
+    jammy: [libgz-rendering6-dev]
+gz-sensors3:
+  ubuntu:
+    focal: [libgz-sensors3-dev]
+gz-sensors6:
+  ubuntu:
+    focal: [libgz-sensors6-dev]
+    jammy: [libgz-sensors6-dev]
+gz-sim3:
+  ubuntu:
+    focal: [libgz-sim3-dev]
+gz-sim6:
+  ubuntu:
+    focal: [libgz-sim6-dev]
+    jammy: [libgz-sim6-dev]
+gz-sim6-plugins:
+  ubuntu:
+    focal: [libgz-sim6-plugins]
+    jammy: [libgz-sim6-plugins]
+gz-tools:
+  ubuntu:
+    focal: [libgz-tools-dev]
+    jammy: [libgz-tools-dev]
+gz-transport11:
+  ubuntu:
+    focal: [libgz-transport11-dev]
+    jammy: [libgz-transport11-dev]
+gz-transport8:
+  ubuntu:
+    focal: [libgz-transport8-dev]
+gz-utils1:
+  ubuntu:
+    focal: [libgz-utils1-dev]
+    jammy: [libgz-utils1-dev]
+gz-utils1-cli:
+  ubuntu:
+    focal: [libgz-utils1-cli-dev]
+    jammy: [libgz-utils1-cli-dev]
 haproxy:
   debian: [haproxy]
   fedora: [haproxy]
   gentoo: [net-proxy/haproxy]
   ubuntu: [haproxy]
 hddtemp:
+  alpine: [hddtemp]
   arch: [hddtemp]
   debian: [hddtemp]
   fedora: [hddtemp]
@@ -1725,15 +1926,19 @@ hddtemp:
   opensuse: [hddtemp]
   rhel: [hddtemp]
   slackware: [hddtemp]
-  ubuntu: [hddtemp]
+  ubuntu:
+    '*': null
+    bionic: [hddtemp]
+    focal: [hddtemp]
+    impish: [hddtemp]
 hdf5:
   arch: [hdf5-cpp-fortran]
-  debian: [libhdf5-serial-dev]
+  debian: [libhdf5-dev]
   fedora: [hdf5-devel]
   gentoo: [sci-libs/hdf5]
   macports: [hdf5]
   nixos: [hdf5]
-  ubuntu: [libhdf5-serial-dev]
+  ubuntu: [libhdf5-dev]
 hdf5-tools:
   debian: [hdf5-tools]
   ubuntu: [hdf5-tools]
@@ -1771,6 +1976,7 @@ i2c-tools:
   gentoo: [sys-apps/i2c-tools]
   nixos: [i2c-tools]
   opensuse: [i2c-tools]
+  rhel: [i2c-tools]
   ubuntu: [i2c-tools]
 ifstat:
   debian: [ifstat]
@@ -1790,6 +1996,7 @@ ignition-cmake2:
   nixos: [ignition.cmake2]
   ubuntu:
     focal: [libignition-cmake2-dev]
+    jammy: [libignition-cmake2-dev]
 ignition-common3:
   debian:
     buster: [libignition-common3-dev]
@@ -1801,6 +2008,7 @@ ignition-common4:
     buster: [libignition-common4-dev]
   ubuntu:
     focal: [libignition-common4-dev]
+    jammy: [libignition-common4-dev]
 ignition-edifice:
   debian:
     buster: [ignition-edifice]
@@ -1811,6 +2019,7 @@ ignition-fortress:
     buster: [ignition-fortress]
   ubuntu:
     focal: [ignition-fortress]
+    jammy: [ignition-fortress]
 ignition-fuel-tools4:
   debian:
     buster: [libignition-fuel-tools4-dev]
@@ -1827,6 +2036,7 @@ ignition-fuel-tools7:
     buster: [libignition-fuel-tools7-dev]
   ubuntu:
     focal: [libignition-fuel-tools7-dev]
+    jammy: [libignition-fuel-tools7-dev]
 ignition-gazebo3:
   debian:
     buster: [libignition-gazebo3-dev]
@@ -1847,11 +2057,13 @@ ignition-gazebo6:
     buster: [libignition-gazebo6-dev]
   ubuntu:
     focal: [libignition-gazebo6-dev]
+    jammy: [libignition-gazebo6-dev]
 ignition-gazebo6-plugins:
   debian:
     buster: [libignition-gazebo6-plugins]
   ubuntu:
     focal: [libignition-gazebo6-plugins]
+    jammy: [libignition-gazebo6-plugins]
 ignition-gui3:
   debian:
     buster: [libignition-gui3-dev]
@@ -1867,6 +2079,7 @@ ignition-gui6:
     buster: [libignition-gui6-dev]
   ubuntu:
     focal: [libignition-gui6-dev]
+    jammy: [libignition-gui6-dev]
 ignition-launch2:
   debian:
     buster: [libignition-launch2-dev]
@@ -1882,18 +2095,21 @@ ignition-launch5:
     buster: [libignition-launch5-dev]
   ubuntu:
     focal: [libignition-launch5-dev]
+    jammy: [libignition-launch5-dev]
 ignition-math6:
   debian:
     buster: [libignition-math6-dev]
   nixos: [ignition.math6]
   ubuntu:
     focal: [libignition-math6-dev]
+    jammy: [libignition-math6-dev]
 ignition-math6-eigen3:
   debian:
     buster: [libignition-math6-eigen3-dev]
   nixos: [ignition.math6]
   ubuntu:
     focal: [libignition-math6-eigen3-dev]
+    jammy: [libignition-math6-eigen3-dev]
 ignition-msgs5:
   debian:
     buster: [libignition-msgs5-dev]
@@ -1910,6 +2126,7 @@ ignition-msgs8:
     buster: [libignition-msgs8-dev]
   ubuntu:
     focal: [libignition-msgs8-dev]
+    jammy: [libignition-msgs8-dev]
 ignition-physics2:
   debian:
     buster: [libignition-physics2-dev]
@@ -1925,11 +2142,13 @@ ignition-physics5:
     buster: [libignition-physics5-dev]
   ubuntu:
     focal: [libignition-physics5-dev]
+    jammy: [libignition-physics5-dev]
 ignition-plugin:
   debian:
     buster: [libignition-plugin-dev]
   ubuntu:
     focal: [libignition-plugin-dev]
+    jammy: [libignition-plugin-dev]
 ignition-rendering3:
   debian:
     buster: [libignition-rendering3-dev]
@@ -1945,6 +2164,7 @@ ignition-rendering6:
     buster: [libignition-rendering6-dev]
   ubuntu:
     focal: [libignition-rendering6-dev]
+    jammy: [libignition-rendering6-dev]
 ignition-sensors3:
   debian:
     buster: [libignition-sensors3-dev]
@@ -1960,12 +2180,14 @@ ignition-sensors6:
     buster: [libignition-sensors6-dev]
   ubuntu:
     focal: [libignition-sensors6-dev]
+    jammy: [libignition-sensors6-dev]
 ignition-tools:
   debian:
     buster: [libignition-tools-dev]
   nixos: [ignition.tools]
   ubuntu:
     focal: [libignition-tools-dev]
+    jammy: [libignition-tools-dev]
 ignition-transport10:
   debian:
     buster: [libignition-transport10-dev]
@@ -1976,6 +2198,7 @@ ignition-transport11:
     buster: [libignition-transport11-dev]
   ubuntu:
     focal: [libignition-transport11-dev]
+    jammy: [libignition-transport11-dev]
 ignition-transport8:
   debian:
     buster: [libignition-transport8-dev]
@@ -1987,11 +2210,13 @@ ignition-utils1:
     buster: [libignition-utils1-dev]
   ubuntu:
     focal: [libignition-utils1-dev]
+    jammy: [libignition-utils1-dev]
 ignition-utils1-cli:
   debian:
     buster: [libignition-utils1-cli-dev]
   ubuntu:
     focal: [libignition-utils1-cli-dev]
+    jammy: [libignition-utils1-cli-dev]
 imagemagick:
   arch: [imagemagick]
   debian: [imagemagick]
@@ -1999,6 +2224,13 @@ imagemagick:
   gentoo: [virtual/imagemagick-tools]
   nixos: [imagemagick]
   ubuntu: [imagemagick]
+intel-opencl-icd:
+  debian:
+    '*': [intel-opencl-icd]
+    buster: null
+  ubuntu:
+    '*': [intel-opencl-icd]
+    bionic: null
 intltool:
   arch: [intltool]
   debian: [intltool]
@@ -2044,6 +2276,7 @@ iproute2:
 iputils-ping:
   debian: [iputils-ping]
   fedora: [iputils]
+  nixos: [unixtools.ping]
   ubuntu: [iputils-ping]
 iwyu:
   debian: [iwyu]
@@ -2100,6 +2333,7 @@ java:
   rhel: [java]
   ubuntu: [default-jdk]
 joystick:
+  alpine: [linux-headers, linuxconsoletools]
   arch: [linuxconsole]
   debian: [joystick]
   fedora: [linuxconsoletools]
@@ -2114,6 +2348,7 @@ jq:
   fedora: [jq]
   gentoo: [app-misc/jq]
   nixos: [jq]
+  openembedded: [jq@meta-oe]
   rhel: [jq]
   ubuntu: [jq]
 julius-voxforge:
@@ -2179,6 +2414,22 @@ lib32asound2:
   fedora: ['alsa-lib(%{__isa_name}-32)', alsa-lib]
   gentoo: [media-libs/alsa-lib]
   ubuntu: [lib32asound2]
+libabsl-dev:
+  arch: [abseil-cpp]
+  debian:
+    '*': [libabsl-dev]
+    buster: null
+  fedora: [abseil-cpp-devel]
+  gentoo: [dev-cpp/abseil-cpp]
+  nixos: [abseil-cpp]
+  openembedded: [abseil-cpp@meta-oe]
+  rhel:
+    '*': [abseil-cpp-devel]
+    '7': null
+  ubuntu:
+    '*': [libabsl-dev]
+    bionic: null
+    focal: null
 libalglib-dev:
   debian: [libalglib-dev]
   fedora: [alglib-devel]
@@ -2189,6 +2440,13 @@ libann-dev:
   debian: [libann-dev]
   fedora: [ann-devel]
   ubuntu: [libann-dev]
+libao-dev:
+  alpine: [libao-dev]
+  debian: [libao-dev]
+  fedora: [libao-devel]
+  opensuse: [libao-devel]
+  rhel: [libao-devel]
+  ubuntu: [libao-dev]
 libapache2-mod-python:
   arch: [mod_python]
   debian: [libapache2-mod-python]
@@ -2226,6 +2484,7 @@ libatomic:
   arch: [gcc-libs]
   debian: [libatomic1]
   fedora: [libatomic]
+  gentoo: [sys-devel/gcc]
   nixos: []
   openembedded: [gcc-runtime@openembedded-core]
   rhel: [libatomic]
@@ -2265,6 +2524,13 @@ libb64-dev:
   gentoo: [libb64]
   nixos: [libb64]
   ubuntu: [libb64-dev]
+libbackward-cpp-dev:
+  debian: [libbackward-cpp-dev]
+  opensuse: [backward-cpp]
+  ubuntu:
+    '*': [libbackward-cpp-dev]
+    bionic: null
+    xenial: null
 libbison-dev:
   debian: [libbison-dev]
   fedora: [bison-devel]
@@ -2303,6 +2569,7 @@ libbluetooth-dev:
   rhel: [bluez-libs-devel]
   ubuntu: [libbluetooth-dev]
 libboost-atomic:
+  alpine: [boost]
   debian:
     bullseye: [libboost-atomic1.74.0]
     buster: [libboost-atomic1.67.0]
@@ -2319,6 +2586,7 @@ libboost-atomic:
     jammy: [libboost-atomic1.74.0]
     xenial: [libboost-atomic1.58.0]
 libboost-atomic-dev:
+  alpine: [boost-dev]
   debian: [libboost-atomic-dev]
   fedora: [boost-devel]
   gentoo: [dev-libs/boost]
@@ -2328,6 +2596,7 @@ libboost-atomic-dev:
   rhel: [boost-devel]
   ubuntu: [libboost-atomic-dev]
 libboost-chrono:
+  alpine: [boost]
   debian:
     bullseye: [libboost-chrono1.74.0]
     buster: [libboost-chrono1.67.0]
@@ -2344,6 +2613,7 @@ libboost-chrono:
     jammy: [libboost-chrono1.74.0]
     xenial: [libboost-chrono1.58.0]
 libboost-chrono-dev:
+  alpine: [boost-dev]
   debian: [libboost-chrono-dev]
   fedora: [boost-devel]
   gentoo: [dev-libs/boost]
@@ -2353,6 +2623,7 @@ libboost-chrono-dev:
   rhel: [boost-devel]
   ubuntu: [libboost-chrono-dev]
 libboost-date-time:
+  alpine: [boost-date_time]
   debian:
     bullseye: [libboost-date-time1.74.0]
     buster: [libboost-date-time1.67.0]
@@ -2369,6 +2640,7 @@ libboost-date-time:
     jammy: [libboost-date-time1.74.0]
     xenial: [libboost-date-time1.58.0]
 libboost-date-time-dev:
+  alpine: [boost-dev]
   debian: [libboost-date-time-dev]
   fedora: [boost-devel]
   gentoo: [dev-libs/boost]
@@ -2378,6 +2650,7 @@ libboost-date-time-dev:
   rhel: [boost-devel]
   ubuntu: [libboost-date-time-dev]
 libboost-dev:
+  alpine: [boost-dev]
   debian: [libboost-dev]
   fedora: [boost-devel]
   gentoo: [dev-libs/boost]
@@ -2387,6 +2660,7 @@ libboost-dev:
   rhel: [boost-devel]
   ubuntu: [libboost-dev]
 libboost-filesystem:
+  alpine: [boost-filesystem]
   debian:
     bullseye: [libboost-filesystem1.74.0]
     buster: [libboost-filesystem1.67.0]
@@ -2403,6 +2677,7 @@ libboost-filesystem:
     jammy: [libboost-filesystem1.74.0]
     xenial: [libboost-filesystem1.58.0]
 libboost-filesystem-dev:
+  alpine: [boost-dev]
   debian: [libboost-filesystem-dev]
   fedora: [boost-devel]
   gentoo: ['dev-libs/boost[python]']
@@ -2412,6 +2687,7 @@ libboost-filesystem-dev:
   rhel: [boost-devel]
   ubuntu: [libboost-filesystem-dev]
 libboost-iostreams:
+  alpine: [boost-iostreams]
   debian:
     bullseye: [libboost-iostreams1.74.0]
     buster: [libboost-iostreams1.67.0]
@@ -2428,6 +2704,7 @@ libboost-iostreams:
     jammy: [libboost-iostreams1.74.0]
     xenial: [libboost-iostreams1.58.0]
 libboost-iostreams-dev:
+  alpine: [boost-dev]
   debian: [libboost-iostreams-dev]
   fedora: [boost-devel]
   gentoo: [dev-libs/boost]
@@ -2468,6 +2745,7 @@ libboost-numpy-dev:
   rhel: [boost-devel]
   ubuntu: [libboost-numpy-dev]
 libboost-program-options:
+  alpine: [boost-program_options]
   debian:
     bullseye: [libboost-program-options1.74.0]
     buster: [libboost-program-options1.67.0]
@@ -2485,6 +2763,7 @@ libboost-program-options:
     jammy: [libboost-program-options1.74.0]
     xenial: [libboost-program-options1.58.0]
 libboost-program-options-dev:
+  alpine: [boost-dev]
   debian: [libboost-program-options-dev]
   fedora: [boost-devel]
   gentoo: [dev-libs/boost]
@@ -2494,7 +2773,9 @@ libboost-program-options-dev:
   rhel: [boost-devel]
   ubuntu: [libboost-program-options-dev]
 libboost-python:
-  alpine: [boost-python2]
+  alpine:
+    '*': [boost-python3]
+    '3.8': [boost-python]
   debian:
     bullseye: [libboost-python1.74.0]
     buster: [libboost-python1.67.0]
@@ -2514,7 +2795,7 @@ libboost-python:
     jammy: [libboost-python1.74.0]
     xenial: [libboost-python1.58.0]
 libboost-python-dev:
-  alpine: [boost-python2]
+  alpine: [boost-dev]
   debian: [libboost-python-dev]
   fedora: [boost-devel]
   gentoo: ['dev-libs/boost[python]']
@@ -2526,6 +2807,7 @@ libboost-python-dev:
     '7': [boost-devel, 'boost-python%{python3_pkgversion}-devel']
   ubuntu: [libboost-python-dev]
 libboost-random:
+  alpine: [boost-random]
   debian:
     bullseye: [libboost-random1.74.0]
     buster: [libboost-random1.67.0]
@@ -2543,6 +2825,7 @@ libboost-random:
     jammy: [libboost-random1.74.0]
     xenial: [libboost-random1.58.0]
 libboost-random-dev:
+  alpine: [boost-dev]
   debian: [libboost-random-dev]
   fedora: [boost-devel]
   gentoo: [dev-libs/boost]
@@ -2552,6 +2835,7 @@ libboost-random-dev:
   rhel: [boost-devel]
   ubuntu: [libboost-random-dev]
 libboost-regex:
+  alpine: [boost-regex]
   debian:
     bullseye: [libboost-regex1.74.0]
     buster: [libboost-regex1.67.0]
@@ -2568,6 +2852,7 @@ libboost-regex:
     jammy: [libboost-regex1.74.0]
     xenial: [libboost-regex1.58.0]
 libboost-regex-dev:
+  alpine: [boost-dev]
   debian: [libboost-regex-dev]
   fedora: [boost-devel]
   gentoo: [dev-libs/boost]
@@ -2602,6 +2887,7 @@ libboost-serialization-dev:
   rhel: [boost-devel]
   ubuntu: [libboost-serialization-dev]
 libboost-system:
+  alpine: [boost-system]
   debian:
     bullseye: [libboost-system1.74.0]
     buster: [libboost-system1.67.0]
@@ -2619,6 +2905,7 @@ libboost-system:
     jammy: [libboost-system1.74.0]
     xenial: [libboost-system1.58.0]
 libboost-system-dev:
+  alpine: [boost-dev]
   debian: [libboost-system-dev]
   fedora: [boost-devel]
   gentoo: [dev-libs/boost]
@@ -2628,6 +2915,7 @@ libboost-system-dev:
   rhel: [boost-devel]
   ubuntu: [libboost-system-dev]
 libboost-thread:
+  alpine: [boost-thread]
   debian:
     bullseye: [libboost-thread1.74.0]
     buster: [libboost-thread1.67.0]
@@ -2645,6 +2933,7 @@ libboost-thread:
     jammy: [libboost-thread1.74.0]
     xenial: [libboost-thread1.58.0]
 libboost-thread-dev:
+  alpine: [boost-dev]
   debian: [libboost-thread-dev]
   fedora: [boost-devel]
   gentoo: ['dev-libs/boost[threads]']
@@ -2676,6 +2965,17 @@ libboost-timer-dev:
   opensuse: [libboost_timer1_66_0-devel]
   rhel: [boost-devel]
   ubuntu: [libboost-timer-dev]
+libbsd-dev:
+  alpine: [libbsd]
+  arch: [libbsd]
+  debian: [libbsd-dev]
+  fedora: [libbsd-devel]
+  gentoo: [dev-libs/libbsd]
+  nixos: [libbsd]
+  osx:
+    homebrew:
+      packages: [libbsd]
+  ubuntu: [libbsd-dev]
 libcairo2-dev:
   arch: [cairo]
   debian: [libcairo2-dev]
@@ -2697,7 +2997,9 @@ libcap-dev:
   ubuntu: [libcap-dev]
 libcap-ng-dev:
   debian: [libcap-ng-dev]
+  fedora: [libcap-ng-devel]
   nixos: [libcap_ng]
+  rhel: [libcap-ng-devel]
   ubuntu: [libcap-ng-dev]
 libcap-ng0:
   debian: [libcap-ng0]
@@ -2744,9 +3046,7 @@ libcereal-dev:
   gentoo: [dev-libs/cereal]
   ubuntu: [libcereal-dev]
 libceres-dev:
-  debian:
-    buster: [libceres-dev]
-    stretch: [libceres-dev]
+  debian: [libceres-dev]
   fedora: [ceres-solver-devel]
   gentoo: ['sci-libs/ceres-solver[sparse,lapack]']
   nixos: [ceres-solver]
@@ -2785,8 +3085,10 @@ libcoin80-dev:
     xenial: [libcoin80-dev]
 libconfig++-dev:
   debian: [libconfig++-dev]
+  fedora: [libconfig-devel]
   gentoo: ['dev-libs/libconfig[cxx]']
   nixos: [libconfig]
+  rhel: [libconfig-devel]
   ubuntu: [libconfig++-dev]
 libconfig-dev:
   debian: [libconfig-dev]
@@ -2797,7 +3099,6 @@ libconfig-dev:
   ubuntu: [libconfig-dev]
 libconsole-bridge-dev:
   alpine: [console_bridge-dev]
-  arch: [console-bridge]
   debian: [libconsole-bridge-dev]
   fedora: [console-bridge-devel]
   freebsd: [ros-console_bridge]
@@ -2857,7 +3158,10 @@ libdc1394-dev:
   arch:
     pacman:
       packages: [libdc1394]
-  debian: [libdc1394-22-dev]
+  debian:
+    '*': [libdc1394-dev]
+    buster: [libdc1394-22-dev]
+    stretch: [libdc1394-22-dev]
   fedora: [libdc1394-devel]
   gentoo: [media-libs/libdc1394]
   nixos: [libdc1394]
@@ -2865,7 +3169,10 @@ libdc1394-dev:
   osx:
     macports:
       packages: [libdc1394]
-  ubuntu: [libdc1394-22-dev]
+  ubuntu:
+    '*': [libdc1394-dev]
+    bionic: [libdc1394-22-dev]
+    focal: [libdc1394-22-dev]
 libdevil-dev:
   arch: [devil]
   debian: [libdevil-dev]
@@ -2875,6 +3182,7 @@ libdevil-dev:
   ubuntu: [libdevil-dev]
 libdlib-dev:
   debian: [libdlib-dev]
+  fedora: [dlib-devel]
   gentoo:
     portage:
       packages: [sci-libs/dlib]
@@ -2891,7 +3199,9 @@ libdmtx-dev:
   ubuntu: [libdmtx-dev]
 libdpkg-dev:
   debian: [libdpkg-dev]
+  fedora: [dpkg-devel]
   nixos: [dpkg]
+  rhel: [dpkg-devel]
   ubuntu: [libdpkg-dev]
 libdrm-dev:
   arch: [libdrm]
@@ -2943,6 +3253,14 @@ libespeak-dev:
   gentoo: [app-accessibility/espeak]
   nixos: [espeak]
   ubuntu: [libespeak-dev]
+libespeak-ng1:
+  debian: [libespeak-ng1]
+  fedora: [espeak-ng]
+  opensuse: [libespeak-ng1]
+  rhel:
+    '*': [espeak-ng]
+    '7': null
+  ubuntu: [libespeak-ng1]
 libestools-dev:
   debian:
     buster: [libestools-dev]
@@ -2987,10 +3305,7 @@ libext2fs-dev:
   ubuntu: [libext2fs-dev]
 libfcl-dev:
   arch: [fcl]
-  debian:
-    buster: [libfcl-dev]
-    jessie: [libfcl-0.5-dev]
-    stretch: [libfcl-dev]
+  debian: [libfcl-dev]
   fedora: [fcl-devel]
   gentoo: [sci-libs/fcl]
   nixos: [fcl]
@@ -3031,6 +3346,7 @@ libflann:
   fedora: [flann]
   gentoo: [sci-libs/flann]
   macports: [flann]
+  nixos: [flann]
   openembedded: [libflann@meta-ros-common]
   rhel: [flann]
   ubuntu:
@@ -3070,39 +3386,56 @@ libfltk-dev:
   opensuse: [fltk-devel]
   rhel: [fltk-devel]
   slackware: [fltk]
-  ubuntu:
-    artful: [libfltk1.3-dev]
-    bionic: [libfltk1.3-dev]
-    focal: [libfltk1.3-dev]
-    lucid: [libfltk1.1-dev]
-    maverick: [libfltk1.1-dev]
-    natty: [libfltk1.1-dev]
-    oneiric: [libfltk1.1-dev]
-    precise: [libfltk1.1-dev]
-    quantal: [libfltk1.1-dev]
-    raring: [libfltk1.1-dev]
-    saucy: [libfltk1.1-dev]
-    trusty: [libfltk1.1-dev]
-    utopic: [libfltk1.3-dev]
-    vivid: [libfltk1.3-dev]
-    wily: [libfltk1.3-dev]
-    xenial: [libfltk1.3-dev]
-    yakkety: [libfltk1.3-dev]
-    zesty: [libfltk1.3-dev]
+  ubuntu: [libfltk1.3-dev]
 libfontconfig1-dev:
   debian: [libfontconfig1-dev]
   fedora: [fontconfig-devel]
   gentoo: [media-libs/fontconfig]
   ubuntu: [libfontconfig1-dev]
+libfreeimage:
+  alpine: [freeimage]
+  arch: [freeimage]
+  debian: [libfreeimage3]
+  fedora: [freeimage]
+  opensuse: [libfreeimage3]
+  rhel: [freeimage]
+  ubuntu: [libfreeimage3]
+libfreeimage-dev:
+  alpine: [freeimage-dev]
+  arch: [freeimage]
+  debian: [libfreeimage-dev]
+  fedora: [freeimage-devel]
+  opensuse: [freeimage-devel]
+  rhel: [freeimage-devel]
+  ubuntu: [libfreeimage-dev]
 libfreenect-dev:
   arch: [libfreenect]
   debian: [libfreenect-dev]
   fedora: [libfreenect-devel]
   nixos: [freenect]
   openembedded: [libfreenect@meta-ros-common]
+  rhel:
+    '*': [libfreenect-devel]
+    '7': null
   ubuntu: [libfreenect-dev]
+libfreetype-dev:
+  alpine: [freetype-dev]
+  arch: [freetype2]
+  debian:
+    '*': [libfreetype-dev]
+    buster: [libfreetype6-dev]
+  fedora: [freetype-devel]
+  gentoo: [media-libs/freetype]
+  nixos: [freetype]
+  openembedded: [freetype@openembedded-core]
+  opensuse: [freetype-devel]
+  rhel: [freetype-devel]
+  ubuntu:
+    '*': [libfreetype-dev]
+    bionic: [libfreetype6-dev]
 libfreetype6:
   alpine: [freetype]
+  arch: [freetype2]
   debian: [libfreetype6]
   fedora: [freetype-devel]
   gentoo: [media-libs/freetype]
@@ -3112,6 +3445,7 @@ libfreetype6:
   ubuntu: [libfreetype6]
 libfreetype6-dev:
   alpine: [freetype-dev]
+  arch: [freetype2]
   debian: [libfreetype6-dev]
   fedora: [freetype-devel]
   gentoo: [media-libs/freetype]
@@ -3159,6 +3493,15 @@ libftgl-dev:
   fedora: [ftgl-devel]
   gentoo: [media-libs/ftgl]
   ubuntu: [libftgl-dev]
+libgazebo-dev:
+  debian:
+    bullseye: [libgazebo-dev]
+    buster: [libgazebo11-dev]
+  fedora: [gazebo-devel]
+  gentoo: [=sci-electronics/gazebo-11*]
+  ubuntu:
+    focal: [libgazebo11-dev]
+    jammy: [libgazebo-dev]
 libgazebo11-dev:
   debian:
     buster: [libgazebo11-dev]
@@ -3166,6 +3509,7 @@ libgazebo11-dev:
   nixos: [gazebo_11]
   ubuntu:
     focal: [libgazebo11-dev]
+    jammy: [libgazebo-dev]
 libgazebo5-dev:
   arch: [gazebo]
   gentoo: [=sci-electronics/gazebo-5*]
@@ -3202,8 +3546,10 @@ libgconf2:
   ubuntu: [libgconf-2-4]
 libgdal-dev:
   debian: [libgdal-dev]
+  fedora: [gdal-devel]
   nixos: [gdal]
   opensuse: [gdal-devel]
+  rhel: [gdal-devel]
   ubuntu: [libgdal-dev]
 libgeographiclib-dev:
   debian:
@@ -3250,6 +3596,7 @@ libgif-dev:
   nixos: [giflib]
   ubuntu: [libgif-dev]
 libglew-dev:
+  alpine: [glew-dev]
   arch: [glew]
   debian: [libglew-dev]
   fedora: [glew-devel]
@@ -3260,6 +3607,7 @@ libglew-dev:
   rhel: [glew-devel]
   ubuntu: [libglew-dev]
 libglfw3-dev:
+  alpine: [glfw-dev]
   debian: [libglfw3-dev]
   fedora: [glfw-devel]
   gentoo: [media-libs/glfw]
@@ -3298,8 +3646,7 @@ libglw1-mesa:
 libgmock-dev:
   alpine: [gmock]
   arch: [gmock]
-  debian:
-    buster: [libgmock-dev]
+  debian: [libgmock-dev]
   fedora: [gmock-devel]
   freebsd: [googlemock]
   gentoo: [dev-cpp/gtest]
@@ -3308,7 +3655,8 @@ libgmock-dev:
   opensuse: [gmock-devel]
   rhel: [gmock-devel]
   ubuntu:
-    focal: [libgmock-dev]
+    '*': [libgmock-dev]
+    bionic: null
 libgmp:
   debian: [libgmp-dev]
   fedora: [gmp-devel]
@@ -3327,6 +3675,7 @@ libgomp1:
   gentoo: [sys-libs/gcc]
   ubuntu: [libgomp1]
 libgoogle-glog-dev:
+  alpine: [glog-dev]
   arch: [google-glog]
   debian: [libgoogle-glog-dev]
   fedora: [glog-devel]
@@ -3339,11 +3688,7 @@ libgoogle-glog-dev:
 libgpgme-dev:
   alpine: [gpgme-dev]
   arch: [gpgme]
-  debian:
-    buster: [libgpgme-dev]
-    jessie: [libgpgme11-dev]
-    stretch: [libgpgme-dev]
-    wheezy: [libgpgme11-dev]
+  debian: [libgpgme-dev]
   fedora: [gpgme-devel]
   freebsd: [gpgme]
   gentoo: [app-crypt/gpgme]
@@ -3382,6 +3727,7 @@ libgphoto-dev:
 libgpiod-dev:
   debian: [libgpiod-dev]
   fedora: [libgpiod-devel]
+  nixos: [libgpiod]
   opensuse: [libgpiod-devel]
   rhel:
     '*': [libgpiod-devel]
@@ -3433,6 +3779,7 @@ libgstreamer-plugins-base0.10-dev:
   gentoo: ['media-libs/gst-plugins-base:0.10']
   ubuntu: [libgstreamer-plugins-base0.10-dev]
 libgstreamer-plugins-base1.0-dev:
+  alpine: [gst-plugins-base-dev]
   arch: [gst-plugins-base]
   debian: [libgstreamer-plugins-base1.0-dev]
   fedora: [gstreamer1-plugins-base-devel]
@@ -3440,6 +3787,7 @@ libgstreamer-plugins-base1.0-dev:
   nixos: [gst_all_1.gst-plugins-base]
   openembedded: [gstreamer1.0-plugins-base@openembedded-core]
   opensuse: [gstreamer-plugins-base-devel]
+  rhel: [gstreamer1-plugins-base-devel]
   ubuntu: [libgstreamer-plugins-base1.0-dev]
 libgstreamer0.10-0:
   arch: [gstreamer0.10]
@@ -3456,6 +3804,7 @@ libgstreamer0.10-dev:
   gentoo: ['media-libs/gstreamer:0.10']
   ubuntu: [libgstreamer0.10-dev]
 libgstreamer1.0-dev:
+  alpine: [gstreamer-dev]
   arch: [gstreamer]
   debian: [libgstreamer1.0-dev]
   fedora: [gstreamer1-devel]
@@ -3463,6 +3812,7 @@ libgstreamer1.0-dev:
   nixos: [gst_all_1.gstreamer]
   openembedded: [gstreamer1.0@openembedded-core]
   opensuse: [gstreamer-devel]
+  rhel: [gstreamer1-devel]
   ubuntu: [libgstreamer1.0-dev]
 libgstrtspserver-1.0-0:
   debian: [libgstrtspserver-1.0-0]
@@ -3509,6 +3859,7 @@ libhidapi-dev:
 libi2c-dev:
   arch: [linux-api-headers]
   debian: [libi2c-dev]
+  fedora: [libi2c-devel]
   gentoo: [sys-apps/i2c-tools]
   nixos: [i2c-tools]
   ubuntu: [libi2c-dev]
@@ -3651,6 +4002,7 @@ libirrlicht-dev:
   nixos: [irrlicht]
   ubuntu: [libirrlicht-dev]
 libiw-dev:
+  alpine: [wireless-tools-dev]
   debian: [libiw-dev]
   fedora: [wireless-tools-devel]
   gentoo: [net-wireless/wireless-tools]
@@ -3658,6 +4010,8 @@ libiw-dev:
   ubuntu: [libiw-dev]
 libjack-dev:
   debian: [libjack-dev]
+  fedora: [jack-audio-connection-kit-devel]
+  rhel: [jack-audio-connection-kit-devel]
   ubuntu: [libjack-dev]
 libjackson-json-java:
   debian: [libjackson-json-java]
@@ -3665,8 +4019,10 @@ libjackson-json-java:
   ubuntu: [libjackson-json-java]
 libjansson-dev:
   debian: [libjansson-dev]
+  fedora: [jansson-devel]
   gentoo: [dev-libs/jansson]
   nixos: [jansson]
+  rhel: [jansson-devel]
   ubuntu: [libjansson-dev]
 libjaxp1.3-java:
   debian: [libjaxp1.3-java]
@@ -3677,12 +4033,9 @@ libjaxp1.3-java:
     wily: [libjaxp1.3-java]
     xenial: [libjaxp1.3-java]
 libjpeg:
+  alpine: [libjpeg-turbo-dev]
   arch: [libjpeg-turbo]
-  debian:
-    buster: [libjpeg-dev]
-    jessie: [libjpeg62-turbo-dev]
-    stretch: [libjpeg-dev]
-    wheezy: [libjpeg8-dev]
+  debian: [libjpeg-dev]
   fedora: [libjpeg-turbo-devel]
   freebsd: [libjpeg-turbo]
   gentoo: [virtual/jpeg]
@@ -3692,26 +4045,7 @@ libjpeg:
   opensuse: [libjpeg8-devel]
   rhel: [libjpeg-turbo-devel]
   slackware: [libjpeg-turbo]
-  ubuntu:
-    artful: [libjpeg-dev]
-    bionic: [libjpeg-dev]
-    focal: [libjpeg-dev]
-    lucid: [libjpeg62-dev]
-    maverick: [libjpeg62-dev]
-    natty: [libjpeg62-dev]
-    oneiric: [libjpeg62-dev]
-    precise: [libjpeg-dev]
-    quantal: [libjpeg-dev]
-    raring: [libjpeg-dev]
-    saucy: [libjpeg-dev]
-    trusty: [libjpeg-dev]
-    trusty_python3: [libjpeg-dev]
-    utopic: [libjpeg-dev]
-    vivid: [libjpeg-dev]
-    wily: [libjpeg-dev]
-    xenial: [libjpeg-dev]
-    yakkety: [libjpeg-dev]
-    zesty: [libjpeg-dev]
+  ubuntu: [libjpeg-dev]
 libjson-glib:
   arch: [json-glib]
   debian: [libjson-glib-dev]
@@ -3732,6 +4066,7 @@ libjson0-dev:
   rhel: [json-c-devel]
   ubuntu: [libjson0-dev]
 libjsoncpp:
+  alpine: [jsoncpp]
   debian: [libjsoncpp1]
   fedora: [jsoncpp]
   gentoo: [dev-libs/jsoncpp]
@@ -3740,14 +4075,13 @@ libjsoncpp:
   opensuse: [libjsoncpp19]
   rhel: [jsoncpp]
   ubuntu:
-    '*': [libjsoncpp1]
-    precise: [libjsoncpp0]
-    saucy: [libjsoncpp0]
+    '*': [libjsoncpp25]
+    bionic: [libjsoncpp1]
+    focal: [libjsoncpp1]
     trusty: [libjsoncpp0]
-    utopic: [libjsoncpp0]
-    vivid: [libjsoncpp0]
-    wily: [libjsoncpp0v5]
+    xenial: [libjsoncpp1]
 libjsoncpp-dev:
+  alpine: [jsoncpp]
   arch: [jsoncpp]
   debian: [libjsoncpp-dev]
   fedora: [jsoncpp-devel]
@@ -3757,6 +4091,24 @@ libjsoncpp-dev:
   opensuse: [jsoncpp-devel]
   rhel: [jsoncpp-devel]
   ubuntu: [libjsoncpp-dev]
+libjsonrpccpp-client0:
+  debian: [libjsonrpccpp-client0]
+  ubuntu: [libjsonrpccpp-client0]
+libjsonrpccpp-common0:
+  debian: [libjsonrpccpp-common0]
+  ubuntu: [libjsonrpccpp-common0]
+libjsonrpccpp-dev:
+  debian: [libjsonrpccpp-dev]
+  ubuntu: [libjsonrpccpp-dev]
+libjsonrpccpp-server0:
+  debian: [libjsonrpccpp-server0]
+  ubuntu: [libjsonrpccpp-server0]
+libjsonrpccpp-stub0:
+  debian: [libjsonrpccpp-stub0]
+  ubuntu: [libjsonrpccpp-stub0]
+libjsonrpccpp-tools:
+  debian: [libjsonrpccpp-tools]
+  ubuntu: [libjsonrpccpp-tools]
 libkdtree++-dev:
   debian: [libkdtree++-dev]
   fedora: [libkdtree++-devel]
@@ -3764,7 +4116,11 @@ libkdtree++-dev:
 libkml-dev:
   arch: [libkml]
   debian: [libkml-dev]
+  fedora: [libkml-devel]
   nixos: [libkml]
+  rhel:
+    '*': [libkml-devel]
+    '7': null
   ubuntu: [libkml-dev]
 liblapack-dev:
   arch: [lapack]
@@ -3778,6 +4134,7 @@ liblapack-dev:
   ubuntu: [liblapack-dev]
 liblapacke-dev:
   debian: [liblapacke-dev]
+  fedora: [lapack-devel]
   ubuntu: [liblapacke-dev]
 liblcm:
   debian: [liblcm1]
@@ -3808,12 +4165,24 @@ liblinphone-dev:
   gentoo: [net-voip/linphone]
   nixos: [liblinphone]
   ubuntu: [liblinphone-dev]
+liblmdb-dev:
+  alpine: [lmdb-dev]
+  arch: [lmdb]
+  debian: [liblmdb-dev]
+  fedora: [lmdb-devel]
+  gentoo: [dev-db/lmdb]
+  macports: [lmdb]
+  nixos: [lmdb]
+  opensuse: [lmdb-devel]
+  rhel: [lmdb-devel]
+  ubuntu: [liblmdb-dev]
 liblttng-ust-dev:
   arch: [lttng-ust]
   debian: [liblttng-ust-dev]
   fedora: [lttng-ust-devel]
   gentoo: [dev-util/lttng-ust]
   nixos: [lttng-ust]
+  openembedded: [lttng-ust@openembedded-core]
   rhel: [lttng-ust-devel]
   ubuntu: [liblttng-ust-dev]
 liblzma-dev:
@@ -3834,6 +4203,9 @@ libmarble-dev:
   fedora: [marble-widget-qt5-devel]
   gentoo: [kde-base/marble]
   ubuntu: [libmarble-dev]
+libmbedtls-dev:
+  debian: [libmbedtls-dev]
+  ubuntu: [libmbedtls-dev]
 libmicrohttpd:
   debian: [libmicrohttpd-dev]
   fedora: [libmicrohttpd-devel]
@@ -3967,20 +4339,20 @@ libnewmat10-dev:
   ubuntu: [libnewmat10-dev]
 libnl-3:
   arch: [libnl]
-  debian: [libnl-3-200, libnl-genl-3-200]
+  debian: [libnl-3-200, libnl-genl-3-200, libnl-route-3-200]
   fedora: [libnl3]
   gentoo: ['dev-libs/libnl:3']
   nixos: [libnl]
   openembedded: [libnl@openembedded-core]
-  ubuntu: [libnl-3-200, libnl-genl-3-200]
+  ubuntu: [libnl-3-200, libnl-genl-3-200, libnl-route-3-200]
 libnl-3-dev:
   arch: [libnl]
-  debian: [libnl-3-dev, libnl-genl-3-dev]
+  debian: [libnl-3-dev, libnl-genl-3-dev, libnl-route-3-dev]
   fedora: [libnl3-devel]
   gentoo: ['dev-libs/libnl:3']
   nixos: [libnl]
   openembedded: [libnl@openembedded-core]
-  ubuntu: [libnl-3-dev, libnl-genl-3-dev]
+  ubuntu: [libnl-3-dev, libnl-genl-3-dev, libnl-route-3-dev]
 libnl-dev:
   arch: [libnl1]
   debian: [libnl-dev]
@@ -4022,6 +4394,7 @@ libnss3-dev:
   nixos: [nss]
   ubuntu: [libnss3-dev]
 libogg:
+  alpine: [libogg-dev]
   arch: [libogg]
   debian: [libogg-dev]
   fedora: [libogg-devel]
@@ -4035,6 +4408,7 @@ libogg:
   slackware: [libogg]
   ubuntu: [libogg-dev]
 libogre:
+  alpine: [ogre]
   arch: [ogre-1.9]
   debian:
     buster: [libogre-1.9.0v5]
@@ -4049,26 +4423,15 @@ libogre:
   openembedded: [ogre@meta-ros-common]
   opensuse: [ogre-devel]
   slackware: [ogre]
+  ubuntu: [libogre-1.9.0v5]
+libogre-1.12-dev:
+  debian:
+    bullseye: [libogre-1.12-dev]
   ubuntu:
-    artful: [libogre-1.9-dev]
-    bionic: [libogre-1.9.0v5]
-    focal: [libogre-1.9.0v5]
-    lucid: [libogre-dev]
-    maverick: [libogre-dev]
-    natty: [libogre-dev]
-    oneiric: [libogre-dev]
-    precise: [libogre-dev]
-    quantal: [libogre-dev]
-    raring: [libogre-dev]
-    saucy: [libogre-1.8-dev]
-    trusty: [libogre-1.8-dev]
-    utopic: [libogre-1.9-dev]
-    vivid: [libogre-1.9-dev]
-    wily: [libogre-1.9-dev]
-    xenial: [libogre-1.9.0v5]
-    yakkety: [libogre-1.9-dev]
-    zesty: [libogre-1.9-dev]
+    focal: [libogre-1.12-dev]
+    jammy: [libogre-1.12-dev]
 libogre-dev:
+  alpine: [ogre-dev]
   arch: [ogre-1.9]
   debian:
     buster: [libogre-1.9-dev]
@@ -4083,25 +4446,12 @@ libogre-dev:
   openembedded: [ogre@meta-ros-common]
   opensuse: [libOgreMain-devel, libOgreOverlay-devel, libOgrePaging-devel, libOgreProperty-devel, libOgreRTShaderSystem-devel, libOgreTerrain-devel, libOgreVolume-devel]
   slackware: [ogre]
+  ubuntu: [libogre-1.9-dev]
+libogre1.12.10:
+  debian:
+    bullseye: [libogre1.12.10]
   ubuntu:
-    artful: [libogre-1.9-dev]
-    bionic: [libogre-1.9-dev]
-    focal: [libogre-1.9-dev]
-    lucid: [libogre-dev]
-    maverick: [libogre-dev]
-    natty: [libogre-dev]
-    oneiric: [libogre-dev]
-    precise: [libogre-dev]
-    quantal: [libogre-dev]
-    raring: [libogre-dev]
-    saucy: [libogre-1.8-dev]
-    trusty: [libogre-1.8-dev]
-    utopic: [libogre-1.9-dev]
-    vivid: [libogre-1.9-dev]
-    wily: [libogre-1.9-dev]
-    xenial: [libogre-1.9-dev]
-    yakkety: [libogre-1.9-dev]
-    zesty: [libogre-1.9-dev]
+    jammy: [libogre1.12.10]
 libois-dev:
   arch: [ois]
   debian: [libois-dev]
@@ -4123,6 +4473,14 @@ libopal-dev:
   fedora: [opal-devel]
   gentoo: [net-libs/opal]
   ubuntu: [libopal-dev]
+libopen3d-dev:
+  debian:
+    '*': [libopen3d-dev]
+    buster: null
+  ubuntu:
+    '*': [libopen3d-dev]
+    bionic: null
+    focal: null
 libopenal-dev:
   arch: [openal]
   debian: [libopenal-dev]
@@ -4152,7 +4510,7 @@ libopencv-dev:
   freebsd: [opencv-core]
   gentoo: [media-libs/opencv]
   macports: [opencv]
-  nixos: [opencv3]
+  nixos: [opencv]
   openembedded: [opencv@meta-oe]
   opensuse: [opencv-devel]
   rhel: [opencv-devel]
@@ -4162,6 +4520,7 @@ libopencv-imgproc-dev:
   debian: [libopencv-imgproc-dev]
   fedora: [opencv-devel]
   gentoo: [media-libs/opencv]
+  openembedded: [opencv@meta-oe]
   rhel: [opencv-devel]
   ubuntu: [libopencv-imgproc-dev]
 libopenexr-dev:
@@ -4177,6 +4536,7 @@ libopenni-dev:
   debian: [libopenni-dev]
   fedora: [openni-devel]
   gentoo: [dev-libs/OpenNI]
+  rhel: [openni-devel]
   ubuntu: [libopenni-dev]
 libopenni-nite-dev:
   arch: [primesense-nite]
@@ -4200,6 +4560,9 @@ libopenni2-dev:
   fedora: [openni-devel]
   gentoo: [dev-libs/OpenNI2]
   nixos: [openni2]
+  rhel:
+    '*': [libfreenect-openni]
+    '7': null
   ubuntu: [libopenni2-dev]
 libopenscenegraph:
   arch: [openscenegraph]
@@ -4270,6 +4633,7 @@ liborocos-bfl-dev:
   fedora: [orocos-bfl-devel]
   ubuntu: [liborocos-bfl-dev]
 liborocos-kdl:
+  alpine: [orocos-kdl]
   debian:
     '*': [liborocos-kdl1.4]
     stretch: [liborocos-kdl1.3]
@@ -4277,16 +4641,25 @@ liborocos-kdl:
   gentoo: [sci-libs/orocos_kdl]
   nixos: [orocos-kdl]
   openembedded: [orocos-kdl@meta-ros1-noetic]
+  rhel:
+    '*': [orocos-kdl]
+    '7': null
   ubuntu:
-    '*': [liborocos-kdl1.4]
+    '*': [liborocos-kdl1.5]
     bionic: [liborocos-kdl1.3]
+    focal: [liborocos-kdl1.4]
+    impish: [liborocos-kdl1.4]
     xenial: [liborocos-kdl1.3]
 liborocos-kdl-dev:
+  alpine: [orocos-kdl-dev]
   debian: [liborocos-kdl-dev]
   fedora: [orocos-kdl-devel]
   gentoo: [sci-libs/orocos_kdl]
   nixos: [orocos-kdl]
   openembedded: [orocos-kdl@meta-ros1-noetic]
+  rhel:
+    '*': [orocos-kdl-devel]
+    '7': null
   ubuntu: [liborocos-kdl-dev]
 libosmesa6-dev:
   arch: [mesa]
@@ -4295,6 +4668,7 @@ libosmesa6-dev:
   gentoo: ['media-libs/mesa[osmesa]']
   ubuntu: [libosmesa6-dev]
 libpcap:
+  alpine: [libpcap-dev]
   arch:
     pacman:
       packages: [libpcap]
@@ -4307,6 +4681,7 @@ libpcap:
   rhel: [libpcap-devel]
   ubuntu: [libpcap0.8-dev]
 libpcl-all:
+  alpine: [pcl]
   arch: [pcl]
   debian:
     bullseye: [libpcl-apps1.11, libpcl-common1.11, libpcl-features1.11, libpcl-filters1.11, libpcl-io1.11, libpcl-kdtree1.11, libpcl-keypoints1.11, libpcl-ml1.11, libpcl-octree1.11, libpcl-outofcore1.11, libpcl-people1.11, libpcl-recognition1.11, libpcl-registration1.11, libpcl-sample-consensus1.11, libpcl-search1.11, libpcl-segmentation1.11, libpcl-stereo1.11, libpcl-surface1.11, libpcl-tracking1.11, libpcl-visualization1.11]
@@ -4326,6 +4701,7 @@ libpcl-all:
     jammy: [libpcl-apps1.12, libpcl-common1.12, libpcl-features1.12, libpcl-filters1.12, libpcl-io1.12, libpcl-kdtree1.12, libpcl-keypoints1.12, libpcl-ml1.12, libpcl-octree1.12, libpcl-outofcore1.12, libpcl-people1.12, libpcl-recognition1.12, libpcl-registration1.12, libpcl-sample-consensus1.12, libpcl-search1.12, libpcl-segmentation1.12, libpcl-stereo1.12, libpcl-surface1.12, libpcl-tracking1.12, libpcl-visualization1.12]
     xenial: [libpcl1.7]
 libpcl-all-dev:
+  alpine: [pcl-dev]
   arch: [pcl]
   debian: [libpcl-dev]
   fedora: [pcl-devel]
@@ -4338,6 +4714,346 @@ libpcl-all-dev:
   rhel: [pcl-devel]
   slackware: [pcl]
   ubuntu: [libpcl-dev]
+libpcl-apps:
+  alpine: [pcl-libs]
+  debian:
+    bullseye: [libpcl-apps1.11]
+    buster: [libpcl-apps1.9]
+  fedora: [pcl]
+  freebsd: [libpcl]
+  gentoo: [sci-libs/pcl]
+  macports: [libpcl]
+  nixos: [pcl]
+  openembedded: [pcl@meta-ros-common]
+  rhel: [pcl]
+  slackware: [pcl]
+  ubuntu:
+    bionic: [libpcl-apps1.8]
+    focal: [libpcl-apps1.10]
+    jammy: [libpcl-apps1.12]
+libpcl-common:
+  alpine: [pcl-libs]
+  debian:
+    bullseye: [libpcl-common1.11]
+    buster: [libpcl-common1.9]
+  fedora: [pcl]
+  freebsd: [libpcl]
+  gentoo: [sci-libs/pcl]
+  macports: [libpcl]
+  nixos: [pcl]
+  openembedded: [pcl@meta-ros-common]
+  rhel: [pcl]
+  slackware: [pcl]
+  ubuntu:
+    bionic: [libpcl-common1.8]
+    focal: [libpcl-common1.10]
+    jammy: [libpcl-common1.12]
+libpcl-features:
+  alpine: [pcl-libs]
+  debian:
+    bullseye: [libpcl-features1.11]
+    buster: [libpcl-features1.9]
+  fedora: [pcl]
+  freebsd: [libpcl]
+  gentoo: [sci-libs/pcl]
+  macports: [libpcl]
+  nixos: [pcl]
+  openembedded: [pcl@meta-ros-common]
+  rhel: [pcl]
+  slackware: [pcl]
+  ubuntu:
+    bionic: [libpcl-features1.8]
+    focal: [libpcl-features1.10]
+    jammy: [libpcl-features1.12]
+libpcl-filters:
+  alpine: [pcl-libs]
+  debian:
+    bullseye: [libpcl-filters1.11]
+    buster: [libpcl-filters1.9]
+  fedora: [pcl]
+  freebsd: [libpcl]
+  gentoo: [sci-libs/pcl]
+  macports: [libpcl]
+  nixos: [pcl]
+  openembedded: [pcl@meta-ros-common]
+  rhel: [pcl]
+  slackware: [pcl]
+  ubuntu:
+    bionic: [libpcl-filters1.8]
+    focal: [libpcl-filters1.10]
+    jammy: [libpcl-filters1.12]
+libpcl-io:
+  alpine: [pcl-libs]
+  debian:
+    bullseye: [libpcl-io1.11]
+    buster: [libpcl-io1.9]
+  fedora: [pcl]
+  freebsd: [libpcl]
+  gentoo: [sci-libs/pcl]
+  macports: [libpcl]
+  nixos: [pcl]
+  openembedded: [pcl@meta-ros-common]
+  rhel: [pcl]
+  slackware: [pcl]
+  ubuntu:
+    bionic: [libpcl-io1.8]
+    focal: [libpcl-io1.10]
+    jammy: [libpcl-io1.12]
+libpcl-kdtree:
+  alpine: [pcl-libs]
+  debian:
+    bullseye: [libpcl-kdtree1.11]
+    buster: [libpcl-kdtree1.9]
+  fedora: [pcl]
+  freebsd: [libpcl]
+  gentoo: [sci-libs/pcl]
+  macports: [libpcl]
+  nixos: [pcl]
+  openembedded: [pcl@meta-ros-common]
+  rhel: [pcl]
+  slackware: [pcl]
+  ubuntu:
+    bionic: [libpcl-kdtree1.8]
+    focal: [libpcl-kdtree1.10]
+    jammy: [libpcl-kdtree1.12]
+libpcl-keypoints:
+  alpine: [pcl-libs]
+  debian:
+    bullseye: [libpcl-keypoints1.11]
+    buster: [libpcl-keypoints1.9]
+  fedora: [pcl]
+  freebsd: [libpcl]
+  gentoo: [sci-libs/pcl]
+  macports: [libpcl]
+  nixos: [pcl]
+  openembedded: [pcl@meta-ros-common]
+  rhel: [pcl]
+  slackware: [pcl]
+  ubuntu:
+    bionic: [libpcl-keypoints1.8]
+    focal: [libpcl-keypoints1.10]
+    jammy: [libpcl-keypoints1.12]
+libpcl-ml:
+  alpine: [pcl-libs]
+  debian:
+    bullseye: [libpcl-ml1.11]
+    buster: [libpcl-ml1.9]
+  fedora: [pcl]
+  freebsd: [libpcl]
+  gentoo: [sci-libs/pcl]
+  macports: [libpcl]
+  nixos: [pcl]
+  openembedded: [pcl@meta-ros-common]
+  rhel: [pcl]
+  slackware: [pcl]
+  ubuntu:
+    bionic: [libpcl-ml1.8]
+    focal: [libpcl-ml1.10]
+    jammy: [libpcl-ml1.12]
+libpcl-octree:
+  alpine: [pcl-libs]
+  debian:
+    bullseye: [libpcl-octree1.11]
+    buster: [libpcl-octree1.9]
+  fedora: [pcl]
+  freebsd: [libpcl]
+  gentoo: [sci-libs/pcl]
+  macports: [libpcl]
+  nixos: [pcl]
+  openembedded: [pcl@meta-ros-common]
+  rhel: [pcl]
+  slackware: [pcl]
+  ubuntu:
+    bionic: [libpcl-octree1.8]
+    focal: [libpcl-octree1.10]
+    jammy: [libpcl-octree1.12]
+libpcl-outofcore:
+  alpine: [pcl-libs]
+  debian:
+    bullseye: [libpcl-outofcore1.11]
+    buster: [libpcl-outofcore1.9]
+  fedora: [pcl]
+  freebsd: [libpcl]
+  gentoo: [sci-libs/pcl]
+  macports: [libpcl]
+  nixos: [pcl]
+  openembedded: [pcl@meta-ros-common]
+  rhel: [pcl]
+  slackware: [pcl]
+  ubuntu:
+    bionic: [libpcl-outofcore1.8]
+    focal: [libpcl-outofcore1.10]
+    jammy: [libpcl-outofcore1.12]
+libpcl-people:
+  alpine: [pcl-libs]
+  debian:
+    bullseye: [libpcl-people1.11]
+    buster: [libpcl-people1.9]
+  fedora: [pcl]
+  freebsd: [libpcl]
+  gentoo: [sci-libs/pcl]
+  macports: [libpcl]
+  nixos: [pcl]
+  openembedded: [pcl@meta-ros-common]
+  rhel: [pcl]
+  slackware: [pcl]
+  ubuntu:
+    bionic: [libpcl-people1.8]
+    focal: [libpcl-people1.10]
+    jammy: [libpcl-people1.12]
+libpcl-recognition:
+  alpine: [pcl-libs]
+  debian:
+    bullseye: [libpcl-recognition1.11]
+    buster: [libpcl-recognition1.9]
+  fedora: [pcl]
+  freebsd: [libpcl]
+  gentoo: [sci-libs/pcl]
+  macports: [libpcl]
+  nixos: [pcl]
+  openembedded: [pcl@meta-ros-common]
+  rhel: [pcl]
+  slackware: [pcl]
+  ubuntu:
+    bionic: [libpcl-recognition1.8]
+    focal: [libpcl-recognition1.10]
+    jammy: [libpcl-recognition1.12]
+libpcl-registration:
+  alpine: [pcl-libs]
+  debian:
+    bullseye: [libpcl-registration1.11]
+    buster: [libpcl-registration1.9]
+  fedora: [pcl]
+  freebsd: [libpcl]
+  gentoo: [sci-libs/pcl]
+  macports: [libpcl]
+  nixos: [pcl]
+  openembedded: [pcl@meta-ros-common]
+  rhel: [pcl]
+  slackware: [pcl]
+  ubuntu:
+    bionic: [libpcl-registration1.8]
+    focal: [libpcl-registration1.10]
+    jammy: [libpcl-registration1.12]
+libpcl-sample-consensus:
+  alpine: [pcl-libs]
+  debian:
+    bullseye: [libpcl-sample-consensus1.11]
+    buster: [libpcl-sample-consensus1.9]
+  fedora: [pcl]
+  freebsd: [libpcl]
+  gentoo: [sci-libs/pcl]
+  macports: [libpcl]
+  nixos: [pcl]
+  openembedded: [pcl@meta-ros-common]
+  rhel: [pcl]
+  slackware: [pcl]
+  ubuntu:
+    bionic: [libpcl-sample-consensus1.8]
+    focal: [libpcl-sample-consensus1.10]
+    jammy: [libpcl-sample-consensus1.12]
+libpcl-search:
+  alpine: [pcl-libs]
+  debian:
+    bullseye: [libpcl-search1.11]
+    buster: [libpcl-search1.9]
+  fedora: [pcl]
+  freebsd: [libpcl]
+  gentoo: [sci-libs/pcl]
+  macports: [libpcl]
+  nixos: [pcl]
+  openembedded: [pcl@meta-ros-common]
+  rhel: [pcl]
+  slackware: [pcl]
+  ubuntu:
+    bionic: [libpcl-search1.8]
+    focal: [libpcl-search1.10]
+    jammy: [libpcl-search1.12]
+libpcl-segmentation:
+  alpine: [pcl-libs]
+  debian:
+    bullseye: [libpcl-segmentation1.11]
+    buster: [libpcl-segmentation1.9]
+  fedora: [pcl]
+  freebsd: [libpcl]
+  gentoo: [sci-libs/pcl]
+  macports: [libpcl]
+  nixos: [pcl]
+  openembedded: [pcl@meta-ros-common]
+  rhel: [pcl]
+  slackware: [pcl]
+  ubuntu:
+    bionic: [libpcl-segmentation1.8]
+    focal: [libpcl-segmentation1.10]
+    jammy: [libpcl-segmentation1.12]
+libpcl-stereo:
+  alpine: [pcl-libs]
+  debian:
+    bullseye: [libpcl-stereo1.11]
+    buster: [libpcl-stereo1.9]
+  fedora: [pcl]
+  freebsd: [libpcl]
+  gentoo: [sci-libs/pcl]
+  macports: [libpcl]
+  nixos: [pcl]
+  openembedded: [pcl@meta-ros-common]
+  rhel: [pcl]
+  slackware: [pcl]
+  ubuntu:
+    bionic: [libpcl-stereo1.8]
+    focal: [libpcl-stereo1.10]
+    jammy: [libpcl-stereo1.12]
+libpcl-surface:
+  alpine: [pcl-libs]
+  debian:
+    bullseye: [libpcl-surface1.11]
+    buster: [libpcl-surface1.9]
+  fedora: [pcl]
+  freebsd: [libpcl]
+  gentoo: [sci-libs/pcl]
+  macports: [libpcl]
+  nixos: [pcl]
+  openembedded: [pcl@meta-ros-common]
+  rhel: [pcl]
+  slackware: [pcl]
+  ubuntu:
+    bionic: [libpcl-surface1.8]
+    focal: [libpcl-surface1.10]
+    jammy: [libpcl-surface1.12]
+libpcl-tracking:
+  alpine: [pcl-libs]
+  debian:
+    bullseye: [libpcl-tracking1.11]
+    buster: [libpcl-tracking1.9]
+  fedora: [pcl]
+  freebsd: [libpcl]
+  gentoo: [sci-libs/pcl]
+  macports: [libpcl]
+  nixos: [pcl]
+  openembedded: [pcl@meta-ros-common]
+  rhel: [pcl]
+  slackware: [pcl]
+  ubuntu:
+    bionic: [libpcl-tracking1.8]
+    focal: [libpcl-tracking1.10]
+    jammy: [libpcl-tracking1.12]
+libpcl-visualization:
+  alpine: [pcl-libs]
+  debian:
+    bullseye: [libpcl-visualization1.11]
+    buster: [libpcl-visualization1.9]
+  fedora: [pcl]
+  freebsd: [libpcl]
+  gentoo: [sci-libs/pcl]
+  macports: [libpcl]
+  nixos: [pcl]
+  openembedded: [pcl@meta-ros-common]
+  rhel: [pcl]
+  slackware: [pcl]
+  ubuntu:
+    bionic: [libpcl-visualization1.8]
+    focal: [libpcl-visualization1.10]
+    jammy: [libpcl-visualization1.12]
 libpcsclite-dev:
   arch: [pcsclite]
   debian: [libpcsclite-dev]
@@ -4361,12 +5077,9 @@ libpng++-dev:
   nixos: [pngpp]
   ubuntu: [libpng++-dev]
 libpng-dev:
+  alpine: [libpng-dev]
   arch: [libpng]
-  debian:
-    buster: [libpng-dev]
-    jessie: [libpng12-dev]
-    stretch: [libpng-dev]
-    wheezy: [libpng12-dev]
+  debian: [libpng-dev]
   fedora: [libpng-devel]
   freebsd: [png]
   gentoo: [media-libs/libpng]
@@ -4468,6 +5181,7 @@ libpqxx-dev:
   ubuntu: [libpqxx-dev]
 libprocps-dev:
   debian: [libprocps-dev]
+  fedora: [procps-ng-devel]
   nixos: [procps]
   ubuntu: [libprocps-dev]
 libprocps6:
@@ -4484,6 +5198,7 @@ libpthread-stubs0-dev:
   debian: [libpthread-stubs0-dev]
   ubuntu: [libpthread-stubs0-dev]
 libpulse-dev:
+  alpine: [pulseaudio-dev]
   debian: [libpulse-dev]
   fedora: [pulseaudio-libs-devel]
   gentoo: [media-sound/pulseaudio]
@@ -4577,6 +5292,7 @@ libqglviewer2-qt5:
     '7': null
   ubuntu: [libqglviewer2-qt5]
 libqhull:
+  alpine: [qhull-dev]
   arch: [qhull]
   debian: [libqhull-dev]
   fedora: [qhull-devel]
@@ -4591,11 +5307,13 @@ libqhull:
   ubuntu: [libqhull-dev]
 libqrencode:
   debian: [libqrencode3]
+  fedora: [qrencode]
   gentoo: [media-gfx/qrencode]
   nixos: [qrencode]
   ubuntu: [libqrencode3]
 libqrencode-dev:
   debian: [libqrencode-dev]
+  fedora: [qrencode-devel]
   gentoo: [media-gfx/qrencode]
   nixos: [qrencode]
   ubuntu: [libqrencode-dev]
@@ -4663,7 +5381,7 @@ libqt5-concurrent:
   slackware: [qt5]
   ubuntu: [libqt5concurrent5]
 libqt5-core:
-  alpine: [qt5-qtbase]
+  alpine: [qt5-qtbase-dev]
   arch: [qt5-base]
   debian: [libqt5core5a]
   fedora: [qt5-qtbase]
@@ -4679,7 +5397,7 @@ libqt5-gstreamer-dev:
   debian: [libqt5gstreamer-dev]
   ubuntu: [libqt5gstreamer-dev]
 libqt5-gui:
-  alpine: [qt5-qtbase]
+  alpine: [qt5-qtbase-dev]
   arch: [qt5-base]
   debian: [libqt5gui5]
   fedora: [qt5-qtbase-gui]
@@ -4696,6 +5414,7 @@ libqt5-multimedia:
   nixos: [qt5.qtmultimedia]
   ubuntu: [libqt5multimedia5]
 libqt5-network:
+  alpine: [qt5-qtbase-dev]
   arch: [qt5-base]
   debian: [libqt5network5]
   fedora: [qt5-qtbase]
@@ -4719,6 +5438,7 @@ libqt5-opengl:
   slackware: [qt5]
   ubuntu: [libqt5opengl5]
 libqt5-opengl-dev:
+  alpine: [qt5-qtbase-dev]
   arch: [qt5-base]
   debian: [libqt5opengl5-dev]
   fedora: [qt5-qtbase-devel]
@@ -4731,6 +5451,7 @@ libqt5-opengl-dev:
   slackware: [qt5]
   ubuntu: [libqt5opengl5-dev]
 libqt5-printsupport:
+  alpine: [qt5-qtbase-dev]
   arch: [qt5-base]
   debian: [libqt5printsupport5]
   fedora: [qt5-qtbase]
@@ -4765,6 +5486,7 @@ libqt5-serialport-dev:
   gentoo: ['dev-qt/qtserialport:5']
   ubuntu: [libqt5serialport5-dev]
 libqt5-sql:
+  alpine: [qt5-qtbase-dev]
   arch: [qt5-base]
   debian:
     buster: [libqt5sql5]
@@ -4776,6 +5498,7 @@ libqt5-sql:
   nixos: [qt5.qtbase]
   ubuntu: [libqt5sql5]
 libqt5-svg-dev:
+  alpine: [qt5-qtsvg-dev]
   debian: [libqt5svg5-dev]
   fedora: [qt5-qtsvg-devel]
   freebsd: [qt5-svg]
@@ -4819,6 +5542,7 @@ libqt5multimedia5-plugins:
   openembedded: [qtmultimedia@meta-qt5]
   ubuntu: [libqt5multimedia5-plugins]
 libqt5x11extras5-dev:
+  alpine: [qt5-qtx11extras-dev]
   arch: [qt5-x11extras]
   debian: [libqt5x11extras5-dev]
   fedora: [qt5-qtx11extras-devel]
@@ -4878,6 +5602,10 @@ librabbitmq-dev:
   fedora: [librabbitmq-devel]
   rhel: [librabbitmq-devel]
   ubuntu: [librabbitmq-dev]
+librapidxml-dev:
+  debian: [librapidxml-dev]
+  fedora: [rapidxml-devel]
+  ubuntu: [librapidxml-dev]
 libraw1394:
   arch:
     pacman:
@@ -4906,6 +5634,7 @@ librdkafka-dev:
   nixos: [rdkafka]
   ubuntu: [librdkafka-dev]
 libreadline:
+  alpine: [readline-dev]
   arch: [readline]
   debian: [libreadline-dev]
   fedora: [readline]
@@ -4916,6 +5645,7 @@ libreadline:
   rhel: [readline]
   ubuntu: [libreadline-dev]
 libreadline-dev:
+  alpine: [readline-dev]
   arch: [readline]
   debian: [libreadline-dev]
   fedora: [readline-devel]
@@ -4929,6 +5659,15 @@ libreadline-java:
   debian: [libreadline-java]
   gentoo: [dev-java/libreadline-java]
   ubuntu: [libreadline-java]
+librtaudio-dev:
+  arch: [rtaudio]
+  debian: [librtaudio-dev]
+  fedora: [rtaudio-devel]
+  gentoo: [media-libs/rtaudio]
+  macports: [rtaudio]
+  nixos: [rtaudio]
+  opensuse: [rtaudio-devel]
+  ubuntu: [librtaudio-dev]
 libsecp256k1-dev:
   debian: [libsecp256k1-dev]
   fedora: [libsecp256k1-devel]
@@ -4966,6 +5705,7 @@ libsoqt4-dev:
   ubuntu: [libsoqt4-dev]
 libspatialindex-dev:
   debian: [libspatialindex-dev]
+  fedora: [spatialindex-devel]
   nixos: [libspatialindex]
   ubuntu: [libspatialindex-dev]
 libspatialite:
@@ -5023,7 +5763,10 @@ libssh2-dev:
   nixos: [libssh2]
   ubuntu: [libssh2-1-dev]
 libssl-dev:
-  alpine: [libressl-dev]
+  alpine:
+    '*': [openssl-dev]
+    '3.11': [libressl-dev]
+    '3.8': [libressl-dev]
   arch: [openssl]
   debian: [libssl-dev]
   fedora: [openssl-devel]
@@ -5064,6 +5807,7 @@ libsvn-dev:
   fedora: [subversion-devel]
   ubuntu: [libsvn-dev]
 libswscale-dev:
+  alpine: [ffmpeg-dev]
   arch: [ffmpeg]
   debian: [libswscale-dev]
   fedora: [ffmpeg-devel]
@@ -5072,6 +5816,7 @@ libswscale-dev:
   ubuntu: [libswscale-dev]
 libsystemd-dev:
   debian: [libsystemd-dev]
+  fedora: [systemd-devel]
   ubuntu:
     '*': [libsystemd-dev]
     trusty: null
@@ -5090,6 +5835,7 @@ libtesseract:
   nixos: [tesseract]
   ubuntu: [libtesseract-dev]
 libtheora:
+  alpine: [libtheora-dev]
   arch: [libtheora]
   debian: [libtheora-dev]
   fedora: [libtheora-devel]
@@ -5105,12 +5851,9 @@ libtheora:
       packages: [libtheora]
   ubuntu: [libtheora-dev]
 libtiff-dev:
+  alpine: [tiff-dev]
   arch: [libtiff]
-  debian:
-    buster: [libtiff5-dev]
-    jessie: [libtiff5-dev]
-    stretch: [libtiff5-dev]
-    wheezy: [libtiff5-alt-dev]
+  debian: [libtiff-dev]
   fedora: [libtiff]
   freebsd: [tiff]
   gentoo: [media-libs/tiff]
@@ -5120,26 +5863,7 @@ libtiff-dev:
   slackware:
     slackpkg:
       packages: [libtiff]
-  ubuntu:
-    artful: [libtiff5-dev]
-    bionic: [libtiff5-dev]
-    focal: [libtiff-dev]
-    lucid: [libtiff4-dev]
-    maverick: [libtiff4-dev]
-    natty: [libtiff4-dev]
-    oneiric: [libtiff4-dev]
-    precise: [libtiff4-dev]
-    quantal: [libtiff5-dev]
-    raring: [libtiff5-dev]
-    saucy: [libtiff5-dev]
-    trusty: [libtiff5-dev]
-    trusty_python3: [libtiff5-dev]
-    utopic: [libtiff5-dev]
-    vivid: [libtiff5-dev]
-    wily: [libtiff5-dev]
-    xenial: [libtiff5-dev]
-    yakkety: [libtiff5-dev]
-    zesty: [libtiff5-dev]
+  ubuntu: [libtiff-dev]
 libtiff4-dev:
   arch: [libtiff]
   debian: [libtiff4-dev]
@@ -5152,6 +5876,7 @@ libtins-dev:
   alpine: [libtins-dev]
   arch: [libtins]
   debian: [libtins-dev]
+  fedora: [libtins-devel]
   opensuse: [libtins-devel]
   ubuntu: [libtins-dev]
 libtool:
@@ -5176,6 +5901,7 @@ libtool:
     artful: [libtool, libltdl-dev, libtool-bin]
     bionic: [libtool, libltdl-dev, libtool-bin]
     focal: [libtool, libltdl-dev, libtool-bin]
+    jammy: [libtool, libltdl-dev, libtool-bin]
     lucid: [libtool, libltdl-dev]
     maverick: [libtool, libltdl-dev]
     natty: [libtool, libltdl-dev]
@@ -5237,6 +5963,7 @@ libunittest++:
   rhel: [unittest-cpp-devel]
   ubuntu: [libunittest++-dev]
 libunwind:
+  alpine: [libunwind]
   debian:
     '*': [libunwind8]
     wheezy: [libunwind7]
@@ -5247,6 +5974,7 @@ libunwind:
     '*': [libunwind8]
     precise: [libunwind7]
 libunwind-dev:
+  alpine: [libunwind-dev]
   debian:
     buster: [libunwind8-dev]
     jessie: [libunwind8-dev]
@@ -5263,6 +5991,7 @@ libunwind-dev:
     saucy: [libunwind8-dev]
     trusty: [libunwind8-dev]
 liburdfdom-dev:
+  alpine: [urdfdom-dev]
   arch: [urdfdom]
   debian: [liburdfdom-dev]
   fedora: [urdfdom-devel]
@@ -5275,6 +6004,7 @@ liburdfdom-dev:
   slackware: [urdfdom]
   ubuntu: [liburdfdom-dev]
 liburdfdom-headers-dev:
+  alpine: [urdfdom_headers]
   arch: [urdfdom-headers]
   debian: [liburdfdom-headers-dev]
   fedora: [urdfdom-headers-devel]
@@ -5287,6 +6017,7 @@ liburdfdom-headers-dev:
   slackware: [urdfdom_headers]
   ubuntu: [liburdfdom-headers-dev]
 liburdfdom-tools:
+  alpine: [urdfdom]
   arch: [urdfdom]
   debian: [liburdfdom-tools]
   fedora: [urdfdom]
@@ -5298,6 +6029,7 @@ liburdfdom-tools:
   slackware: [urdfdom]
   ubuntu: [liburdfdom-tools]
 libusb:
+  alpine: [libusb-compat]
   arch: [libusb-compat]
   debian: [libusb-0.1-4]
   fedora: [libusb]
@@ -5306,6 +6038,7 @@ libusb:
   nixos: [libusb-compat-0_1]
   ubuntu: [libusb-0.1-4]
 libusb-1.0:
+  alpine: [libusb]
   arch: [libusbx]
   debian: [libusb-1.0-0]
   fedora: [libusbx]
@@ -5316,6 +6049,7 @@ libusb-1.0:
   rhel: [libusbx]
   ubuntu: [libusb-1.0-0]
 libusb-1.0-dev:
+  alpine: [libusb-dev]
   arch: [libusbx]
   debian: [libusb-1.0-0-dev]
   fedora: [libusbx-devel]
@@ -5327,6 +6061,7 @@ libusb-1.0-dev:
   rhel: [libusbx-devel]
   ubuntu: [libusb-1.0-0-dev]
 libusb-dev:
+  alpine: [libusb-compat-dev]
   arch: [libusb-compat]
   debian: [libusb-dev]
   fedora: [libusb-devel]
@@ -5370,6 +6105,7 @@ libuvc-dev:
     '*': [libuvc-dev]
     xenial: null
 libv4l-dev:
+  alpine: [v4l-utils-dev]
   arch: [v4l-utils]
   debian: [libv4l-dev]
   fedora: [libv4l-devel]
@@ -5423,6 +6159,10 @@ libvpx-dev:
   rhel: [libvpx-devel]
   ubuntu: [libvpx-dev]
 libvtk:
+  alpine:
+    '*': [vtk8-dev]
+    '3.11': [vtk7-dev]
+    '3.8': [vtk7-dev]
   arch: [vtk]
   debian:
     buster: [libvtk7-dev]
@@ -5483,6 +6223,10 @@ libvtk-java:
     yakkety: [libvtk6-java]
     zesty: [libvtk6-java]
 libvtk-qt:
+  alpine:
+    '*': [vtk8-dev]
+    '3.11': [vtk7-dev]
+    '3.8': [vtk7-dev]
   arch: [vtk]
   debian:
     buster: [libvtk7-qt-dev]
@@ -5527,6 +6271,7 @@ libvulkan-dev:
     '*': [libvulkan-dev]
     trusty: null
 libwebp-dev:
+  alpine: [libwebp-dev]
   debian: [libwebp-dev]
   fedora: [libwebp-devel]
   freebsd: [webp]
@@ -5554,7 +6299,7 @@ libwebsockets-dev:
   rhel: [libwebsockets-devel]
   ubuntu: [libwebsockets-dev]
 libx11:
-  alpine: [libx11]
+  alpine: [libx11-dev]
   arch: [libx11]
   debian: [libx11-dev]
   fedora: [libX11]
@@ -5596,6 +6341,7 @@ libxaw:
   ubuntu: [libxaw7-dev]
 libxcursor-dev:
   debian: [libxcursor-dev]
+  fedora: [libXcursor-devel]
   nixos: [xorg.libXcursor]
   ubuntu: [libxcursor-dev]
 libxenomai-dev:
@@ -5617,6 +6363,7 @@ libxext:
   ubuntu: [libxext-dev]
 libxft-dev:
   debian: [libxft-dev]
+  fedora: [libXft-devel]
   gentoo: [x11-libs/libXft]
   nixos: [xorg.libXft]
   ubuntu: [libxft-dev]
@@ -5638,6 +6385,7 @@ libxinerama-dev:
   ubuntu: [libxinerama-dev]
 libxkbcommon-dev:
   debian: [libxkbcommon-dev]
+  fedora: [libxkbcommon-devel]
   ubuntu: [libxkbcommon-dev]
 libxml++-2.6:
   arch: [libxml++]
@@ -5660,6 +6408,7 @@ libxml2:
   ubuntu: [libxml2-dev]
 libxml2-utils:
   alpine: [libxml2-utils]
+  arch: [libxml2]
   debian: [libxml2-utils]
   fedora: [libxml2]
   gentoo: [dev-libs/libxml2]
@@ -5668,6 +6417,7 @@ libxml2-utils:
   rhel: [libxml2]
   ubuntu: [libxml2-utils]
 libxmlrpc-c++:
+  alpine: [xmlrpc-c-dev]
   arch: [xmlrpc-c]
   debian: [libxmlrpc-c++8-dev]
   fedora: [xmlrpc-c-devel]
@@ -5736,6 +6486,26 @@ libxxf86vm:
   opensuse: [xorg-x11-devel]
   rhel: [libXxf86vm-devel]
   ubuntu: [libxxf86vm-dev]
+libyaml:
+  alpine: [yaml]
+  arch: [libyaml]
+  debian: [libyaml-0-2]
+  fedora: [libyaml]
+  gentoo: [dev-libs/libyaml]
+  nixos: [libyaml]
+  opensuse: [libyaml-devel]
+  rhel: [libyaml]
+  ubuntu: [libyaml-0-2]
+libyaml-dev:
+  alpine: [yaml-dev]
+  arch: [libyaml]
+  debian: [libyaml-dev]
+  fedora: [libyaml-devel]
+  gentoo: [dev-libs/libyaml]
+  nixos: [libyaml]
+  opensuse: [libyaml-devel]
+  rhel: [libyaml-devel]
+  ubuntu: [libyaml-dev]
 libzip-dev:
   debian: [libzip-dev]
   fedora: [libzip-devel]
@@ -5806,6 +6576,7 @@ linux-kernel-headers:
 llvm:
   arch: [llvm]
   debian: [llvm]
+  fedora: [llvm]
   gentoo: [sys-devel/llvm]
   nixos: [llvm]
   openembedded: [llvm@openembedded-core]
@@ -5831,11 +6602,15 @@ llvm-7-dev:
 llvm-dev:
   arch: [llvm]
   debian: [llvm-dev]
+  fedora: [llvm-devel]
   gentoo: [sys-devel/llvm]
   nixos: [llvm]
   openembedded: [llvm@openembedded-core]
   ubuntu: [llvm-dev]
 lm-sensors:
+  alpine:
+    '*': [lm-sensors]
+    '3.8': [lm_sensors]
   arch: [lm_sensors]
   debian: [lm-sensors]
   fedora: [lm_sensors]
@@ -6098,6 +6873,7 @@ mongodb-dev:
   ubuntu: [libmongoclient-dev]
 mono-complete:
   debian: [mono-complete]
+  fedora: [mono-complete]
   gentoo: [dev-lang/mono]
   ubuntu: [mono-complete]
 mono-devel:
@@ -6208,6 +6984,7 @@ netcdf:
   nixos: [netcdf]
   ubuntu: [libnetcdf-dev]
 netpbm:
+  alpine: [libnetpbm-dev]
   arch: [netpbm]
   debian: [libnetpbm10-dev]
   fedora: [netpbm-devel]
@@ -6259,6 +7036,7 @@ nlohmann-json-dev:
     bionic: [nlohmann-json-dev]
     focal: [nlohmann-json3-dev]
     groovy: [nlohmann-json3-dev]
+    jammy: [nlohmann-json3-dev]
     xenial: null
 nmap:
   archlinux: [nmap]
@@ -6315,6 +7093,7 @@ ocl-icd-opencl-dev:
   debian: [ocl-icd-opencl-dev]
   fedora: [ocl-icd-devel]
   gentoo: [virtual/opencl]
+  rhel: [ocl-icd-devel]
   ubuntu: [ocl-icd-opencl-dev]
 odb:
   debian: [odb]
@@ -6395,6 +7174,7 @@ openni-dev:
   debian: [libopenni-dev]
   fedora: [openni-devel]
   gentoo: [dev-libs/OpenNI]
+  rhel: [openni-devel]
   ubuntu: [libopenni-dev]
 openocd:
   debian: [openocd]
@@ -6552,6 +7332,7 @@ polyclipping-dev:
     buster: [libpolyclipping-dev]
     jessie: [libpolyclipping-dev]
     stretch: [libpolyclipping-dev]
+  fedora: [polyclipping-devel]
   ubuntu: [libpolyclipping-dev]
 poppler-utils:
   debian: [poppler-utils]
@@ -6573,6 +7354,14 @@ portaudio19-dev:
   nixos: [portaudio]
   openembedded: [portaudio-v19@meta-oe]
   ubuntu: [portaudio19-dev]
+postfix:
+  alpine: [postfix]
+  arch: [postfix]
+  debian: [postfix]
+  fedora: [postfix]
+  opensuse: [postfix]
+  rhel: [postfix]
+  ubuntu: [postfix]
 postgresql:
   debian: [postgresql, postgresql-contrib]
   fedora: [postgresql-server, postgresql-contrib]
@@ -6646,13 +7435,11 @@ proj:
   slackware: [proj]
   ubuntu: [libproj-dev]
 protobuf:
+  alpine: [protobuf-dev]
   arch: [protobuf]
   debian:
+    bullseye: [libprotobuf23]
     buster: [libprotobuf17]
-    jessie: [libprotobuf9]
-    squeeze: [libprotobuf7]
-    stretch: [libprotobuf10]
-    wheezy: [libprotobuf7]
   fedora: [protobuf]
   freebsd: [protobuf]
   gentoo: [dev-libs/protobuf]
@@ -6663,21 +7450,12 @@ protobuf:
   rhel: [protobuf]
   slackware: [protobuf]
   ubuntu:
-    artful: [libprotobuf10]
     bionic: [libprotobuf10]
-    cosmic: [libprotobuf10]
     focal: [libprotobuf17]
-    precise: [libprotobuf7]
-    raring: [libprotobuf7]
-    saucy: [libprotobuf7]
-    trusty: [libprotobuf8]
-    utopic: [libprotobuf8]
-    vivid: [libprotobuf9]
-    wily: [libprotobuf9v5]
+    jammy: [libprotobuf23]
     xenial: [libprotobuf9v5]
-    yakkety: [libprotobuf10]
-    zesty: [libprotobuf10]
 protobuf-dev:
+  alpine: [protobuf-dev]
   arch: [protobuf]
   debian: [libprotobuf-dev, protobuf-compiler, libprotoc-dev]
   fedora: [protobuf-devel, protobuf-compiler]
@@ -6715,19 +7493,33 @@ pugixml-dev:
   openembedded: [pugixml@meta-oe]
   rhel: [pugixml-devel]
   ubuntu: [libpugixml-dev]
+pulseaudio:
+  alpine: [pulseaudio]
+  ubuntu: [pulseaudio]
 pybind11-dev:
   arch: [pybind11]
   debian: [pybind11-dev]
   fedora: [pybind11-devel]
-  nixos: [pybind11]
+  nixos: [pythonPackages.pybind11]
+  openembedded: [python3-pybind11@meta-python]
+  rhel:
+    '*': [pybind11-devel]
+    '7': null
   ubuntu: [pybind11-dev]
 python-dev:
   debian: [python-dev]
   fedora: [python2-devel]
   nixos: [pythonPackages.python]
+  rhel:
+    '7': [python2-devel]
+    '8': [python2-devel]
   ubuntu:
     '*': [python-dev]
     focal: [python2-dev]
+qemu-user-static:
+  debian: [qemu-user-static]
+  fedora: [qemu-user-static]
+  ubuntu: [qemu-user-static]
 qhull-bin:
   arch: [qhull]
   debian: [qhull-bin]
@@ -6898,16 +7690,21 @@ range-v3:
     stretch: null
   fedora: [range-v3-devel]
   gentoo: [dev-cpp/range-v3]
+  rhel:
+    '*': [range-v3-devel]
+    '7': null
   ubuntu:
     '*': [librange-v3-dev]
     xenial: null
 rapidjson-dev:
+  alpine: [rapidjson-dev]
   debian: [rapidjson-dev]
   fedora: [rapidjson]
   gentoo: [dev-libs/rapidjson]
   nixos: [rapidjson]
   ubuntu: [rapidjson-dev]
 readline-dev:
+  alpine: [readline-dev]
   arch: [readline]
   debian: [libreadline-dev]
   fedora: [readline-devel]
@@ -6959,6 +7756,11 @@ rti-connext-dds-5.3.1:
     bionic: [rti-connext-dds-5.3.1]
     focal: [rti-connext-dds-5.3.1]
     xenial: [rti-connext-dds-5.3.1]
+rti-connext-dds-6.0.1:
+  nixos: []
+  ubuntu:
+    focal: [rti-connext-dds-6.0.1]
+    jammy: [rti-connext-dds-6.0.1]
 rtmidi:
   debian: [librtmidi-dev]
   fedora: [rtmidi-devel]
@@ -7017,6 +7819,7 @@ sdformat:
     bionic: [libsdformat6-dev]
     cosmic: [libsdformat6-dev]
     focal: [libsdformat9-dev]
+    jammy: [libsdformat-dev]
     precise: [sdformat]
     quantal: [sdformat]
     raring: [sdformat]
@@ -7033,7 +7836,9 @@ sdformat12:
     buster: [libsdformat12-dev]
   ubuntu:
     focal: [libsdformat12-dev]
+    jammy: [libsdformat12-dev]
 sdl:
+  alpine: [sdl-dev]
   arch: [sdl]
   debian: [libsdl1.2-dev]
   fedora: [SDL-devel]
@@ -7052,6 +7857,10 @@ sdl-gfx:
   nixos: [SDL_gfx]
   ubuntu: [libsdl-gfx1.2-dev]
 sdl-image:
+  alpine:
+    '*': [sdl_image-dev, libpng]
+    '3.11': [sdl_image-dev]
+    '3.8': [sdl_image-dev]
   arch: [sdl_image]
   debian: [libsdl-image1.2-dev]
   fedora: [SDL_image-devel]
@@ -7065,6 +7874,7 @@ sdl-image:
     '7': [SDL_image-devel]
   ubuntu: [libsdl-image1.2-dev]
 sdl-mixer:
+  alpine: [sdl_mixer-dev]
   arch: [sdl_mixer]
   debian: [libsdl-mixer1.2-dev]
   fedora: [SDL_mixer-devel]
@@ -7080,6 +7890,7 @@ sdl-ttf:
   nixos: [SDL_ttf]
   ubuntu: [libsdl-ttf2.0-dev]
 sdl2:
+  alpine: [sdl2-dev]
   debian: [libsdl2-dev]
   fedora: [SDL2-devel]
   gentoo: [media-libs/libsdl2]
@@ -7088,16 +7899,19 @@ sdl2:
   rhel: [SDL2-devel]
   ubuntu: [libsdl2-dev]
 sdl2-image:
+  alpine: [sdl2_image-dev]
   debian: [libsdl2-image-dev]
   fedora: [SDL2_image-devel]
   rhel:
     '7': [SDL2_image-devel]
   ubuntu: [libsdl2-image-dev]
 sdl2-mixer:
+  alpine: [sdl2_mixer-dev]
   debian: [libsdl2-mixer-dev]
   fedora: [SDL2_mixer-devel]
   ubuntu: [libsdl2-mixer-dev]
 sdl2-ttf:
+  alpine: [sdl2_ttf-dev]
   debian: [libsdl2-ttf-dev]
   fedora: [SDL2_ttf-devel]
   gentoo: [media-libs/sdl2-ttf]
@@ -7151,6 +7965,7 @@ socat:
   fedora: [socat]
   gentoo: [net-misc/socat]
   nixos: [socat]
+  rhel: [socat]
   ubuntu: [socat]
 sound-theme-freedesktop:
   debian: [sound-theme-freedesktop]
@@ -7176,20 +7991,10 @@ sparsehash:
   fedora: [sparsehash-devel]
   gentoo: [dev-cpp/sparsehash]
   nixos: [sparsehash]
-  ubuntu:
-    artful: [libsparsehash-dev]
-    bionic: [libsparsehash-dev]
-    precise: [sparsehash]
-    saucy: [sparsehash]
-    trusty: [sparsehash]
-    utopic: [sparsehash]
-    vivid: [libsparsehash-dev]
-    wily: [libsparsehash-dev]
-    xenial: [libsparsehash-dev]
-    yakkety: [libsparsehash-dev]
-    zesty: [libsparsehash-dev]
+  ubuntu: [libsparsehash-dev]
 spdlog:
   alpine: [spdlog-dev]
+  arch: [spdlog]
   debian: [libspdlog-dev]
   fedora: [spdlog-devel]
   gentoo: [dev-libs/spdlog]
@@ -7215,7 +8020,9 @@ speex:
     xenial: [speex]
 spirv-headers:
   arch: [spirv-headers]
-  debian: [spirv-headers]
+  debian:
+    '*': [spirv-headers]
+    stretch: null
   fedora: [spirv-headers-devel]
   gentoo: [dev-util/spirv-headers]
   nixos: [spirv-headers]
@@ -7227,7 +8034,9 @@ spirv-headers:
     xenial: null
 spirv-tools:
   arch: [spirv-tools]
-  debian: [spirv-tools]
+  debian:
+    '*': [spirv-tools]
+    stretch: null
   fedora: [spirv-tools, spirv-tools-devel, spirv-tools-libs]
   gentoo: [dev-util/spirv-tools]
   nixos: [spirv-tools]
@@ -7578,6 +8387,7 @@ tmux:
   ubuntu: [tmux]
 touchegg:
   arch: [touchegg]
+  fedora: [touchegg]
   nixos: [touchegg]
   ubuntu: [touchegg]
 trang:
@@ -7636,10 +8446,12 @@ unclutter:
   ubuntu: [unclutter]
 uncrustify:
   alpine: [uncrustify]
+  arch: [uncrustify]
   debian: [uncrustify]
   fedora: [uncrustify]
   gentoo: [uncrustify]
   nixos: [uncrustify]
+  openembedded: [uncrustify@meta-ros-common]
   osx:
     homebrew:
       packages: [uncrustify]
@@ -7710,6 +8522,7 @@ util-linux:
     '*': [util-linux]
     bionic: [setpriv, util-linux]
 uuid:
+  alpine: [util-linux-dev]
   arch: [util-linux]
   debian: [uuid-dev]
   fedora: [libuuid-devel]
@@ -7730,6 +8543,7 @@ uvcdynctrl:
   nixos: [uvcdynctrl]
   ubuntu: [uvcdynctrl]
 v4l-utils:
+  alpine: [v4l-utils]
   arch: [v4l-utils]
   debian: [v4l-utils]
   fedora: [v4l-utils]
@@ -7760,6 +8574,7 @@ vlc:
   openembedded: [vlc@meta-multimedia]
   ubuntu: [vlc]
 vorbis-tools:
+  alpine: [vorbis-tools]
   arch: [vorbis-tools]
   debian: [vorbis-tools]
   fedora: [vorbis-tools]
@@ -7785,6 +8600,17 @@ wget:
     homebrew:
       packages: [wget]
   ubuntu: [wget]
+wireguard:
+  debian:
+    '*': [wireguard]
+    buster: null
+  fedora: [wireguard-tools]
+  gentoo: [net-vpn/wireguard-tools]
+  nixos: [wireguard-tools]
+  rhel: [wireguard-tools]
+  ubuntu:
+    '*': [wireguard]
+    bionic: null
 wireless-tools:
   debian: [wireless-tools]
   fedora: [wireless-tools]
@@ -7835,10 +8661,8 @@ wx-common:
 wxwidgets:
   arch: [wxgtk]
   debian:
+    '*': [libwxgtk3.0-gtk3-dev]
     buster: [libwxgtk3.0-dev]
-    jessie: [libwxgtk3.0-dev]
-    stretch: [libwxgtk3.0-dev]
-    wheezy: [libwxgtk2.8-dev]
   fedora: [wxGTK3-devel]
   freebsd: [wxgtk2]
   gentoo: [x11-libs/wxGTK]
@@ -7850,24 +8674,9 @@ wxwidgets:
     '*': [wxGTK3-devel]
     '7': [wxGTK-devel]
   ubuntu:
-    artful: [libwxgtk3.0-dev]
+    '*': [libwxgtk3.0-gtk3-dev]
     bionic: [libwxgtk3.0-dev]
-    focal: [libwxgtk3.0-gtk3-dev]
-    lucid: [libwxgtk2.8-dev]
-    maverick: [libwxgtk2.8-dev]
-    natty: [libwxgtk2.8-dev]
-    oneiric: [libwxgtk2.8-dev]
-    precise: [libwxgtk2.8-dev]
-    quantal: [libwxgtk2.8-dev]
-    raring: [libwxgtk2.8-dev]
-    saucy: [libwxgtk2.8-dev]
-    trusty: [libwxgtk2.8-dev]
-    utopic: [libwxgtk2.8-dev]
-    vivid: [libwxgtk2.8-dev]
-    wily: [libwxgtk2.8-dev]
     xenial: [libwxgtk3.0-dev]
-    yakkety: [libwxgtk3.0-dev]
-    zesty: [libwxgtk3.0-dev]
 x11proto-dri2-dev:
   arch: [dri2proto]
   debian: [x11proto-dri2-dev]
@@ -7892,7 +8701,18 @@ xclip:
   osx:
     homebrew:
       packages: [xclip]
+  rhel: [xclip]
   ubuntu: [xclip]
+xdg-utils:
+  alpine: [xdg-utils]
+  arch: [xdg-utils]
+  debian: [xdg-utils]
+  fedora: [xdg-utils]
+  gentoo: [x11-misc/xdg-utils]
+  nixos: [xdg-utils]
+  opensuse: [xdg-utils]
+  rhel: [xdg-utils]
+  ubuntu: [xdg-utils]
 xdotool:
   arch: [xdotool]
   debian: [xdotool]
@@ -7932,6 +8752,20 @@ xpath-perl:
   gentoo: [dev-perl/XML-XPath]
   macports: [p5-xml-xpath]
   ubuntu: [libxml-xpath-perl]
+xsimd:
+  alpine: [xsimd]
+  debian:
+    '*': [libxsimd-dev]
+    bullseye: null
+    buster: null
+  fedora: [xsimd-devel]
+  rhel:
+    '*': [xsimd-devel]
+    '7': null
+  ubuntu:
+    '*': [libxsimd-dev]
+    bionic: null
+    focal: null
 xsltproc:
   arch: [libxslt]
   debian: [xsltproc]
@@ -7939,6 +8773,12 @@ xsltproc:
   gentoo: [dev-libs/libxslt]
   nixos: [libxslt]
   ubuntu: [xsltproc]
+xtensor:
+  arch: [xtensor]
+  fedora: [xtensor]
+  ubuntu:
+    bionic: [xtensor-dev]
+    jammy: [libxtensor-dev]
 xterm:
   arch: [xterm]
   debian: [xterm]
@@ -8002,13 +8842,28 @@ yaml-cpp:
   slackware: [yaml-cpp]
   ubuntu: [libyaml-cpp-dev]
 yamllint:
+  alpine: [yamllint]
   arch: [yamllint]
-  debian:
-    buster: [yamllint]
-    stretch: [yamllint]
+  debian: [yamllint]
   fedora: [yamllint]
   gentoo: [dev-util/yamllint]
+  nixos: [yamllint]
+  osx:
+    homebrew:
+      packages: [yamllint]
+  rhel: [yamllint]
   ubuntu: [yamllint]
+yarn:
+  alpine: [yarn]
+  arch: [yarn]
+  debian: [yarnpkg]
+  fedora: [yarnpkg]
+  gentoo: [sys-apps/yarn]
+  macports: [yarn]
+  nixos: [yarn]
+  ubuntu:
+    '*': [yarnpkg]
+    bionic: null
 yasm:
   arch: [yasm]
   debian: [yasm]
@@ -8023,6 +8878,7 @@ zbar:
   gentoo: [media-gfx/zbar]
   nixos: [zbar]
   openembedded: [zbar@meta-oe]
+  rhel: [zbar-devel]
   ubuntu: [libzbar-dev]
 zenity:
   arch: [zenity]
