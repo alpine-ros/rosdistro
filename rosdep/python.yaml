@@ -7488,7 +7488,6 @@ python3-importlib-metadata:
         packages: [importlib-metadata]
 python3-importlib-resources:
   alpine:
-    '*': null
     '3.17': [py3-importlib-resources]
   arch: [python-importlib_resources]
   debian:
