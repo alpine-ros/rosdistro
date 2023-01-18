@@ -8961,6 +8961,7 @@ python3-pytest-mock:
 python3-pytest-timeout:
   alpine:
     '*': null
+    '3.14': [py3-pytest-timeout]
     '3.17': [py3-pytest-timeout]
   arch: [python-pytest-timeout]
   debian: [python3-pytest-timeout]
