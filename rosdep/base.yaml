@@ -319,6 +319,7 @@ beep:
   nixos: [beep]
   ubuntu: [beep]
 benchmark:
+  alpine: [benchmark]
   arch: [benchmark]
   debian:
     '*': [libbenchmark-dev]
