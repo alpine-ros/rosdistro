@@ -58,8 +58,8 @@ def detect_lines(diffstr):
 
 def get_changed_line_numbers():
     UPSTREAM_NAME = 'unittest_upstream_comparison'
-    DIFF_BRANCH = 'master'
-    DIFF_REPO = 'https://github.com/ros/rosdistro.git'
+    DIFF_BRANCH = 'alpine-custom-apk'
+    DIFF_REPO = 'https://github.com/alpine-ros/rosdistro.git'
 
     # See if UPSTREAM_NAME remote is available and use it as it's expected to be setup by CI
     # Otherwise fall back to origin/master

@@ -108,7 +108,7 @@ try:
     if os.path.exists(os.path.join(repo_location, '.git')):
         subprocess.check_call('git -C %s fetch' % repo_location, shell=True)
     else:
-        subprocess.check_call('git clone https://github.com/ros/rosdistro.git %s' % repo_location, shell=True)
+        subprocess.check_call('git clone https://github.com/alpine-ros/rosdistro.git %s' % repo_location, shell=True)
         print("Cloned to %s" % repo_location)
 
     commits = get_all_commits(repo_location, FIRST_HASH)
