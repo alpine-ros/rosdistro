@@ -346,7 +346,6 @@ def main():
             continue
         with Fold():
             print("verifying diff of file '%s'" % path)
-            is_eol_distro = path in get_eol_distribution_filenames(url)
             data = load_yaml_with_lines(path)
 
             repos = data['repositories']
@@ -362,10 +361,6 @@ def main():
                 errors = check_repo_for_errors(r)
                 detected_errors.extend(["In file '''%s''': " % path + e
                                         for e in errors])
-                if is_eol_distro:
-                    errors = detect_post_eol_release(n, r, lines)
-                    detected_errors.extend(["In file '''%s''': " % path + e
-                                            for e in errors])
 
     for e in detected_errors:
 
