@@ -1,7 +1,7 @@
 name: Validate rosdistro
 on:
   push:
-    branches: ['master']
+    branches: ['alpine-custom-apk']
   pull_request:
 
 permissions:
@@ -22,8 +22,8 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Fetch upstream (to enable diff)
       run: |
-        git remote add unittest_upstream_comparison https://github.com/ros/rosdistro.git || git remote set-url unittest_upstream_comparison https://github.com/ros/rosdistro.git
-        git fetch --no-tags --depth=1 unittest_upstream_comparison master
+        git remote add unittest_upstream_comparison https://github.com/alpine-ros/rosdistro.git || git remote set-url unittest_upstream_comparison https://github.com/alpine-ros/rosdistro.git
+        git fetch --no-tags --depth=1 unittest_upstream_comparison alpine-custom-apk
     - name: Install Dependencies
       run: |
         python -m pip install --upgrade pip setuptools wheel
