@@ -6997,6 +6997,14 @@ pcre-dev:
   nixos: [pcre]
   rhel: [pcre-devel]
   ubuntu: [libpcre++-dev]
+pcsc-lite:
+  alpine: [pcsc-lite]
+  arch: [pcsclite]
+  debian: [pcsc-lite]
+  fedora: [pcsc-lite]
+  gentoo: [sys-apps/pcsc-lite]
+  nixos: [pcsclite]
+  ubuntu: [pcsc-lite]
 phantomjs:
   debian:
     buster: [phantomjs]
