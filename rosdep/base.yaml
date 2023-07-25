@@ -7000,11 +7000,11 @@ pcre-dev:
 pcsc-lite:
   alpine: [pcsc-lite]
   arch: [pcsclite]
-  debian: [pcsc-lite]
+  debian: [source, https://packages.debian.org/source/bookworm/pcsc-lite]
   fedora: [pcsc-lite]
   gentoo: [sys-apps/pcsc-lite]
   nixos: [pcsclite]
-  ubuntu: [pcsc-lite]
+  ubuntu: [source, https://packages.ubuntu.com/source/focal/pcsc-lite]
 phantomjs:
   debian:
     buster: [phantomjs]
