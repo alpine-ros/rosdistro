@@ -7000,11 +7000,15 @@ pcre-dev:
 pcsc-lite:
   alpine: [pcsc-lite]
   arch: [pcsclite]
-  debian: [source, https://packages.debian.org/source/bookworm/pcsc-lite]
+  debian:
+    bullseye: [pcscd]
+    bookworm: [pcsc-lite]
   fedora: [pcsc-lite]
   gentoo: [sys-apps/pcsc-lite]
   nixos: [pcsclite]
-  ubuntu: [source, https://packages.ubuntu.com/source/focal/pcsc-lite]
+  ubuntu:
+    focal: [pcscd]
+    jammy: [pcscd]
 phantomjs:
   debian:
     buster: [phantomjs]
