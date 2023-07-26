@@ -7001,8 +7001,8 @@ pcsc-lite:
   alpine: [pcsc-lite]
   arch: [pcsclite]
   debian:
-    bullseye: [pcscd]
     bookworm: [pcsc-lite]
+    bullseye: [pcscd]
   fedora: [pcsc-lite]
   gentoo: [sys-apps/pcsc-lite]
   nixos: [pcsclite]
