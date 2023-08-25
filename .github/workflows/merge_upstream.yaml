@@ -1,5 +1,7 @@
+---
 name: Merge upstream
-on:
+# this is fine since gha runs with yaml 1.2
+on:  # yamllint disable-line rule:truthy
   issues:
     types: [opened, reopened, edited]
 
@@ -9,33 +11,33 @@ jobs:
     if: startsWith(github.event.issue.title, 'Merge upstream')
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Fetch upstream
-        run: |
-          git remote add upstream https://github.com/ros/rosdistro.git
-          git fetch upstream
-      - name: Create upstream merge branch
-        id: create
-        run: |
-          branch=merge-upstream-$(date '+%Y-%m-%d-%H-%M-%S')
-          echo "branch=${branch}" >> ${GITHUB_OUTPUT}
-          git config --global user.email 'github-actions[bot]'
-          git config --global user.name '41898282+github-actions[bot]@users.noreply.github.com'
-          git checkout -b ${branch}
-          git merge --no-ff --no-edit upstream/master
-      - name: Remove upstream remote
-        run: git remote remove upstream # avoid to open PR in upstream repo
-      - name: Create PR
-        run: |
-          git push origin ${{ steps.create.outputs.branch }}
-          gh pr create \
-            --repo ${GITHUB_REPOSITORY} \
-            --base alpine-custom-apk \
-            --head ${{ steps.create.outputs.branch }} \
-            --title "Merge upstream" \
-            --body "close #${{ github.event.issue.number }}"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    - name: Fetch upstream
+      run: |
+        git remote add upstream https://github.com/ros/rosdistro.git
+        git fetch upstream
+    - name: Create upstream merge branch
+      id: create
+      run: |
+        branch=merge-upstream-$(date '+%Y-%m-%d-%H-%M-%S')
+        echo "branch=${branch}" >> ${GITHUB_OUTPUT}
+        git config --global user.email 'github-actions[bot]'
+        git config --global user.name '41898282+github-actions[bot]@users.noreply.github.com'
+        git checkout -b ${branch}
+        git merge --no-ff --no-edit upstream/master
+    - name: Remove upstream remote
+      run: git remote remove upstream  # avoid to open PR in upstream repo
+    - name: Create PR
+      run: |
+        git push origin ${{ steps.create.outputs.branch }}
+        gh pr create \
+          --repo ${GITHUB_REPOSITORY} \
+          --base alpine-custom-apk \
+          --head ${{ steps.create.outputs.branch }} \
+          --title "Merge upstream" \
+          --body "close #${{ github.event.issue.number }}"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
