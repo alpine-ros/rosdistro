@@ -517,7 +517,7 @@ repositories:
       tags:
         release: release/noetic/{package}/{version}
       url: https://github.com/ros2-gbp/behaviortree_cpp_v4-release.git
-      version: 4.3.5-1
+      version: 4.3.6-2
     source:
       type: git
       url: https://github.com/BehaviorTree/BehaviorTree.CPP.git
@@ -1550,7 +1550,7 @@ repositories:
       tags:
         release: release/noetic/{package}/{version}
       url: https://github.com/clearpath-gbp/cpr_onav_description-release.git
-      version: 0.1.5-2
+      version: 0.1.6-1
     source:
       type: git
       url: https://github.com/cpr-application/cpr_onav_description.git
@@ -1601,10 +1601,25 @@ repositories:
       tags:
         release: release/noetic/{package}/{version}
       url: https://gitlab.fel.cvut.cz/cras/ros-release/cras_msgs
-      version: 1.1.0-1
+      version: 1.1.1-1
     source:
       type: git
       url: https://github.com/ctu-vras/cras_msgs.git
+      version: master
+    status: developed
+  cras_relative_positional_controller:
+    doc:
+      type: git
+      url: https://github.com/ctu-vras/cras_relative_positional_controller.git
+      version: master
+    release:
+      tags:
+        release: release/noetic/{package}/{version}
+      url: https://gitlab.fel.cvut.cz/cras/ros-release/cras_relative_positional_controller.git
+      version: 2.0.0-1
+    source:
+      type: git
+      url: https://github.com/ctu-vras/cras_relative_positional_controller.git
       version: master
     status: developed
   cras_ros_utils:
@@ -1900,7 +1915,7 @@ repositories:
       tags:
         release: release/noetic/{package}/{version}
       url: https://github.com/luxonis/depthai-ros-release.git
-      version: 2.7.5-1
+      version: 2.8.0-1
     source:
       test_pull_requests: true
       type: git
@@ -3028,6 +3043,21 @@ repositories:
       url: https://github.com/locusrobotics/fuse.git
       version: devel
     status: developed
+  gazebo_custom_sensor_preloader:
+    doc:
+      type: git
+      url: https://github.com/ctu-vras/gazebo_custom_sensor_preloader.git
+      version: master
+    release:
+      tags:
+        release: release/noetic/{package}/{version}
+      url: https://gitlab.fel.cvut.cz/cras/ros-release/gazebo_custom_sensor_preloader
+      version: 1.1.0-1
+    source:
+      type: git
+      url: https://github.com/ctu-vras/gazebo_custom_sensor_preloader.git
+      version: master
+    status: maintained
   gazebo_ros_control_select_joints:
     release:
       tags:
@@ -6134,7 +6164,7 @@ repositories:
       tags:
         release: release/noetic/{package}/{version}
       url: https://github.com/ual-arm-ros-pkg-release/mvsim-release.git
-      version: 0.7.3-1
+      version: 0.8.0-1
     source:
       type: git
       url: https://github.com/ual-arm-ros-pkg/mvsim.git
@@ -6351,7 +6381,7 @@ repositories:
       tags:
         release: release/noetic/{package}/{version}
       url: https://github.com/at-wat/neonavigation-release.git
-      version: 0.14.2-1
+      version: 0.15.0-1
     source:
       type: git
       url: https://github.com/at-wat/neonavigation.git
@@ -6934,7 +6964,7 @@ repositories:
       tags:
         release: release/noetic/{package}/{version}
       url: https://github.com/lp-research/openzen_sensor-release.git
-      version: 1.2.0-1
+      version: 1.3.2-1
     source:
       type: git
       url: https://bitbucket.org/lpresearch/openzenros.git
@@ -8113,16 +8143,19 @@ repositories:
       version: production-noetic
     release:
       packages:
+      - qb_softhand_industry
       - qb_softhand_industry_bringup
+      - qb_softhand_industry_control
       - qb_softhand_industry_description
       - qb_softhand_industry_driver
+      - qb_softhand_industry_hardware_interface
       - qb_softhand_industry_msgs
       - qb_softhand_industry_srvs
       - qb_softhand_industry_utils
       tags:
         release: release/noetic/{package}/{version}
       url: https://bitbucket.org/qbrobotics/qbshin-ros-release.git
-      version: 1.0.8-3
+      version: 1.0.9-1
     source:
       type: git
       url: https://bitbucket.org/qbrobotics/qbshin-ros.git
@@ -8439,10 +8472,16 @@ repositories:
       version: master
     status: developed
   reach:
+    release:
+      tags:
+        release: release/noetic/{package}/{version}
+      url: https://github.com/ros2-gbp/reach-release.git
+      version: 1.5.1-1
     source:
       type: git
       url: https://github.com/ros-industrial/reach.git
       version: master
+    status: developed
   reach_ros:
     source:
       type: git
@@ -9102,7 +9141,7 @@ repositories:
       tags:
         release: release/noetic/{package}/{version}
       url: https://github.com/ros-gbp/ros_controllers-release.git
-      version: 0.21.1-1
+      version: 0.21.2-1
     source:
       type: git
       url: https://github.com/ros-controls/ros_controllers.git
@@ -11775,7 +11814,7 @@ repositories:
       tags:
         release: release/noetic/{package}/{version}
       url: https://github.com/UniversalRobots/Universal_Robots_Client_Library-release.git
-      version: 1.3.2-1
+      version: 1.3.3-1
     source:
       type: git
       url: https://github.com/UniversalRobots/Universal_Robots_Client_Library.git
