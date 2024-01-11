@@ -63,7 +63,7 @@ supported_versions:
   arch:
   - ''
   debian:
-  - bullseye
+  - bookworm
   fedora:
   - '37'
   - '38'
