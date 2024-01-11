@@ -8472,6 +8472,7 @@ v4l-utils:
     '7': [v4l-utils]
   ubuntu: [v4l-utils]
 valgrind:
+  alpine: [valgrind]
   debian: [valgrind]
   fedora: [valgrind]
   gentoo: [dev-util/valgrind]
