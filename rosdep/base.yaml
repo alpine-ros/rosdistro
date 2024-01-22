@@ -4336,6 +4336,7 @@ libnanopb-dev:
     '*': [libnanopb-dev]
     bionic: null
 libncurses:
+  alpine: [ncurses]
   arch: [ncurses]
   debian: [libncurses5]
   fedora: [ncurses]
@@ -4346,6 +4347,7 @@ libncurses:
   rhel: [ncurses]
   ubuntu: [libncurses5]
 libncurses-dev:
+  alpine: [ncurses-dev]
   arch: [ncurses]
   debian: [libncurses5-dev]
   fedora: [ncurses-devel]
