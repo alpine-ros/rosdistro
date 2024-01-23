@@ -5494,6 +5494,7 @@ libqt5-sql:
   nixos: [qt5.qtbase]
   ubuntu: [libqt5sql5]
 libqt5-svg:
+  alpine: [qt5-qtsvg]
   arch: [qt5-svg]
   debian: [libqt5svg5]
   fedora: [qt5-qtsvg]
