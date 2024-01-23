@@ -855,6 +855,7 @@ docker.io:
   fedora: [docker]
   ubuntu: [docker.io]
 doxygen:
+  alpine: [doxygen]
   arch: [doxygen]
   debian: [doxygen]
   fedora: [doxygen]
@@ -7040,7 +7041,7 @@ opende:
   nixos: [ode]
   ubuntu: [libode-dev]
 opengl:
-  alpine: [mesa-dev]
+  alpine: [mesa-dev, glu-dev]
   arch: [mesa]
   debian: [libgl1-mesa-dev, libglu1-mesa-dev]
   fedora: [mesa-libGL-devel, mesa-libGLU-devel]
