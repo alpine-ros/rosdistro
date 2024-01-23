@@ -855,6 +855,8 @@ docker.io:
   fedora: [docker]
   ubuntu: [docker.io]
 doxygen:
+  alpine: [doxygen]
+  arch: [doxygen]
   arch: [doxygen]
   debian: [doxygen]
   fedora: [doxygen]
