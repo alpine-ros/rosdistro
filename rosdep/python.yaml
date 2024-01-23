@@ -6558,7 +6558,9 @@ python3-gst-1.0:
   alpine: [py3-gst]
   debian: [python3-gst-1.0]
   fedora: [python3-gstreamer1]
-  ubuntu: [python3-gst-1.0]
+  ubuntu:
+    '*': [python3-gst-1.0]
+    noble: null
 python3-gurobipy-pip: *migrate_eol_2025_04_30_python3_gurobipy_pip
 python3-gymnasium-pip:
   debian:
