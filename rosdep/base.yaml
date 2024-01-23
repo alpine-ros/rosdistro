@@ -1070,6 +1070,7 @@ ffmpeg2theora:
   gentoo: [media-video/ffmpeg2theora]
   ubuntu: [ffmpeg2theora]
 file:
+  alpine: [file]
   arch: [file]
   debian: [file]
   fedora: [file]
