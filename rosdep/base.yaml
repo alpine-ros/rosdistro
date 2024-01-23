@@ -1998,6 +1998,7 @@ ignition-citadel:
   ubuntu:
     focal: [ignition-citadel]
 ignition-cmake2:
+  alpine: [ignition-cmake2]
   debian:
     bookworm: [libignition-cmake-dev]
     buster: [libignition-cmake2-dev]
@@ -2108,6 +2109,7 @@ ignition-launch5:
     focal: [libignition-launch5-dev]
     jammy: [libignition-launch5-dev]
 ignition-math6:
+  alpine: [ignition-math6]
   debian:
     bookworm: [libignition-math-dev]
     buster: [libignition-math6-dev]
