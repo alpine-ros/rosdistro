@@ -1999,6 +1999,11 @@ ignition-citadel:
   ubuntu:
     focal: [ignition-citadel]
 ignition-cmake2:
+  alpine:
+    '*': [ignition-cmake2]
+    '3.11': null
+    '3.14': null
+    '3.8': null
   debian:
     bookworm: [libignition-cmake-dev]
     buster: [libignition-cmake2-dev]
@@ -2109,6 +2114,11 @@ ignition-launch5:
     focal: [libignition-launch5-dev]
     jammy: [libignition-launch5-dev]
 ignition-math6:
+  alpine:
+    '*': [ignition-math6]
+    '3.11': null
+    '3.14': null
+    '3.8': null
   debian:
     bookworm: [libignition-math-dev]
     buster: [libignition-math6-dev]
