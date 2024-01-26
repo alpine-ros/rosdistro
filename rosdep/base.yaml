@@ -7047,6 +7047,7 @@ opencl-headers:
   rhel: [opencl-headers]
   ubuntu: [opencl-headers]
 opende:
+  alpine: [ode]
   arch: [ode]
   debian: [libode-dev]
   fedora: [ode-devel]
