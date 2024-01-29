@@ -8721,6 +8721,11 @@ xsltproc:
   nixos: [libxslt]
   ubuntu: [xsltproc]
 xtensor:
+  alpine:
+    '*': [xtensor]
+    '3.11': null
+    '3.14': null
+    '3.8': null
   arch: [xtensor]
   fedora: [xtensor-devel]
   nixos: [xtensor]
