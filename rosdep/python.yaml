@@ -9863,6 +9863,9 @@ python3-yolov5:
     pip:
       packages: [yolov5]
 python3-zmq:
+  alpine:
+    '*': [py3-pyzmq]
+    '3.8': null
   arch: [python-pyzmq]
   debian: [python3-zmq]
   fedora: [python3-zmq]
