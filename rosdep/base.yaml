@@ -3068,7 +3068,7 @@ libcereal-dev:
   ubuntu: [libcereal-dev]
 libceres-dev:
   alpine:
-    '*': [ceres-solver]
+    '*': [ceres-solver, ceres-solver-dev]
     '3.11': null
     '3.14': null
     '3.8': null
@@ -4505,6 +4505,11 @@ libois-dev:
   nixos: [ois]
   ubuntu: [libois-dev]
 libomp-dev:
+  alpine:
+    '*': [openmp]
+    '3.11': null
+    '3.14': null
+    '3.8': null
   arch: [openmp]
   debian: [libomp-dev]
   fedora: [libomp-devel]
@@ -6928,6 +6933,10 @@ nkf:
   rhel: [nkf]
   ubuntu: [nkf]
 nlohmann-json-dev:
+  alpine:
+    '*': [nlohmann-json]
+    '3.11': null
+    '3.8': null
   debian:
     bullseye: [nlohmann-json3-dev]
     buster: [nlohmann-json3-dev]
@@ -8184,6 +8193,10 @@ tar:
     '7': [libtar-devel]
   ubuntu: [libtar-dev]
 tbb:
+  alpine:
+    '*': [libtbb-dev]
+    '3.11': null
+    '3.8': null
   arch: [intel-tbb]
   debian: [libtbb-dev]
   fedora: [tbb-devel]
