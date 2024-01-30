@@ -8065,6 +8065,9 @@ subversion:
   rhel: [subversion]
   ubuntu: [subversion]
 suitesparse:
+  alpine:
+    '*': [suitesparse-dev]
+    '3.8': null
   arch: [suitesparse]
   debian: [libsuitesparse-dev]
   fedora: [suitesparse-devel]
