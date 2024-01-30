@@ -1582,8 +1582,6 @@ gradle:
 graphicsmagick:
   alpine:
     '*': [graphicsmagick, graphicsmagick-dev]
-    '3.11': null
-    '3.14': null
     '3.8': null
   arch: [graphicsmagick]
   debian: [libgraphicsmagick++1-dev, graphicsmagick-libmagick-dev-compat]
