@@ -4502,7 +4502,11 @@ libois-dev:
   nixos: [ois]
   ubuntu: [libois-dev]
 libomp-dev:
-  alpine: [openmp]
+  alpine:
+    '*': [openmp]
+    '3.11': null
+    '3.14': null
+    '3.8': null
   arch: [openmp]
   debian: [libomp-dev]
   fedora: [libomp-devel]
