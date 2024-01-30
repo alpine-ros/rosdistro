@@ -3398,6 +3398,7 @@ libflann:
   ubuntu:
     '*': [libflann1.9]
 libflann-dev:
+  alpine: [flann-dev]
   arch: [flann]
   debian: [libflann-dev]
   fedora: [flann-devel]
