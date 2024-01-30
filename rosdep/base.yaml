@@ -3070,7 +3070,7 @@ libcereal-dev:
   ubuntu: [libcereal-dev]
 libceres-dev:
   alpine:
-    '*': [ceres-solver-dev]
+    '*': [ceres-solver]
     '3.11': null
     '3.14': null
     '3.8': null
