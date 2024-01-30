@@ -4150,6 +4150,9 @@ libkml-dev:
     '7': null
   ubuntu: [libkml-dev]
 liblapack-dev:
+  alpine:
+    '*': [lapack-dev]
+    '3.8': null
   arch: [lapack]
   debian: [liblapack-dev]
   fedora: [lapack-devel]
