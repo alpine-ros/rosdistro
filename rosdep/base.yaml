@@ -6925,6 +6925,7 @@ nkf:
   rhel: [nkf]
   ubuntu: [nkf]
 nlohmann-json-dev:
+  alpine: [nlohmann-json]
   debian:
     bullseye: [nlohmann-json3-dev]
     buster: [nlohmann-json3-dev]
