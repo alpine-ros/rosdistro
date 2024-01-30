@@ -3395,6 +3395,11 @@ libflann:
   ubuntu:
     '*': [libflann1.9]
 libflann-dev:
+  alpine:
+    '*': [flann-dev]
+    '3.11': null
+    '3.14': null
+    '3.8': null
   arch: [flann]
   debian: [libflann-dev]
   fedora: [flann-devel]
