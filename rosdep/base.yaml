@@ -1580,6 +1580,7 @@ gradle:
   nixos: [gradle]
   ubuntu: [gradle]
 graphicsmagick:
+  alpine: [graphicsmagick graphicsmagick-dev]
   arch: [graphicsmagick]
   debian: [libgraphicsmagick++1-dev, graphicsmagick-libmagick-dev-compat]
   fedora: [GraphicsMagick-c++-devel]
@@ -3065,7 +3066,7 @@ libcereal-dev:
   ubuntu: [libcereal-dev]
 libceres-dev:
   alpine:
-    '*': [ceres-solver]
+    '*': [ceres-solver-dev]
     '3.11': null
     '3.14': null
     '3.8': null
