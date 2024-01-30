@@ -1581,7 +1581,7 @@ gradle:
   ubuntu: [gradle]
 graphicsmagick:
   alpine:
-    '*': [graphicsmagick graphicsmagick-dev]
+    '*': [graphicsmagick, graphicsmagick-dev]
     '3.11': null
     '3.14': null
     '3.8': null
