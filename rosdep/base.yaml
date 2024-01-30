@@ -7063,6 +7063,11 @@ opencl-headers:
   rhel: [opencl-headers]
   ubuntu: [opencl-headers]
 opende:
+  alpine:
+    '*': [ode]
+    '3.11': null
+    '3.14': null
+    '3.8': null
   arch: [ode]
   debian: [libode-dev]
   fedora: [ode-devel]
