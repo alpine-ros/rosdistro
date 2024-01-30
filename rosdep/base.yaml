@@ -1580,6 +1580,9 @@ gradle:
   nixos: [gradle]
   ubuntu: [gradle]
 graphicsmagick:
+  alpine:
+    '*': [graphicsmagick, graphicsmagick-dev]
+    '3.8': null
   arch: [graphicsmagick]
   debian: [libgraphicsmagick++1-dev, graphicsmagick-libmagick-dev-compat]
   fedora: [GraphicsMagick-c++-devel]
