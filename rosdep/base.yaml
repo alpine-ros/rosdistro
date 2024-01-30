@@ -8185,6 +8185,10 @@ tar:
     '7': [libtar-devel]
   ubuntu: [libtar-dev]
 tbb:
+  alpine:
+    '*': [libtbb-dev]
+    '3.11': null
+    '3.8': null
   arch: [intel-tbb]
   debian: [libtbb-dev]
   fedora: [tbb-devel]
