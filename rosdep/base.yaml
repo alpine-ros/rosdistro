@@ -8726,11 +8726,7 @@ xpath-perl:
   macports: [p5-xml-xpath]
   ubuntu: [libxml-xpath-perl]
 xsimd:
-  alpine:
-    '*': [xsimd xsimd-dev]
-    '3.11': null
-    '3.14': null
-    '3.8': null
+  alpine: [xsimd, xsimd-dev]
   debian:
     '*': [libxsimd-dev]
     bullseye: null
