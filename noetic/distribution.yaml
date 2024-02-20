@@ -547,7 +547,7 @@ repositories:
       tags:
         release: release/noetic/{package}/{version}
       url: https://github.com/ros2-gbp/behaviortree_cpp_v4-release.git
-      version: 4.4.3-2
+      version: 4.5.1-1
     source:
       type: git
       url: https://github.com/BehaviorTree/BehaviorTree.CPP.git
@@ -670,7 +670,7 @@ repositories:
       tags:
         release: release/noetic/{package}/{version}
       url: https://github.com/FraunhoferIOSB/camera_aravis-release.git
-      version: 4.0.4-1
+      version: 4.0.5-3
     source:
       test_pull_requests: true
       type: git
@@ -1676,7 +1676,7 @@ repositories:
       tags:
         release: release/noetic/{package}/{version}
       url: https://gitlab.fel.cvut.cz/cras/ros-release/cras_laser_geometry.git
-      version: 1.2.0-1
+      version: 1.2.1-1
     source:
       type: git
       url: https://github.com/ctu-vras/cras_laser_geometry.git
@@ -2005,7 +2005,7 @@ repositories:
       tags:
         release: release/noetic/{package}/{version}
       url: https://github.com/luxonis/depthai-ros-release.git
-      version: 2.8.2-1
+      version: 2.9.0-1
     source:
       test_pull_requests: true
       type: git
@@ -4365,7 +4365,7 @@ repositories:
       tags:
         release: release/noetic/{package}/{version}
       url: https://github.com/clearpath-gbp/jackal-release.git
-      version: 0.8.8-1
+      version: 0.8.9-1
     source:
       type: git
       url: https://github.com/jackal/jackal.git
@@ -5757,7 +5757,7 @@ repositories:
       tags:
         release: release/noetic/{package}/{version}
       url: https://github.com/LORD-MicroStrain/microstrain_inertial-release.git
-      version: 3.2.0-3
+      version: 3.2.1-1
     source:
       test_pull_requests: true
       type: git
@@ -6230,7 +6230,7 @@ repositories:
       tags:
         release: release/noetic/{package}/{version}
       url: https://github.com/mrpt-ros-pkg-release/mrpt2-release.git
-      version: 2.11.4-1
+      version: 2.11.9-1
     source:
       type: git
       url: https://github.com/mrpt/mrpt.git
@@ -6673,7 +6673,7 @@ repositories:
       tags:
         release: release/noetic/{package}/{version}
       url: https://github.com/nerian-vision/nerian_stereo-release.git
-      version: 3.11.0-1
+      version: 3.11.1-2
     source:
       type: git
       url: https://github.com/nerian-vision/nerian_stereo.git
@@ -6806,7 +6806,7 @@ repositories:
       tags:
         release: release/noetic/{package}/{version}
       url: https://github.com/novatel-gbp/novatel_oem7_driver-release.git
-      version: 4.2.0-1
+      version: 4.3.0-5
     source:
       type: git
       url: https://github.com/novatel/novatel_oem7_driver.git
@@ -7638,7 +7638,7 @@ repositories:
       tags:
         release: release/noetic/{package}/{version}
       url: https://github.com/facontidavide/plotjuggler-release.git
-      version: 3.8.8-3
+      version: 3.9.0-1
     source:
       type: git
       url: https://github.com/facontidavide/PlotJuggler.git
@@ -7668,7 +7668,7 @@ repositories:
       tags:
         release: release/noetic/{package}/{version}
       url: https://github.com/PlotJuggler/plotjuggler-ros-plugins-release.git
-      version: 2.0.0-1
+      version: 2.1.0-1
     source:
       type: git
       url: https://github.com/PlotJuggler/plotjuggler-ros-plugins.git
@@ -8394,7 +8394,7 @@ repositories:
       tags:
         release: release/noetic/{package}/{version}
       url: https://bitbucket.org/qbrobotics/qbshin-ros-release.git
-      version: 1.0.9-1
+      version: 1.2.5-1
     source:
       type: git
       url: https://bitbucket.org/qbrobotics/qbshin-ros.git
@@ -11200,7 +11200,7 @@ repositories:
       tags:
         release: release/noetic/{package}/{version}
       url: https://github.com/SICKAG/sick_visionary_ros-release.git
-      version: 1.1.1-1
+      version: 1.1.2-1
     source:
       type: git
       url: https://github.com/SICKAG/sick_visionary_ros.git
@@ -12363,7 +12363,7 @@ repositories:
       tags:
         release: release/noetic/{package}/{version}
       url: https://github.com/seqsense/urg_stamped-release.git
-      version: 0.0.17-1
+      version: 0.1.0-1
     source:
       type: git
       url: https://github.com/seqsense/urg_stamped.git
@@ -12998,7 +12998,7 @@ repositories:
       tags:
         release: release/noetic/{package}/{version}
       url: https://github.com/ros-gbp/xacro-release.git
-      version: 1.14.16-1
+      version: 1.14.17-2
     source:
       test_pull_requests: true
       type: git

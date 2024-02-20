@@ -1041,13 +1041,16 @@ ffmpeg:
   arch: [ffmpeg]
   debian:
     '*': [ffmpeg, libavcodec-dev, libavformat-dev, libavutil-dev, libswscale-dev]
-  fedora: [ffmpeg-devel]
+  fedora: [ffmpeg-free-devel]
   freebsd: [ffmpeg]
   gentoo: [virtual/ffmpeg]
   macports: [ffmpeg]
   nixos: [ffmpeg]
   openembedded: [ffmpeg@openembedded-core]
   opensuse: [ffmpeg-4-libavcodec-devel, ffmpeg-4-libavdevice-devel, ffmpeg-4-libavfilter-devel, ffmpeg-4-libavformat-devel, ffmpeg-4-libavresample-devel, ffmpeg-4-libavutil-devel, ffmpeg-4-libpostproc-devel, ffmpeg-4-libswresample-devel, ffmpeg-4-libswscale-devel, ffmpeg-4-private-devel]
+  rhel:
+    '*': [ffmpeg-free-devel]
+    '8': null
   slackware: [ffmpeg]
   ubuntu:
     '*': [ffmpeg, libavcodec-dev, libavformat-dev, libavutil-dev, libswscale-dev]
@@ -1055,14 +1058,16 @@ ffmpeg-dev:
   alpine: [ffmpeg-dev]
   arch: [ffmpeg]
   debian: [libavcodec-dev, libavdevice-dev, libavfilter-dev, libavformat-dev, libavutil-dev, libpostproc-dev, libswresample-dev, libswscale-dev]
-  fedora: [ffmpeg-devel]
+  fedora: [ffmpeg-free-devel]
   freebsd: [ffmpeg]
   gentoo: [virtual/ffmpeg]
   macports: [ffmpeg]
   nixos: [ffmpeg]
   openembedded: [ffmpeg@openembedded-core]
   opensuse: [ffmpeg-4-libavcodec-devel, ffmpeg-4-libavdevice-devel, ffmpeg-4-libavfilter-devel, ffmpeg-4-libavformat-devel, ffmpeg-4-libavresample-devel, ffmpeg-4-libavutil-devel, ffmpeg-4-libpostproc-devel, ffmpeg-4-libswresample-devel, ffmpeg-4-libswscale-devel, ffmpeg-4-private-devel]
-  rhel: [ffmpeg-devel]
+  rhel:
+    '*': [ffmpeg-free-devel]
+    '8': null
   slackware: [ffmpeg]
   ubuntu: [libavcodec-dev, libavdevice-dev, libavfilter-dev, libavformat-dev, libavutil-dev, libpostproc-dev, libswresample-dev, libswscale-dev]
 ffmpeg2theora:
@@ -3195,6 +3200,7 @@ libdbus-dev:
   fedora: [dbus-devel]
   gentoo: [sys-apps/dbus]
   nixos: [dbus]
+  rhel: [dbus-devel]
   ubuntu: [libdbus-1-dev]
 libdc1394-dev:
   arch:
@@ -4061,6 +4067,9 @@ libjansson-dev:
   ubuntu: [libjansson-dev]
 libjaxp1.3-java:
   debian: [libjaxp1.3-java]
+libjchart2d-java:
+  debian: [libjchart2d-java]
+  ubuntu: [libjchart2d-java]
 libjpeg:
   alpine: [libjpeg-turbo-dev]
   arch: [libjpeg-turbo]
@@ -4658,6 +4667,17 @@ libopenvdb-dev:
     '*': [openvdb-devel]
     '7': null
   ubuntu: [libopenvdb-dev, libilmbase-dev]
+libopus-dev:
+  alpine: [opus-dev]
+  arch: [opus]
+  debian: [libopus-dev]
+  fedora: [opus-devel]
+  gentoo: [media-sound/opus]
+  macports: [opus]
+  nixos: [libopus]
+  opensuse: [libopus-devel]
+  rhel: [opus-devel]
+  ubuntu: [libopus-dev]
 liborocos-bfl:
   debian:
     '*': [liborocos-bfl0.8]
@@ -5392,6 +5412,9 @@ libqt4-sql-psql:
   macports: [qt4-mac]
   nixos: [qt4]
   ubuntu: [libqt4-sql-psql]
+libqt5-charts-dev:
+  debian: [libqt5charts5-dev]
+  ubuntu: [libqt5charts5-dev]
 libqt5-concurrent:
   arch: [qt5-base]
   debian: [libqt5concurrent5]
@@ -5862,9 +5885,12 @@ libswscale-dev:
   alpine: [ffmpeg-dev]
   arch: [ffmpeg]
   debian: [libswscale-dev]
-  fedora: [ffmpeg-devel]
+  fedora: [libswscale-free-devel]
   gentoo: [virtual/ffmpeg]
   nixos: [ffmpeg]
+  rhel:
+    '*': [libswscale-free-devel]
+    '8': null
   ubuntu: [libswscale-dev]
 libsystemd-dev:
   debian: [libsystemd-dev]
@@ -7073,6 +7099,8 @@ opende:
   fedora: [ode-devel]
   gentoo: [dev-games/ode]
   nixos: [ode]
+  rhel:
+    '8': [ode-devel]
   ubuntu: [libode-dev]
 opengl:
   alpine: [mesa-dev, glu-dev]
