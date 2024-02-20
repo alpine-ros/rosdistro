@@ -7935,6 +7935,7 @@ snappy:
   rhel: [snappy-devel]
   ubuntu: [libsnappy-dev]
 socat:
+  alpine: [socat]
   arch: [socat]
   debian: [socat]
   fedora: [socat]
