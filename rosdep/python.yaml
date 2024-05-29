@@ -6708,6 +6708,7 @@ python3-importlib-metadata:
 python3-importlib-resources:
   alpine:
     '3.17': [py3-importlib-resources]
+    '3.20': [py3-importlib-resources]
   arch: [python-importlib_resources]
   debian:
     '*': [python3-importlib-resources]
@@ -8528,6 +8529,7 @@ python3-qt5-bindings:
   alpine:
     '*': [py3-qt5, py3-sip, py-sip, py-sip-dev]
     '3.17': [py3-qt5, py3-sip4, py3-sip4-dev]
+    '3.20': [py3-qt5, py3-sip4, py3-sip4-dev]
   arch: [python-pyqt5]
   debian:
     '*': [libpyside2-dev, libshiboken2-dev, pyqt5-dev, python3-pyqt5, python3-pyqt5.qtsvg, python3-pyside2.qtsvg, python3-sip-dev, qtbase5-dev, shiboken2]
