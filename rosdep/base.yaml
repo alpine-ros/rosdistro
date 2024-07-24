@@ -485,6 +485,9 @@ catch2:
   freebsd: [catch2]
   gentoo: [dev-cpp/catch]
   nixos: [catch2]
+  rhel:
+    '*': [catch2-devel]
+    '8': null
   ubuntu:
     '*': [catch2]
     focal: null
@@ -564,13 +567,15 @@ clang-format:
   alpine: [clang]
   arch: [clang]
   debian: [clang-format]
-  fedora: [clang]
+  fedora: [clang-tools-extra, git-clang-format]
   gentoo: [sys-devel/clang]
   nixos: [clang]
   osx:
     homebrew:
       packages: [clang-format]
-  rhel: [clang]
+  rhel:
+    '*': [clang-tools-extra, git-clang-format]
+    '7': null
   ubuntu: [clang-format]
 clang-tidy:
   alpine: [clang-extra-tools]
@@ -3359,10 +3364,12 @@ libdpkg-dev:
 libdraco-dev:
   arch: [draco]
   debian: [libdraco-dev]
-  fedora: [draco-devel]
+  fedora:
+    '*': [draco-devel, draco-static]
+    '39': [draco-devel]
   nixos: [draco]
   rhel:
-    '*': [draco-devel]
+    '*': [draco-devel, draco-static]
     '8': null
   ubuntu:
     '*': [libdraco-dev]
@@ -3537,6 +3544,27 @@ libflann-dev:
   openembedded: [libflann@meta-ros-common]
   rhel: [flann-devel]
   ubuntu: [libflann-dev]
+libflatbuffers-dev:
+  alpine: [flatbuffers-dev]
+  arch: [flatbuffers]
+  debian: [libflatbuffers-dev]
+  fedora: [flatbuffers-devel]
+  freebsd: [flatbuffers]
+  gentoo: [dev-libs/flatbuffers]
+  nixos: [flatbuffers]
+  opensuse:
+    '*': [flatbuffers-devel]
+    '15.2': null
+    '15.3': null
+  osx:
+    homebrew:
+      packages: [flatbuffers]
+    macports:
+      packages: [flatbuffers]
+  rhel:
+    '*': [flatbuffers-devel]
+    '8': null
+  ubuntu: [libflatbuffers-dev]
 libfltk-dev:
   arch: [fltk]
   debian:
@@ -3899,21 +3927,21 @@ libgps:
   rhel: [gpsd-devel]
   ubuntu: [libgps-dev]
 libgrpc:
-  alpine: [grpc]
+  alpine: [grpc-dev]
   arch: [grpc]
   debian: [libgrpc++-dev]
-  fedora: [grpc-cpp]
+  fedora: [grpc-devel]
   gentoo: [net-libs/grpc]
   nixos: [grpc]
   openembedded: [grpc@meta-networking]
-  opensuse: [grpc]
+  opensuse: [grpc-devel]
   osx:
     homebrew:
       packages: [grpc]
     macports:
       packages: [grpc]
   rhel:
-    '*': [grpc]
+    '*': [grpc-devel]
     '8': null
   ubuntu: [libgrpc++-dev]
 libgsl:
@@ -4621,6 +4649,12 @@ libnss3-dev:
   gentoo: [=dev-libs/nss-3*]
   nixos: [nss]
   ubuntu: [libnss3-dev]
+liboctomap-dev:
+  debian: [liboctomap-dev]
+  fedora: [octomap-devel]
+  nixos: [octomap]
+  rhel: [octomap-devel]
+  ubuntu: [liboctomap-dev]
 libogg:
   alpine: [libogg-dev]
   arch: [libogg]
@@ -4902,6 +4936,7 @@ libpaho-mqtt:
   nixos: [paho-mqtt-c]
   openembedded: [paho-mqtt-c@meta-oe]
   opensuse: [libpaho-mqtt1]
+  rhel: [paho-c]
   ubuntu:
     '*': [libpaho-mqtt1.3]
     bionic: null
@@ -4913,6 +4948,7 @@ libpaho-mqtt-dev:
   nixos: [paho-mqtt-c]
   openembedded: [paho-mqtt-c@meta-oe]
   opensuse: [libpaho-mqtt-devel]
+  rhel: [paho-c-devel]
   ubuntu:
     '*': [libpaho-mqtt-dev]
     bionic: null
@@ -5953,6 +5989,7 @@ libsensors4-dev:
   nixos: [lm_sensors]
   openembedded: [lmsensors@meta-oe]
   opensuse: [libsensors4-devel]
+  rhel: [lm_sensors-devel]
   ubuntu: [libsensors4-dev]
 libserial-dev:
   debian: [libserial-dev]
@@ -6310,10 +6347,11 @@ libusb:
   alpine: [libusb-compat]
   arch: [libusb-compat]
   debian: [libusb-0.1-4]
-  fedora: [libusb]
+  fedora: [libusb-compat-0.1]
   gentoo: ['virtual/libusb:0']
   macports: [libusb]
   nixos: [libusb-compat-0_1]
+  rhel: [libusb]
   ubuntu: [libusb-0.1-4]
 libusb-1.0:
   alpine: [libusb]
@@ -6342,7 +6380,7 @@ libusb-dev:
   alpine: [libusb-compat-dev]
   arch: [libusb-compat]
   debian: [libusb-dev]
-  fedora: [libusb-devel]
+  fedora: [libusb-compat-0.1-devel]
   gentoo: [virtual/libusb]
   macports: [libusb]
   nixos: [libusb1]
@@ -6408,6 +6446,13 @@ libvlccore-dev:
   fedora: [vlc-devel]
   opensuse: [vlc-devel]
   ubuntu: [libvlccore-dev]
+libvorbis-dev:
+  alpine: [libvorbis-dev]
+  debian: [libvorbis-dev]
+  fedora: [libvorbis-devel]
+  opensuse: [libvorbis-devel]
+  rhel: [libvorbis-devel]
+  ubuntu: [libvorbis-dev]
 libvpx-dev:
   debian: [libvpx-dev]
   fedora: [libvpx-devel]
@@ -6751,14 +6796,21 @@ libzip-dev:
 libzmq3-dev:
   alpine: [zeromq-dev]
   arch: [zeromq]
-  debian: [libzmq3-dev]
+  debian:
+    '*': [libzmq3-dev, cppzmq-dev]
+    bullseye: [libzmq3-dev]
+    buster: [libzmq3-dev]
   fedora: [cppzmq-devel]
   gentoo: [net-libs/cppzmq]
   nixos: [cppzmq]
   openembedded: [zeromq@meta-oe]
   opensuse: [zeromq-devel]
   rhel: [cppzmq-devel]
-  ubuntu: [libzmq3-dev]
+  ubuntu:
+    '*': [libzmq3-dev, cppzmq-dev]
+    bionic: [libzmq3-dev]
+    focal: [libzmq3-dev]
+    jammy: [libzmq3-dev]
 libzmqpp-dev:
   ubuntu: [libzmqpp-dev]
 libzmqpp3:
@@ -6988,9 +7040,7 @@ matio:
   fedora: [matio-devel]
   gentoo: [sci-libs/matio]
   nixos: [matio]
-  rhel:
-    '*': null
-    '8': [matio-devel]
+  rhel: [matio-devel]
   ubuntu: [libmatio-dev]
 maven:
   alpine: [maven]
@@ -8024,6 +8074,7 @@ rapidjson-dev:
   fedora: [rapidjson]
   gentoo: [dev-libs/rapidjson]
   nixos: [rapidjson]
+  rhel: [rapidjson-devel]
   ubuntu: [rapidjson-dev]
 readline-dev:
   alpine: [readline-dev]
@@ -8520,6 +8571,7 @@ swig:
   gentoo: [dev-lang/swig]
   nixos: [swig]
   openembedded: [swig@openembedded-core]
+  rhel: [swig]
   ubuntu: [swig]
 swig-wx:
   gentoo: [dev-lang/swig]
@@ -8598,7 +8650,7 @@ tbb:
   fedora: [tbb-devel]
   gentoo: [dev-cpp/tbb]
   macports: [tbb]
-  nixos: [tbb_2021_8]
+  nixos: [tbb_2021_11]
   openembedded: [tbb@meta-oe]
   opensuse: [tbb-devel]
   rhel: [tbb-devel]
