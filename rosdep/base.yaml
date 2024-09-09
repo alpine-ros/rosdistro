@@ -726,6 +726,12 @@ cppunit:
 cpuburn:
   debian: [cpuburn]
   ubuntu: [cpuburn]
+cpp-httplib:
+  alpine:
+    '*': [cpp-httplib-dev]
+    '3.11': null
+    '3.14': null
+    '3.8': null
 croncpp:
   alpine:
     '*': [croncpp-dev]
