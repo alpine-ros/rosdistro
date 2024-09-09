@@ -693,7 +693,7 @@ couchdb:
   ubuntu: [couchdb]
 cpp-httplib:
   alpine:
-    '*': [cpp-httplib-dev]
+    '*': [cpp-httplib, cpp-httplib-dev]
     '3.11': null
     '3.14': null
     '3.8': null
