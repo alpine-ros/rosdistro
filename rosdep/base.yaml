@@ -8198,7 +8198,7 @@ protobuf:
     noble: [libprotobuf32]
 protobuf-compiler-grpc:
   alpine:
-    '*': grpc-plugins
+    '*': [grpc-plugins]
     '3.14': null
     '3.11': null
     '3.8': null
