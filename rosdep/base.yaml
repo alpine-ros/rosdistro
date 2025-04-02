@@ -4670,6 +4670,7 @@ liblmdb-dev:
   rhel: [lmdb-devel]
   ubuntu: [liblmdb-dev]
 liblttng-ctl-dev:
+  alpine: [lttng-tools-dev]
   debian: [liblttng-ctl-dev]
   fedora: [lttng-tools-devel]
   nixos: [lttng-tools]
@@ -4678,6 +4679,7 @@ liblttng-ctl-dev:
   rhel: [lttng-tools-devel]
   ubuntu: [liblttng-ctl-dev]
 liblttng-ust-dev:
+  alpine: [lttng-ust-dev]
   arch: [lttng-ust]
   debian: [liblttng-ust-dev]
   fedora: [lttng-ust-devel]
@@ -7348,6 +7350,7 @@ lttng-modules:
   openembedded: [lttng-modules@openembedded-core]
   ubuntu: [lttng-modules-dkms]
 lttng-tools:
+  alpine: [lttng-tools]
   debian: [lttng-tools]
   fedora: [lttng-tools]
   gentoo: [dev-util/lttng-tools]
