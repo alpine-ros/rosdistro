@@ -4001,7 +4001,9 @@ python-singledispatch:
   gentoo: [virtual/python-singledispatch]
   ubuntu: [python-singledispatch]
 python-sip:
-  alpine: [py-sip-dev, py-sip]
+  alpine:
+    '*': null
+    '3.8': [py-sip-dev, py-sip]
   arch: [sip, python2-sip]
   debian: [python-sip-dev]
   freebsd: [py27-sip]
@@ -4018,7 +4020,9 @@ python-sip:
   ubuntu:
     '*': [python-sip-dev]
 python-sip4:
-  alpine: [py-sip-dev, py-sip]
+  alpine:
+    '*': null
+    '3.8': [py-sip-dev, py-sip]
   debian: [python-sip-dev]
   fedora: [sip]
   gentoo: [=dev-python/sip-4*]
@@ -10075,6 +10079,11 @@ python3-singleton-pattern-decorator-pip:
     pip:
       packages: [singleton-pattern-decorator]
 python3-sip:
+  alpine:
+    '*': [py3-sip4, py3-sip4-dev]
+    '3.11': [py-sip, py-sip-dev]
+    '3.14': [py-sip, py-sip-dev]
+    '3.8': [py-sip, py-sip-dev]
   debian: [python3-sip-dev]
   fedora: [python3-sip-devel]
   gentoo: [dev-python/sip]

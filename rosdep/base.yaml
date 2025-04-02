@@ -6812,7 +6812,7 @@ libvpx-dev:
   ubuntu: [libvpx-dev]
 libvtk:
   alpine:
-    '*': [vtk8-dev]
+    '*': [vtk-dev]
     '3.11': [vtk7-dev]
     '3.8': [vtk7-dev]
   arch: [vtk]
@@ -6845,7 +6845,7 @@ libvtk-java:
     bionic: [libvtk6-java]
 libvtk-qt:
   alpine:
-    '*': [vtk8-dev]
+    '*': [vtk-dev]
     '3.11': [vtk7-dev]
     '3.8': [vtk7-dev]
   arch: [vtk]
