@@ -10079,7 +10079,11 @@ python3-singleton-pattern-decorator-pip:
     pip:
       packages: [singleton-pattern-decorator]
 python3-sip:
-  alpine: [py3-sip]
+  alpine:
+    '*': [py3-sip4, py3-sip4-dev]
+    '3.11': [py-sip, py-sip-dev]
+    '3.14': [py-sip, py-sip-dev]
+    '3.8': [py-sip, py-sip-dev]
   debian: [python3-sip-dev]
   fedora: [python3-sip-devel]
   gentoo: [dev-python/sip]
