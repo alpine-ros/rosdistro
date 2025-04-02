@@ -48,7 +48,7 @@ alsa-oss:
   arch: [alsa-oss]
   debian: [alsa-oss]
   gentoo: [media-libs/alsa-oss]
-  nixos: [alsaOss]
+  nixos: [alsa-oss]
   openembedded: [alsa-oss@meta-oe]
   opensuse: [alsa-oss]
   ubuntu: [alsa-oss]
@@ -2714,7 +2714,7 @@ libasound2-dev:
   debian: [libasound2-dev]
   fedora: [alsa-lib]
   gentoo: [media-libs/alsa-lib]
-  nixos: [alsaLib]
+  nixos: [alsa-lib]
   openembedded: [alsa-lib@openembedded-core]
   ubuntu: [libasound2-dev]
 libatomic:
@@ -6814,7 +6814,7 @@ libvpx-dev:
   ubuntu: [libvpx-dev]
 libvtk:
   alpine:
-    '*': [vtk8-dev]
+    '*': [vtk-dev]
     '3.11': [vtk7-dev]
     '3.8': [vtk7-dev]
   arch: [vtk]
@@ -6847,7 +6847,7 @@ libvtk-java:
     bionic: [libvtk6-java]
 libvtk-qt:
   alpine:
-    '*': [vtk8-dev]
+    '*': [vtk-dev]
     '3.11': [vtk7-dev]
     '3.8': [vtk7-dev]
   arch: [vtk]
@@ -9269,6 +9269,14 @@ texmaker:
   gentoo: [app-office/texmaker]
   nixos: [texmaker]
   ubuntu: [texmaker]
+tftp-hpa:
+  alpine: [tftp-hpa]
+  arch: [tftp-hpa]
+  debian: [tftp-hpa]
+  fedora: [tftp]
+  gentoo: [net-ftp/tftp-hpa]
+  nixos: [tftp-hpa]
+  ubuntu: [tftp-hpa]
 tiled:
   alpine: [tiled]
   arch: [tiled]
