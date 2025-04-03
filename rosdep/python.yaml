@@ -9244,7 +9244,9 @@ python3-pyswarms-pip:
     pip:
       packages: [pyswarms]
 python3-pytest:
-  alpine: [py3-pytest]
+  alpine:
+    '*': [py3-pytest7]
+    '3.17': [py3-pytest]
   arch: [python-pytest]
   debian: [python3-pytest]
   fedora: [python3-pytest]
