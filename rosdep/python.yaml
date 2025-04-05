@@ -6359,7 +6359,7 @@ python3-flake8-isort:
     pip:
       packages: [flake8-isort]
 python3-flake8-quotes:
-  alpine: [python3-flake8-quotes]
+  alpine: [py3-flake8-quotes]
   debian:
     '*': [python3-flake8-quotes]
     bullseye:
