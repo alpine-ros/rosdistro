@@ -5761,6 +5761,7 @@ python3-defusedxml:
   rhel: ['python%{python3_pkgversion}-defusedxml']
   ubuntu: [python3-defusedxml]
 python3-deprecated:
+  alpine: [py3-deprecated]
   debian:
     '*': [python3-deprecated]
     buster: null
@@ -6210,6 +6211,9 @@ python3-flake8-blind-except-pip:
     pip:
       packages: [flake8-blind-except]
 python3-flake8-builtins:
+  alpine:
+    '*': [py3-flake8-builtins]
+    '3.17': null
   debian:
     '*': [python3-flake8-builtins]
     bullseye:
@@ -6256,6 +6260,9 @@ python3-flake8-class-newline-pip:
     pip:
       packages: [flake8-class-newline]
 python3-flake8-comprehensions:
+  alpine:
+    '*': [py3-flake8-comprehensions]
+    '3.17': null
   debian:
     '*': [python3-flake8-comprehensions]
     bullseye:
@@ -6301,6 +6308,9 @@ python3-flake8-deprecated-pip:
     pip:
       packages: [flake8-deprecated]
 python3-flake8-docstrings:
+  alpine:
+    '*': [py3-flake8-docstrings]
+    '3.17': null
   arch: [python-flake8-docstrings]
   debian: [python3-flake8-docstrings]
   fedora: [python3-flake8-docstrings]
@@ -6317,6 +6327,9 @@ python3-flake8-docstrings-pip:
     pip:
       packages: [flake8-docstrings]
 python3-flake8-import-order:
+  alpine:
+    '*': [py3-flake8-import-order]
+    '3.17': null
   debian:
     '*': [python3-flake8-import-order]
     bullseye:
@@ -6354,6 +6367,9 @@ python3-flake8-isort:
     pip:
       packages: [flake8-isort]
 python3-flake8-quotes:
+  alpine:
+    '*': [py3-flake8-quotes]
+    '3.17': null
   debian:
     '*': [python3-flake8-quotes]
     bullseye:
@@ -9238,7 +9254,9 @@ python3-pyswarms-pip:
     pip:
       packages: [pyswarms]
 python3-pytest:
-  alpine: [py3-pytest]
+  alpine:
+    '*': [py3-pytest7]
+    '3.17': [py3-pytest]
   arch: [python-pytest]
   debian: [python3-pytest]
   fedora: [python3-pytest]
@@ -9913,6 +9931,7 @@ python3-semantic-version:
   nixos: [python3Packages.semantic-version]
   ubuntu: [python3-semantic-version]
 python3-semver:
+  alpine: [py3-semver]
   debian: [python3-semver]
   fedora: [python3-semver]
   freebsd: [py36-semver]
