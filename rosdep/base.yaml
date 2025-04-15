@@ -1437,7 +1437,7 @@ gdal-bin:
   ubuntu: [gdal-bin]
 geographiclib:
   alpine:
-    '*': [geographiclib]
+    '*': [geographiclib-dev]
     '3.17': null
   debian:
     '*': [libgeographiclib-dev]
