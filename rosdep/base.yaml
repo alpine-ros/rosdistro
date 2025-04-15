@@ -1436,6 +1436,9 @@ gdal-bin:
   nixos: [gdal]
   ubuntu: [gdal-bin]
 geographiclib:
+  alpine:
+    '*': [geographiclib]
+    '3.17': null
   debian:
     '*': [libgeographiclib-dev]
     bullseye: [libgeographic-dev]
@@ -1449,6 +1452,9 @@ geographiclib:
     focal: [libgeographic-dev]
     jammy: [libgeographic-dev]
 geographiclib-tools:
+  alpine:
+    '*': [geographiclib-tools]
+    '3.17': null
   debian: [geographiclib-tools]
   fedora: [GeographicLib]
   gentoo: [sci-geosciences/GeographicLib]
@@ -4013,6 +4019,9 @@ libgdal-dev:
   rhel: [gdal-devel]
   ubuntu: [libgdal-dev]
 libgeographiclib-dev:
+  alpine:
+    '*': [geographiclib-dev]
+    '3.17': null
   debian:
     wheezy: [libgeographiclib-dev]
   fedora: [GeographicLib-devel]
