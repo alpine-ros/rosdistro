@@ -1331,6 +1331,7 @@ g++-multilib:
   gentoo: [sys-devel/multilib-gcc-wrapper]
   ubuntu: [g++-multilib]
 g++-static:
+  alpine: [g++, libstdc++-dev]
   arch: [gcc]
   debian: [g++]
   fedora: [gcc-c++, glibc-devel, glibc-static, libstdc++-devel, libstdc++-static]
@@ -3290,6 +3291,7 @@ libbsd-dev:
       packages: [libbsd]
   ubuntu: [libbsd-dev]
 libcairo2-dev:
+  alpine: [cairo-dev]
   arch: [cairo]
   debian: [libcairo2-dev]
   fedora: [cairo-devel]
@@ -4045,6 +4047,7 @@ libgeotiff-dev:
   nixos: [libgeotiff]
   ubuntu: [libgeotiff-dev]
 libgflags-dev:
+  alpine: [gflags-dev]
   arch: [gflags]
   debian: [libgflags-dev]
   fedora: [gflags-devel]
@@ -7379,6 +7382,7 @@ lua-dev:
   openembedded: [lua@openembedded-core]
   ubuntu: [liblua5.1-0-dev]
 lua5.2-dev:
+  alpine: [lua5.2-dev]
   arch: [lua52]
   debian: [liblua5.2-dev]
   fedora: [lua-devel]

@@ -4123,6 +4123,7 @@ python-speechrecognition-pip:
     pip:
       packages: [speechrecognition]
 python-sphinx:
+  alpine: [py2-sphinx]
   arch: [python2-sphinx]
   debian: [python-sphinx]
   fedora: [python-sphinx]
@@ -10237,6 +10238,7 @@ python3-sparkfun-ublox-gps-pip:
     pip:
       packages: [sparkfun-ublox-gps]
 python3-sphinx:
+  alpine: [py3-sphinx]
   debian: [python3-sphinx]
   fedora: [python3-sphinx]
   gentoo: [dev-python/sphinx]
