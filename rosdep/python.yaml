@@ -4126,7 +4126,6 @@ python-speechrecognition-pip:
     pip:
       packages: [speechrecognition]
 python-sphinx:
-  alpine: [py2-sphinx]
   arch: [python2-sphinx]
   debian: [python-sphinx]
   fedora: [python-sphinx]
