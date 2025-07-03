@@ -10368,6 +10368,7 @@ python3-sparkfun-ublox-gps-pip:
     pip:
       packages: [sparkfun-ublox-gps]
 python3-sphinx:
+  alpine: [py3-sphinx]
   debian: [python3-sphinx]
   fedora: [python3-sphinx]
   gentoo: [dev-python/sphinx]
