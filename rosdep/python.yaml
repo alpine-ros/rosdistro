@@ -6632,6 +6632,10 @@ python3-geopy:
   fedora: [python3-geopy]
   nixos: [python3Packages.geopy]
   ubuntu: [python3-geopy]
+python3-gersemi-pip:
+  '*':
+    pip:
+      packages: [gersemi]
 python3-gi:
   alpine: [py3-gobject3]
   arch: [python-gobject]
@@ -10729,6 +10733,7 @@ python3-toml:
   fedora: [python3-toml]
   gentoo: [dev-python/toml]
   nixos: [python3Packages.toml]
+  rhel: [python3-toml]
   ubuntu: [python3-toml]
 python3-toppra-pip:
   debian:
