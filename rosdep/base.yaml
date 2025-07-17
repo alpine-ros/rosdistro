@@ -572,6 +572,7 @@ chromium-browser:
   rhel: [chromium]
   ubuntu: [chromium-browser]
 chrony:
+  alpine: [chrony]
   arch: [chrony]
   debian: [chrony]
   fedora: [chrony]
