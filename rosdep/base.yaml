@@ -2676,6 +2676,7 @@ lib32asound2:
   gentoo: [media-libs/alsa-lib]
   ubuntu: [lib32asound2]
 libabsl-dev:
+  alpine: [abseil-cpp-dev]
   arch: [abseil-cpp]
   debian:
     '*': [libabsl-dev]
