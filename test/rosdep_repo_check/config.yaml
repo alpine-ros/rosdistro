@@ -1,9 +1,12 @@
 ---
 package_sources:
   alpine:
-  - !apk_base_url https://dl-cdn.alpinelinux.org/alpine/v$releasever/main
-  - !apk_base_url https://dl-cdn.alpinelinux.org/alpine/v$releasever/community
-  - !apk_base_url http://alpine-ros.seqsense.org/v$releasever/backports
+  - !apk_base_url https://dl-cdn.alpinelinux.org/alpine/$releasever/main
+  - !apk_base_url https://dl-cdn.alpinelinux.org/alpine/$releasever/community
+  - !apk_base_url https://dl-cdn.alpinelinux.org/alpine/$releasever/testing
+  arch:
+  - !pacman_base_url https://archive.archlinux.org/repos/last/$repo/os/$arch/ core
+  - !pacman_base_url https://archive.archlinux.org/repos/last/$repo/os/$arch/ extra
   debian:
   - !deb_base_url http://deb.debian.org/debian main
   - !deb_base_url http://deb.debian.org/debian contrib
@@ -57,8 +60,9 @@ package_dashboards:
 
 supported_versions:
   alpine:
-  - '3.17'
-  - '3.20'
+  - edge
+  arch:
+  - ''
   debian:
   - bookworm
   fedora:
@@ -78,6 +82,8 @@ supported_versions:
 
 supported_arches:
   alpine:
+  - x86_64
+  arch:
   - x86_64
   debian:
   - amd64

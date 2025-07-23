@@ -39,7 +39,7 @@ from .rpm import rpm_mirrorlist_url
 
 DEFAULT_CONFIG_PATH = os.path.join(
     os.path.dirname(os.path.abspath(__file__)),
-    'config.yaml')
+    'config.alpine-ros.yaml')
 
 
 def load_apk_base_url(loader, node):
