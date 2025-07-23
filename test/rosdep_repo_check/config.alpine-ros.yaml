@@ -17,3 +17,5 @@ supported_versions:
 supported_arches:
   alpine:
   - x86_64
+
+name_replacements:
