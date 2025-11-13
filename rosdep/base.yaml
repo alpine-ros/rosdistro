@@ -1907,7 +1907,12 @@ gstreamer1.0-tools:
   opensuse: [gstreamer-utils]
   ubuntu: [gstreamer1.0-tools]
 gstreamer1.0-vaapi:
-  alpine: [gst-vaapi]
+  alpine:
+    '*': [gst-vaapi]
+    '3.11': null
+    '3.14': null
+    '3.17': null
+    '3.8': null
   debian: [gstreamer1.0-vaapi]
   fedora: [gstreamer1-vaapi]
   gentoo: ['media-plugins/gst-plugins-vaapi']
