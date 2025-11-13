@@ -1910,7 +1910,7 @@ gstreamer1.0-vaapi:
   alpine: [gst-vaapi]
   debian: [gstreamer1.0-vaapi]
   fedora: [gstreamer1-vaapi]
-  gentoo: ['media-libs/gst-plugins-vaapi']
+  gentoo: ['media-plugins/gst-plugins-vaapi']
   opensuse: [gstreamer-plugins-vaapi]
   ubuntu: [gstreamer1.0-vaapi]
 gstreamer1.0-x:
