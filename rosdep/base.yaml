@@ -2504,6 +2504,13 @@ imagemagick:
   nixos: [imagemagick]
   openembedded: [imagemagick@meta-oe]
   ubuntu: [imagemagick]
+intel-media-driver:
+  alpine: [intel-media-driver]
+  debian: [intel-media-va-driver]
+  fedora: [intel-media-driver]
+  gentoo: ['media-video/intel-media-driver']
+  opensuse: [intel-media-driver]
+  ubuntu: [intel-media-va-driver]
 intel-opencl-icd:
   arch: [intel-compute-runtime]
   debian:
