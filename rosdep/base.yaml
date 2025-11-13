@@ -2504,7 +2504,7 @@ imagemagick:
   nixos: [imagemagick]
   openembedded: [imagemagick@meta-oe]
   ubuntu: [imagemagick]
-intel-media-driver:
+intel-media-va-driver:
   alpine: [intel-media-driver]
   debian: [intel-media-va-driver]
   fedora: [libva-intel-media-driver]
