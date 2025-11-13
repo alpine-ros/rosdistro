@@ -1906,6 +1906,13 @@ gstreamer1.0-tools:
   gentoo: ['media-libs/gstreamer:1.0']
   opensuse: [gstreamer-utils]
   ubuntu: [gstreamer1.0-tools]
+gstreamer1.0-vaapi:
+  alpine: [gst-vaapi]
+  debian: [gstreamer1.0-vaapi]
+  fedora: [gstreamer1-vaapi]
+  gentoo: ['media-libs/gst-plugins-vaapi']
+  opensuse: [gstreamer-plugins-vaapi]
+  ubuntu: [gstreamer1.0-vaapi]
 gstreamer1.0-x:
   alpine: [gst-plugins-base]
   arch: [gstreamer]
