@@ -2508,7 +2508,7 @@ intel-media-driver:
   alpine: [intel-media-driver]
   debian: [intel-media-va-driver]
   fedora: [libva-intel-media-driver]
-  gentoo: ['media-video/intel-media-driver']
+  gentoo: ['media-libs/libva-intel-media-driver']
   opensuse: [intel-media-driver]
   ubuntu: [intel-media-va-driver]
 intel-opencl-icd:
