@@ -7282,6 +7282,7 @@ libvorbis-dev:
   rhel: [libvorbis-devel]
   ubuntu: [libvorbis-dev]
 libvpx-dev:
+  alpine: [libvpx-dev]
   arch: [libvpx]
   debian: [libvpx-dev]
   fedora: [libvpx-devel]
