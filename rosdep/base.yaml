@@ -7753,6 +7753,7 @@ linphone:
   nixos: [linphone]
   ubuntu: [linphone]
 linux-headers-generic:
+  alpine: [linux-headers]
   arch: [linux-headers]
   debian:
     stretch: [linux-headers-4.9.0-11-all]
