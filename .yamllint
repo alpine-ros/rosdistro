@@ -17,6 +17,7 @@ rules:
   key-ordering:
     ignore: |
       .github/
+      test/rosdep_repo_check/config.alpine-ros.yaml
       test/rosdep_repo_check/config.yaml
   line-length:
     allow-non-breakable-words: true
