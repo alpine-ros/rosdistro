@@ -458,7 +458,7 @@ repositories:
       tags:
         release: release/jazzy/{package}/{version}
       url: https://github.com/ros2-gbp/apriltag_detector-release.git
-      version: 3.0.3-1
+      version: 3.1.0-1
     source:
       type: git
       url: https://github.com/ros-misc-utilities/apriltag_detector.git
@@ -546,7 +546,7 @@ repositories:
       tags:
         release: release/jazzy/{package}/{version}
       url: https://github.com/ros2-gbp/aruco_opencv-release.git
-      version: 6.0.2-1
+      version: 6.1.0-1
     source:
       type: git
       url: https://github.com/fictionlab/ros_aruco_opencv.git
@@ -659,7 +659,7 @@ repositories:
       tags:
         release: release/jazzy/{package}/{version}
       url: https://github.com/ros2-gbp/automatika_ros_sugar-release.git
-      version: 0.4.1-1
+      version: 0.4.2-1
     source:
       type: git
       url: https://github.com/automatika-robotics/ros-sugar.git
@@ -926,6 +926,21 @@ repositories:
       type: git
       url: https://github.com/blackcoffeerobotics/bcr_arm.git
       version: ros2
+    status: developed
+  bcr_bot:
+    doc:
+      type: git
+      url: https://github.com/blackcoffeerobotics/bcr_bot.git
+      version: ros2-jazzy
+    release:
+      tags:
+        release: release/jazzy/{package}/{version}
+      url: https://github.com/blackcoffeerobotics/bcr_bot_ros2-release.git
+      version: 2.0.0-2
+    source:
+      type: git
+      url: https://github.com/blackcoffeerobotics/bcr_bot.git
+      version: ros2-jazzy
     status: developed
   beckhoff_ads_driver:
     release:
@@ -1886,7 +1901,7 @@ repositories:
       tags:
         release: release/jazzy/{package}/{version}
       url: https://github.com/luxonis/depthai-core-release.git
-      version: 2.30.0-1
+      version: 2.31.0-1
     source:
       type: git
       url: https://github.com/luxonis/depthai-core.git
@@ -2106,6 +2121,34 @@ repositories:
       url: https://github.com/ROBOTIS-GIT/dynamixel-workbench-msgs.git
       version: ros2
     status: maintained
+  easynav:
+    doc:
+      type: git
+      url: https://github.com/EasyNavigation/EasyNavigation.git
+      version: jazzy
+    release:
+      packages:
+      - easynav
+      - easynav_common
+      - easynav_controller
+      - easynav_core
+      - easynav_interfaces
+      - easynav_localizer
+      - easynav_maps_manager
+      - easynav_planner
+      - easynav_sensors
+      - easynav_support_py
+      - easynav_system
+      - easynav_tools
+      tags:
+        release: release/jazzy/{package}/{version}
+      url: https://github.com/EasyNavigation/EasyNavigation-release.git
+      version: 0.2.0-1
+    source:
+      type: git
+      url: https://github.com/EasyNavigation/EasyNavigation.git
+      version: jazzy
+    status: developed
   ecal:
     doc:
       type: git
@@ -2343,7 +2386,7 @@ repositories:
       tags:
         release: release/jazzy/{package}/{version}
       url: https://github.com/ros2-gbp/event_camera_codecs-release.git
-      version: 2.0.1-1
+      version: 3.0.0-1
     source:
       type: git
       url: https://github.com/ros-event-camera/event_camera_codecs.git
@@ -2358,7 +2401,7 @@ repositories:
       tags:
         release: release/jazzy/{package}/{version}
       url: https://github.com/ros2-gbp/event_camera_msgs-release.git
-      version: 2.0.0-1
+      version: 2.0.1-1
     source:
       type: git
       url: https://github.com/ros-event-camera/event_camera_msgs.git
@@ -2373,7 +2416,7 @@ repositories:
       tags:
         release: release/jazzy/{package}/{version}
       url: https://github.com/ros2-gbp/event_camera_py-release.git
-      version: 2.0.1-1
+      version: 3.0.0-1
     source:
       type: git
       url: https://github.com/ros-event-camera/event_camera_py.git
@@ -2388,10 +2431,20 @@ repositories:
       tags:
         release: release/jazzy/{package}/{version}
       url: https://github.com/ros2-gbp/event_camera_renderer-release.git
-      version: 2.0.1-2
+      version: 3.0.0-1
     source:
       type: git
       url: https://github.com/ros-event-camera/event_camera_renderer.git
+      version: release
+    status: developed
+  event_camera_tools:
+    doc:
+      type: git
+      url: https://github.com/ros-event-camera/event_camera_tools.git
+      version: release
+    source:
+      type: git
+      url: https://github.com/ros-event-camera/event_camera_tools.git
       version: release
     status: developed
   event_image_reconstruction_fibar:
@@ -2587,6 +2640,11 @@ repositories:
       type: git
       url: https://github.com/ros-event-camera/fibar_lib.git
       version: release
+    release:
+      tags:
+        release: release/jazzy/{package}/{version}
+      url: https://github.com/ros2-gbp/fibar_lib-release.git
+      version: 1.0.1-1
     source:
       type: git
       url: https://github.com/ros-event-camera/fibar_lib.git
@@ -2827,13 +2885,6 @@ repositories:
       url: https://github.com/ros-misc-utilities/foxglove_compressed_video_transport.git
       version: release
     status: developed
-  foxglove_sdk_vendor:
-    release:
-      tags:
-        release: release/jazzy/{package}/{version}
-      url: https://github.com/jlack1987/foxglove_sdk_vendor-release.git
-      version: 0.2.0-1
-    status: maintained
   frame_editor:
     doc:
       type: git
@@ -2849,6 +2900,21 @@ repositories:
       url: https://github.com/ipa320/rqt_frame_editor_plugin.git
       version: jazzy-devel
     status: maintained
+  frequency_cam:
+    doc:
+      type: git
+      url: https://github.com/ros-event-camera/frequency_cam.git
+      version: release
+    release:
+      tags:
+        release: release/jazzy/{package}/{version}
+      url: https://github.com/ros2-gbp/frequency_cam-release.git
+      version: 3.1.0-1
+    source:
+      type: git
+      url: https://github.com/ros-event-camera/frequency_cam.git
+      version: release
+    status: developed
   fuse:
     doc:
       type: git
@@ -2919,17 +2985,13 @@ repositories:
       version: main
     release:
       packages:
-      - cmake_generate_parameter_module_example
       - generate_parameter_library
-      - generate_parameter_library_example
-      - generate_parameter_library_example_external
       - generate_parameter_library_py
-      - generate_parameter_module_example
       - parameter_traits
       tags:
         release: release/jazzy/{package}/{version}
       url: https://github.com/ros2-gbp/generate_parameter_library-release.git
-      version: 0.5.0-1
+      version: 0.6.0-1
     source:
       type: git
       url: https://github.com/PickNikRobotics/generate_parameter_library.git
@@ -2994,7 +3056,7 @@ repositories:
       tags:
         release: release/jazzy/{package}/{version}
       url: https://github.com/ros2-gbp/geometry2-release.git
-      version: 0.36.16-1
+      version: 0.36.17-1
     source:
       test_pull_requests: true
       type: git
@@ -3566,6 +3628,12 @@ repositories:
       url: https://github.com/HebiRobotics/hebi_cpp_api_ros.git
       version: ros2
     status: maintained
+  hebi_hardware:
+    source:
+      type: git
+      url: https://github.com/HebiRobotics/hebi_hardware.git
+      version: main
+    status: maintained
   hector_rviz_overlay:
     source:
       type: git
@@ -4000,30 +4068,16 @@ repositories:
       packages:
       - kinematics_interface
       - kinematics_interface_kdl
+      - kinematics_interface_pinocchio
       tags:
         release: release/jazzy/{package}/{version}
       url: https://github.com/ros2-gbp/kinematics_interface-release.git
-      version: 1.6.0-1
+      version: 1.7.0-1
     source:
       type: git
       url: https://github.com/ros-controls/kinematics_interface.git
       version: jazzy
     status: developed
-  kinematics_interface_pinocchio:
-    doc:
-      type: git
-      url: https://github.com/justagist/kinematics_interface_pinocchio.git
-      version: ros-jazzy
-    release:
-      tags:
-        release: release/jazzy/{package}/{version}
-      url: https://github.com/justagist/kinematics_interface_pinocchio-release.git
-      version: 0.0.1-1
-    source:
-      type: git
-      url: https://github.com/justagist/kinematics_interface_pinocchio.git
-      version: ros-jazzy
-    status: maintained
   kobuki_core:
     doc:
       type: git
@@ -4084,7 +4138,7 @@ repositories:
       tags:
         release: release/jazzy/{package}/{version}
       url: https://github.com/ros2-gbp/kompass-release.git
-      version: 0.3.2-1
+      version: 0.3.3-1
     source:
       type: git
       url: https://github.com/automatika-robotics/kompass.git
@@ -4307,6 +4361,26 @@ repositories:
       type: git
       url: https://github.com/LeoRover/leo_desktop-ros2.git
       version: jazzy
+    status: maintained
+  leo_examples:
+    doc:
+      type: git
+      url: https://github.com/LeoRover/leo_examples-ros2.git
+      version: main
+    release:
+      packages:
+      - leo_example_follow_aruco_marker
+      - leo_example_line_follower
+      - leo_example_object_detection
+      - leo_examples
+      tags:
+        release: release/jazzy/{package}/{version}
+      url: https://github.com/ros2-gbp/leo_examples-ros2-release.git
+      version: 1.0.0-1
+    source:
+      type: git
+      url: https://github.com/LeoRover/leo_examples-ros2.git
+      version: main
     status: maintained
   leo_robot:
     doc:
@@ -4572,7 +4646,7 @@ repositories:
       tags:
         release: release/jazzy/{package}/{version}
       url: https://github.com/ros2-gbp/magic_enum-release.git
-      version: 0.9.7-2
+      version: 0.9.7-3
     source:
       type: git
       url: https://github.com/Neargye/magic_enum.git
@@ -4777,7 +4851,7 @@ repositories:
       tags:
         release: release/jazzy/{package}/{version}
       url: https://github.com/ros2-gbp/metavision_driver-release.git
-      version: 2.0.1-1
+      version: 3.0.0-1
     source:
       type: git
       url: https://github.com/ros-event-camera/metavision_driver.git
@@ -5095,7 +5169,7 @@ repositories:
       tags:
         release: release/jazzy/{package}/{version}
       url: https://github.com/ros2-gbp/moveit2-release.git
-      version: 2.12.3-1
+      version: 2.12.4-1
     source:
       test_commits: false
       test_pull_requests: false
@@ -5157,7 +5231,7 @@ repositories:
       tags:
         release: release/jazzy/{package}/{version}
       url: https://github.com/ros2-gbp/moveit_task_constructor-release.git
-      version: 0.1.4-1
+      version: 0.1.4-3
     source:
       type: git
       url: https://github.com/moveit/moveit_task_constructor.git
@@ -6412,7 +6486,7 @@ repositories:
       - play_motion2_msgs
       tags:
         release: release/jazzy/{package}/{version}
-      url: https://github.com/pal-gbp/play_motion2-release.git
+      url: https://github.com/ros2-gbp/play_motion2-release.git
       version: 1.8.0-1
     source:
       type: git
@@ -6447,7 +6521,7 @@ repositories:
       tags:
         release: release/jazzy/{package}/{version}
       url: https://github.com/ros2-gbp/plotjuggler-release.git
-      version: 3.14.1-1
+      version: 3.14.2-1
     source:
       type: git
       url: https://github.com/facontidavide/PlotJuggler.git
@@ -6495,7 +6569,7 @@ repositories:
       tags:
         release: release/jazzy/{package}/{version}
       url: https://github.com/ros2-gbp/pluginlib-release.git
-      version: 5.4.3-1
+      version: 5.4.4-1
     source:
       test_pull_requests: true
       type: git
@@ -6900,6 +6974,21 @@ repositories:
       url: https://github.com/ros-visualization/python_qt_binding.git
       version: jazzy
     status: maintained
+  qml6_ros2_plugin:
+    doc:
+      type: git
+      url: https://github.com/StefanFabian/qml6_ros2_plugin.git
+      version: jazzy
+    release:
+      tags:
+        release: release/jazzy/{package}/{version}
+      url: https://github.com/ros2-gbp/qml6_ros2_plugin-release.git
+      version: 1.25.120-1
+    source:
+      type: git
+      url: https://github.com/StefanFabian/qml6_ros2_plugin.git
+      version: jazzy
+    status: maintained
   qml_ros2_plugin:
     doc:
       type: git
@@ -7017,10 +7106,24 @@ repositories:
       version: ros2
     status: maintained
   raph_common:
+    doc:
+      type: git
+      url: https://github.com/RaphRover/raph_common.git
+      version: main
+    release:
+      packages:
+      - raph
+      - raph_description
+      - raph_interfaces
+      - raph_teleop
+      tags:
+        release: release/jazzy/{package}/{version}
+      url: https://github.com/ros2-gbp/raph_common-release.git
+      version: 1.0.1-1
     source:
       type: git
       url: https://github.com/RaphRover/raph_common.git
-      version: jazzy
+      version: main
     status: maintained
   raph_desktop:
     source:
@@ -7029,10 +7132,22 @@ repositories:
       version: jazzy
     status: maintained
   raph_robot:
+    doc:
+      type: git
+      url: https://github.com/RaphRover/raph_robot.git
+      version: main
+    release:
+      packages:
+      - raph_bringup
+      - raph_robot
+      tags:
+        release: release/jazzy/{package}/{version}
+      url: https://github.com/ros2-gbp/raph_robot-release.git
+      version: 1.0.0-1
     source:
       type: git
       url: https://github.com/RaphRover/raph_robot.git
-      version: jazzy
+      version: main
     status: maintained
   raspimouse2:
     doc:
@@ -7504,7 +7619,7 @@ repositories:
       tags:
         release: release/jazzy/{package}/{version}
       url: https://github.com/ros2-gbp/realtime_tools-release.git
-      version: 3.10.0-1
+      version: 3.10.1-1
     source:
       type: git
       url: https://github.com/ros-controls/realtime_tools.git
@@ -7580,7 +7695,7 @@ repositories:
       tags:
         release: release/jazzy/{package}/{version}
       url: https://github.com/ros2-gbp/rko_lio-release.git
-      version: 0.1.6-1
+      version: 0.2.0-1
     source:
       type: git
       url: https://github.com/PRBonn/rko_lio.git
@@ -8137,7 +8252,7 @@ repositories:
       tags:
         release: release/jazzy/{package}/{version}
       url: https://github.com/ros2-gbp/ros2_canopen-release.git
-      version: 0.3.1-1
+      version: 0.3.2-1
     source:
       type: git
       url: https://github.com/ros-industrial/ros2_canopen.git
@@ -8164,7 +8279,7 @@ repositories:
       tags:
         release: release/jazzy/{package}/{version}
       url: https://github.com/ros2-gbp/ros2_control-release.git
-      version: 4.39.2-1
+      version: 4.40.0-1
     source:
       type: git
       url: https://github.com/ros-controls/ros2_control.git
@@ -8223,7 +8338,7 @@ repositories:
       tags:
         release: release/jazzy/{package}/{version}
       url: https://github.com/ros2-gbp/ros2_controllers-release.git
-      version: 4.34.0-1
+      version: 4.35.0-1
     source:
       type: git
       url: https://github.com/ros-controls/ros2_controllers.git
@@ -8473,7 +8588,7 @@ repositories:
       tags:
         release: release/jazzy/{package}/{version}
       url: https://github.com/ros2-gbp/ros_babel_fish-release.git
-      version: 2.25.11-1
+      version: 2.25.111-1
     source:
       type: git
       url: https://github.com/LOEWE-emergenCITY/ros2_babel_fish.git
@@ -9622,7 +9737,7 @@ repositories:
       tags:
         release: release/jazzy/{package}/{version}
       url: https://github.com/ros2-gbp/rviz-release.git
-      version: 14.1.17-1
+      version: 14.1.18-1
     source:
       test_pull_requests: true
       type: git
@@ -10549,11 +10664,12 @@ repositories:
       version: main
     release:
       packages:
+      - cm_topic_hardware_component
       - joint_state_topic_hardware_interface
       tags:
         release: release/jazzy/{package}/{version}
       url: https://github.com/ros2-gbp/topic_based_hardware-release.git
-      version: 0.2.1-1
+      version: 1.0.0-1
     source:
       type: git
       url: https://github.com/ros-controls/topic_based_hardware_interfaces.git
@@ -11172,7 +11288,7 @@ repositories:
       tags:
         release: release/jazzy/{package}/{version}
       url: https://github.com/ros2-gbp/Universal_Robots_Client_Library-release.git
-      version: 2.6.0-1
+      version: 2.6.1-2
     source:
       type: git
       url: https://github.com/UniversalRobots/Universal_Robots_Client_Library.git
@@ -11764,7 +11880,7 @@ repositories:
       tags:
         release: release/jazzy/{package}/{version}
       url: https://github.com/ros2-gbp/yasmin-release.git
-      version: 4.0.1-1
+      version: 4.1.0-1
     source:
       type: git
       url: https://github.com/uleroboticsgroup/yasmin.git
