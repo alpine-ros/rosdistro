@@ -9639,7 +9639,13 @@ sdformat13:
   gentoo: ['dev-libs/sdformat:13']
   nixos: [sdformat_13]
 sdl:
-  alpine: [sdl-dev]
+  alpine:
+    '*': [sdl12-compat-dev]
+    '3.20': [sdl-dev]
+    '3.17': [sdl-dev]
+    '3.14': [sdl-dev]
+    '3.11': [sdl-dev]
+    '3.8': [sdl-dev]
   arch: [sdl12-compat]
   debian: [libsdl1.2-dev]
   fedora: [SDL-devel]
