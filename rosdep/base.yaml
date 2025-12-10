@@ -5117,7 +5117,7 @@ libmysqlcppconn-dev:
 libnanoflann-dev:
   alpine:
     '*': [nanoflann-dev]
-    3.17: null
+    '3.17': null
   debian:
     '*': [libnanoflann-dev]
     buster: null
