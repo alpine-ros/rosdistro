@@ -9641,10 +9641,10 @@ sdformat13:
 sdl:
   alpine:
     '*': [sdl12-compat-dev]
-    '3.20': [sdl-dev]
-    '3.17': [sdl-dev]
-    '3.14': [sdl-dev]
     '3.11': [sdl-dev]
+    '3.14': [sdl-dev]
+    '3.17': [sdl-dev]
+    '3.20': [sdl-dev]
     '3.8': [sdl-dev]
   arch: [sdl12-compat]
   debian: [libsdl1.2-dev]
