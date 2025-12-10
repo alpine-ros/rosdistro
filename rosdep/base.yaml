@@ -5115,6 +5115,7 @@ libmysqlcppconn-dev:
   opensuse: [libmysqlcppconn-devel]
   ubuntu: [libmysqlcppconn-dev]
 libnanoflann-dev:
+  alpine: [nanoflann-dev]
   debian:
     '*': [libnanoflann-dev]
     buster: null
