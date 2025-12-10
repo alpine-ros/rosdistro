@@ -3743,6 +3743,7 @@ libdrm-dev:
   nixos: [libdrm]
   ubuntu: [libdrm-dev]
 libdw-dev:
+  alpine: [elfutils-dev]
   arch: [libelf]
   debian: [libdw-dev]
   fedora: [elfutils-devel]
