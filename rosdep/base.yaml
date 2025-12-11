@@ -21,8 +21,12 @@ ack-grep:
   ubuntu: [ack-grep]
 acl:
   alpine:
-    '*': [acl, acl-dev, acl-static, libacl]
+    '*': [acl, acl-dev, acl-static, acl-libs]
     '3.8': [acl, acl-dev, libacl]
+    '3.11': [acl, acl-dev, acl-static, libacl]
+    '3.14': [acl, acl-dev, acl-static, libacl]
+    '3.17': [acl, acl-dev, acl-static, libacl]
+    '3.20': [acl, acl-dev, acl-static, libacl]
   arch: [acl]
   debian: [acl, libacl1-dev]
   fedora: [acl, libacl-devel]
