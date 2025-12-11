@@ -1133,7 +1133,12 @@ fcgi:
   openembedded: [fcgi@meta-webserver]
   ubuntu: [libfcgi-dev, libapache2-mod-fastcgi, spawn-fcgi]
 festival:
-  alpine: [festival, festvox-kallpc16k]
+  alpine:
+    '3.8': [festival, festvox-kallpc16k]
+    '3.11': [festival, festvox-kallpc16k]
+    '3.14': [festival, festvox-kallpc16k]
+    '3.17': [festival, festvox-kallpc16k]
+    '3.20': [festival, festvox-kallpc16k]
   arch: [festival, festival-english]
   debian: [festival, festvox-kallpc16k]
   fedora: [festival, festvox-kal-diphone]
@@ -2181,7 +2186,12 @@ haproxy:
   nixos: [haproxy]
   ubuntu: [haproxy]
 hddtemp:
-  alpine: [hddtemp]
+  alpine:
+    '3.11': [hddtemp]
+    '3.14': [hddtemp]
+    '3.17': [hddtemp]
+    '3.20': [hddtemp]
+    '3.8': [hddtemp]
   arch: [hddtemp]
   debian: [hddtemp]
   fedora: [hddtemp]
