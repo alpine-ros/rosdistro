@@ -2777,11 +2777,11 @@ python-opencv-contrib-pip:
 python-opengl:
   alpine:
     '*': [py3-opengl]
-    '3.8': [py-opengl]
     '3.11': [py-opengl]
     '3.14': [py-opengl]
     '3.17': [py-opengl]
     '3.20': [py-opengl]
+    '3.8': [py-opengl]
   arch: [python2-opengl]
   debian: [python-opengl]
   freebsd: [py27-PyOpenGL]
