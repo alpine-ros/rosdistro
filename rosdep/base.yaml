@@ -8223,7 +8223,13 @@ netcdf:
   nixos: [netcdf]
   ubuntu: [libnetcdf-dev]
 netpbm:
-  alpine: [libnetpbm-dev]
+  alpine:
+    '*': [netpbm-dev]
+    '3.8': [libnetpbm-dev]
+    '3.11': [libnetpbm-dev]
+    '3.14': [libnetpbm-dev]
+    '3.17': [libnetpbm-dev]
+    '3.20': [libnetpbm-dev]
   arch: [netpbm]
   debian: [libnetpbm10-dev]
   fedora: [netpbm-devel]
