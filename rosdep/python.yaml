@@ -528,7 +528,13 @@ pyros-setup-pip:
     pip:
       packages: [pyros-setup]
 pysdl2:
-  alpine: [py-pysdl2]
+  alpine:
+    '*': [py3-pysdl2]
+    '3.11': [py-pysdl2]
+    '3.14': [py-pysdl2]
+    '3.17': [py-pysdl2]
+    '3.20': [py-pysdl2]
+    '3.8': [py-pysdl2]
   debian:
     pip:
       packages: [pysdl2]
@@ -536,7 +542,13 @@ pysdl2:
     pip:
       packages: [pysdl2]
 pysdl2-dll:
-  alpine: [py-pysdl2-dll]
+  alpine:
+    '*': [py3-pysdl2-dll]
+    '3.11': [py-pysdl2-dll]
+    '3.14': [py-pysdl2-dll]
+    '3.17': [py-pysdl2-dll]
+    '3.20': [py-pysdl2-dll]
+    '3.8': [py-pysdl2-dll]
   debian:
     pip:
       packages: [pysdl2-dll]
@@ -2763,7 +2775,13 @@ python-opencv-contrib-pip:
     pip:
       packages: [opencv-contrib-python]
 python-opengl:
-  alpine: [py-opengl]
+  alpine:
+    '*': [py3-opengl]
+    '3.8': [py-opengl]
+    '3.11': [py-opengl]
+    '3.14': [py-opengl]
+    '3.17': [py-opengl]
+    '3.20': [py-opengl]
   arch: [python2-opengl]
   debian: [python-opengl]
   freebsd: [py27-PyOpenGL]
