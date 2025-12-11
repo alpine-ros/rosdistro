@@ -22,11 +22,11 @@ ack-grep:
 acl:
   alpine:
     '*': [acl, acl-dev, acl-static, acl-libs]
-    '3.8': [acl, acl-dev, libacl]
     '3.11': [acl, acl-dev, acl-static, libacl]
     '3.14': [acl, acl-dev, acl-static, libacl]
     '3.17': [acl, acl-dev, acl-static, libacl]
     '3.20': [acl, acl-dev, acl-static, libacl]
+    '3.8': [acl, acl-dev, libacl]
   arch: [acl]
   debian: [acl, libacl1-dev]
   fedora: [acl, libacl-devel]
@@ -1134,11 +1134,11 @@ fcgi:
   ubuntu: [libfcgi-dev, libapache2-mod-fastcgi, spawn-fcgi]
 festival:
   alpine:
-    '3.8': [festival, festvox-kallpc16k]
     '3.11': [festival, festvox-kallpc16k]
     '3.14': [festival, festvox-kallpc16k]
     '3.17': [festival, festvox-kallpc16k]
     '3.20': [festival, festvox-kallpc16k]
+    '3.8': [festival, festvox-kallpc16k]
   arch: [festival, festival-english]
   debian: [festival, festvox-kallpc16k]
   fedora: [festival, festvox-kal-diphone]
@@ -8239,11 +8239,11 @@ netcdf:
 netpbm:
   alpine:
     '*': [netpbm-dev]
-    '3.8': [libnetpbm-dev]
     '3.11': [libnetpbm-dev]
     '3.14': [libnetpbm-dev]
     '3.17': [libnetpbm-dev]
     '3.20': [libnetpbm-dev]
+    '3.8': [libnetpbm-dev]
   arch: [netpbm]
   debian: [libnetpbm10-dev]
   fedora: [netpbm-devel]
