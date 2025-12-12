@@ -21,7 +21,11 @@ ack-grep:
   ubuntu: [ack-grep]
 acl:
   alpine:
-    '*': [acl, acl-dev, acl-static, libacl]
+    '*': [acl, acl-dev, acl-static, acl-libs]
+    '3.11': [acl, acl-dev, acl-static, libacl]
+    '3.14': [acl, acl-dev, acl-static, libacl]
+    '3.17': [acl, acl-dev, acl-static, libacl]
+    '3.20': [acl, acl-dev, acl-static, libacl]
     '3.8': [acl, acl-dev, libacl]
   arch: [acl]
   debian: [acl, libacl1-dev]
@@ -1129,7 +1133,12 @@ fcgi:
   openembedded: [fcgi@meta-webserver]
   ubuntu: [libfcgi-dev, libapache2-mod-fastcgi, spawn-fcgi]
 festival:
-  alpine: [festival, festvox-kallpc16k]
+  alpine:
+    '3.11': [festival, festvox-kallpc16k]
+    '3.14': [festival, festvox-kallpc16k]
+    '3.17': [festival, festvox-kallpc16k]
+    '3.20': [festival, festvox-kallpc16k]
+    '3.8': [festival, festvox-kallpc16k]
   arch: [festival, festival-english]
   debian: [festival, festvox-kallpc16k]
   fedora: [festival, festvox-kal-diphone]
@@ -2177,7 +2186,12 @@ haproxy:
   nixos: [haproxy]
   ubuntu: [haproxy]
 hddtemp:
-  alpine: [hddtemp]
+  alpine:
+    '3.11': [hddtemp]
+    '3.14': [hddtemp]
+    '3.17': [hddtemp]
+    '3.20': [hddtemp]
+    '3.8': [hddtemp]
   arch: [hddtemp]
   debian: [hddtemp]
   fedora: [hddtemp]
@@ -8223,7 +8237,13 @@ netcdf:
   nixos: [netcdf]
   ubuntu: [libnetcdf-dev]
 netpbm:
-  alpine: [libnetpbm-dev]
+  alpine:
+    '*': [netpbm-dev]
+    '3.11': [libnetpbm-dev]
+    '3.14': [libnetpbm-dev]
+    '3.17': [libnetpbm-dev]
+    '3.20': [libnetpbm-dev]
+    '3.8': [libnetpbm-dev]
   arch: [netpbm]
   debian: [libnetpbm10-dev]
   fedora: [netpbm-devel]
@@ -9642,7 +9662,13 @@ sdformat13:
   gentoo: ['dev-libs/sdformat:13']
   nixos: [sdformat_13]
 sdl:
-  alpine: [sdl-dev]
+  alpine:
+    '*': [sdl12-compat-dev]
+    '3.11': [sdl-dev]
+    '3.14': [sdl-dev]
+    '3.17': [sdl-dev]
+    '3.20': [sdl-dev]
+    '3.8': [sdl-dev]
   arch: [sdl12-compat]
   debian: [libsdl1.2-dev]
   fedora: [SDL-devel]
