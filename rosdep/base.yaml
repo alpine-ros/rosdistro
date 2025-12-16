@@ -2181,12 +2181,7 @@ haproxy:
   nixos: [haproxy]
   ubuntu: [haproxy]
 hddtemp:
-  alpine:
-    '3.11': [hddtemp]
-    '3.14': [hddtemp]
-    '3.17': [hddtemp]
-    '3.20': [hddtemp]
-    '3.8': [hddtemp]
+  alpine: [hddtemp]
   arch: [hddtemp]
   debian: [hddtemp]
   fedora: [hddtemp]
