@@ -11216,6 +11216,7 @@ python3-types-pyyaml:
       pip:
         packages: [types-pyyaml]
 python3-typing-extensions:
+  alpine: [py3-typing-extensions]
   arch: [python-typing_extensions]
   debian: [python3-typing-extensions]
   fedora: [python3-typing-extensions]
