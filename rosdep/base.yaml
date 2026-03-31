@@ -4334,6 +4334,7 @@ libglib-dev:
   gentoo: [dev-libs/glib]
   nixos: [glib]
   openembedded: [glib-2.0@openembedded-core]
+  rhel: [glib2-devel]
   ubuntu: [libglib2.0-dev, libglib2.0-dev-bin]
 libglm-dev:
   arch: [glm]
@@ -5425,6 +5426,7 @@ libopencv-core:
     bullseye: [libopencv-core45]
     trixie: [libopencv-core410]
   fedora: [opencv-core]
+  nixos: [opencv]
   rhel: [opencv-core]
   ubuntu:
     jammy: [libopencv-core4.5d]
@@ -5433,6 +5435,7 @@ libopencv-core:
 libopencv-core-dev:
   debian: [libopencv-core-dev]
   fedora: [opencv-devel]
+  nixos: [opencv]
   rhel: [opencv-devel]
   ubuntu: [libopencv-core-dev]
 libopencv-dev:
@@ -5454,6 +5457,7 @@ libopencv-highgui:
     bookworm: [libopencv-highgui406]
     bullseye: [libopencv-highgui4.5]
   fedora: [opencv-highgui]
+  nixos: [opencv]
   rhel:
     '*': [opencv-highgui]
     '8': [opencv-core]
@@ -5469,6 +5473,7 @@ libopencv-imgcodecs:
     bullseye: [libopencv-imgcodecs45]
     trixie: [libopencv-imgcodecs410]
   fedora: [opencv-imgcodecs]
+  nixos: [opencv]
   rhel:
     '*': [opencv-imgcodecs]
     '8': [opencv-core]
@@ -5480,6 +5485,7 @@ libopencv-imgcodecs:
 libopencv-imgcodecs-dev:
   debian: [libopencv-imgcodecs-dev]
   fedora: [opencv-devel]
+  nixos: [opencv]
   rhel: [opencv-devel]
   ubuntu: [libopencv-imgcodecs-dev]
 libopencv-imgproc:
@@ -5488,6 +5494,7 @@ libopencv-imgproc:
     bullseye: [libopencv-imgproc45]
     trixie: [libopencv-imgproc410]
   fedora: [opencv-imgproc]
+  nixos: [opencv]
   rhel:
     '*': [opencv-imgproc]
     '8': [opencv-core]
@@ -5512,6 +5519,7 @@ libopencv-videoio:
     bookworm: [libopencv-videoio406]
     bullseye: [libopencv-videoio4.5]
   fedora: [opencv-videoio]
+  nixos: [opencv]
   rhel:
     '*': [opencv-videoio]
     '8': [opencv-core]
@@ -7205,6 +7213,7 @@ libsystemd-dev:
   arch: [systemd-libs]
   debian: [libsystemd-dev]
   fedora: [systemd-devel]
+  nixos: [systemd]
   openembedded: [systemd@openembedded-core]
   ubuntu:
     '*': [libsystemd-dev]
