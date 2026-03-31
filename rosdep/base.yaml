@@ -809,13 +809,13 @@ cppunit:
   rhel: [cppunit-devel]
   slackware: [cppunit]
   ubuntu: [libcppunit-dev]
+cpuburn:
+  debian: [cpuburn]
+  ubuntu: [cpuburn]
 croncpp:
   alpine:
     '*': [croncpp-dev]
     '3.8': null
-cpuburn:
-  debian: [cpuburn]
-  ubuntu: [cpuburn]
 crypto++:
   arch: [crypto++]
   debian: [libcrypto++-dev]
