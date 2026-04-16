@@ -9932,7 +9932,7 @@ sdformat13:
   nixos: [sdformat_13]
 sdl:
   alpine:
-    '*': [sdl12-compat-dev, sdl2-dev]
+    '*': [sdl12-compat-dev, sdl2]
     '3.11': [sdl-dev]
     '3.14': [sdl-dev]
     '3.17': [sdl-dev]
