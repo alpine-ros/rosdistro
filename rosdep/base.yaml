@@ -1784,6 +1784,7 @@ gradle:
   nixos: [gradle]
   ubuntu: [gradle]
 graphicsmagick:
+  alpine: [graphicsmagick, graphicsmagick-c++, graphicsmagick-dev]
   arch: [graphicsmagick]
   debian: [libgraphicsmagick++1-dev, graphicsmagick-libmagick-dev-compat]
   fedora: [GraphicsMagick-c++-devel]
