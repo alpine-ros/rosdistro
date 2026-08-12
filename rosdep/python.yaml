@@ -5386,9 +5386,6 @@ python3-lensfun:
     '8': null
   ubuntu: [python3-lensfun]
 python3-lgpio:
-  alpine:
-    pip:
-      packages: [lgpio]
   arch:
     pip:
       packages: [lgpio]
@@ -5430,9 +5427,6 @@ python3-libgpiod:
     '*': [python3-libgpiod]
     bionic: null
 python3-libtmux:
-  alpine:
-    pip:
-      packages: [libtmux]
   arch: [python-libtmux]
   debian: [python3-libtmux]
   fedora: [python-libtmux]
@@ -5691,9 +5685,7 @@ python3-minio-pip:
     pip:
       packages: [minio]
 python3-mistune:
-  alpine:
-    pip:
-      packages: [mistune]
+  alpine: [py3-mistune]
   arch: [python-mistune]
   debian: [python3-mistune]
   fedora: [python3-mistune]
