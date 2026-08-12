@@ -630,7 +630,7 @@ clang:
     '7': null
   ubuntu: [clang]
 clang-format:
-  alpine: [clang]
+  alpine: [clang-extra-tools]
   arch: [clang]
   debian: [clang-format]
   fedora: [clang-tools-extra, git-clang-format]
