@@ -8485,9 +8485,6 @@ lz4:
   slackware: [lz4]
   ubuntu: [liblz4-dev, lz4]
 m2r:
-  alpine:
-    pip:
-      packages: [m2r]
   arch:
     pip:
       packages: [m2r]
